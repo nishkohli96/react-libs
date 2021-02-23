@@ -1,0 +1,73 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "author": "Nishant Kohli",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "autoprefixer": "9",
+    "axios": "^0.21.1",
+    "cogo-toast": "^4.2.3",
+    "customize-cra": "^1.0.0",
+    "formik": "^2.2.6",
+    "jquery": "^3.5.1",
+    "postcss": "7",
+    "react": "^17.0.1",
+    "react-charts": "^2.0.0-beta.7",
+    "react-dom": "^17.0.1",
+    "react-query": "^3.12.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "video.js": "^7.10.2",
+    "videojs-youtube": "^2.6.1",
+    "web-vitals": "^0.2.4",
+    "yup": "^0.32.8"
+  },
+  "scripts": {
+    "build-styles": "tailwindcss build src/assets/styles/tailwind.css -o src/assets/styles/index.css",
+    "start": "react-app-rewired start",
+    "build": "yarn build-styles && react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.13",
+    "prettier": "^2.2.1",
+    "react-app-rewired": "^2.1.8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js, jsx, ts, tsx, md, html, css}": [
+      "prettier --write"
+    ]
+  }
+}
