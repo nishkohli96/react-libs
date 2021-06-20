@@ -53,6 +53,7 @@ class VideoPlayer extends React.Component {
                             <a
                                 href="https://videojs.com/html5-video-support/"
                                 target="_blank"
+                                rel="noreferrer"
                             >
                                 supports HTML5 video
                             </a>

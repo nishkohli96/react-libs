@@ -4,6 +4,7 @@ import Sample from '@Components/Sample';
 
 const Page404 = lazy(() => import('@Pages/Page404'));
 const Page2 = lazy(() => import('@Pages/Page2'));
+const ZoomEg = lazy(() => import('@Pages/ZoomEg'));
 
 const Routing = () => {
     return (
@@ -11,6 +12,7 @@ const Routing = () => {
             <Switch>
                 <Route exact path="/" component={Sample} />
                 <Route path="/page2" component={Page2} />
+                <Route path="/zoom" component={ZoomEg} />
                 <Route component={Page404} />
             </Switch>
         </BrowserRouter>

@@ -18,6 +18,9 @@ const LinksList = () => {
             <Link className="link" to="/react-charts">
                 React-charts
             </Link>
+            <Link className="link" to="/zoom">
+                zoom web sdk
+            </Link>
         </div>
     );
 };

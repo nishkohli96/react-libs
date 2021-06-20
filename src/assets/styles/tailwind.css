@@ -1,3 +1,8 @@
+#zmmtg-root {
+	display: none;
+	z-index: 10000;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
