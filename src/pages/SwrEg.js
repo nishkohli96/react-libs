@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-// import useSWR from 'swr';
 import axiosApi from '@Utils/AxiosApi';
 
 const SwrEg = () => {

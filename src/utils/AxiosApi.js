@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const axiosApi = axios.create({
     baseURL: 'https://pokeapi.co/api/v2/pokemon',
-    timeout: 1000,
+    timeout: 10000,
     headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
