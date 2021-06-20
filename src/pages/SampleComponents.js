@@ -1,6 +1,7 @@
 import CogoToastEg from '@Atoms/CogoToastEg';
 import GlassComp from '@Atoms/GlassComp';
 import ReactCsv from '@Atoms/ReactCsv';
+import AosDiv from '@Atoms/AosDiv';
 
 const SampleComponents = () => {
     return (
@@ -8,6 +9,7 @@ const SampleComponents = () => {
             <CogoToastEg />
             <GlassComp />
             <ReactCsv />
+            <AosDiv />
         </div>
     );
 };
