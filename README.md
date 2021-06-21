@@ -20,6 +20,7 @@ While building app for production, comment/remove `import tailwind.css` line in 
 - [react-charts](https://www.npmjs.com/package/react-charts)
 - [react-csv](https://www.npmjs.com/package/react-csv)
 - [react-icons](https://www.npmjs.com/package/react-icons)
+- [react-query](https://www.npmjs.com/package/react-query)
 - [tailwind-css](https://tailwindcss.com/)
 - [yup](https://www.npmjs.com/package/yup)
 - [zoom-websdk](https://www.npmjs.com/package/@zoomus/websdk)

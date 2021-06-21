@@ -1,14 +1,19 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import App from './App';
 import LoadingComp from '@Components/LoadingComp';
 import reportWebVitals from './reportWebVitals';
 import '@Styles/tailwind.css';
 
+const queryClient = new QueryClient();
+
 const ReactApp = () => (
     <React.StrictMode>
         <Suspense fallback={<LoadingComp />}>
-            <App />
+            <QueryClientProvider client={queryClient}>
+                <App />
+            </QueryClientProvider>
         </Suspense>
     </React.StrictMode>
 );
