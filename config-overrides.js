@@ -10,6 +10,7 @@ module.exports = override(
         ['@Atoms']: path.resolve(__dirname, './src/components/atoms'),
         ['@Components']: path.resolve(__dirname, './src/components'),
         ['@Images']: path.resolve(__dirname, './src/assets/images'),
+        ['@Molecules']: path.resolve(__dirname, './src/components/molecules'),
         ['@Pages']: path.resolve(__dirname, './src/pages'),
         ['@Styles']: path.resolve(__dirname, './src/assets/styles'),
         ['@Utils']: path.resolve(__dirname, './src/utils'),

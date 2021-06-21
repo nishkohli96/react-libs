@@ -1,9 +1,18 @@
 import React from 'react';
 import videojs from 'video.js';
+import ReactPlayer from 'react-player';
+import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import fieryace from '@Images/fireyace.png';
 import 'video.js/dist/video-js.css';
 
 class VideoPlayer extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            videoPlaying: false,
+        };
+    }
+
     componentDidMount() {
         // instantiate Video.js
         this.player = videojs(
@@ -35,6 +44,7 @@ class VideoPlayer extends React.Component {
     render() {
         return (
             <div style={{ margin: 30 }}>
+                <div className="text-lavendar">VideoJS Example</div>
                 <div data-vjs-player>
                     <video
                         ref={(node) => (this.videoNode = node)}
@@ -60,6 +70,27 @@ class VideoPlayer extends React.Component {
                         </p>
                     </video>
                 </div>
+
+                <div className="text-purple-500" style={{ marginTop: 30 }}>
+                    React-player Example
+                </div>
+                <ReactPlayer
+                    url="https://youtu.be/bFFNHRvJGq8"
+                    controls
+                    width={600}
+                    height={400}
+                    playing={this.state.videoPlaying}
+                />
+                <div className="text-yellow-700">
+                    Click the below icon to pause/play video
+                </div>
+                <PlayCircleOutlineIcon
+                    onClick={() =>
+                        this.setState({
+                            videoPlaying: !this.state.videoPlaying,
+                        })
+                    }
+                />
             </div>
         );
     }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axiosApi from '@Utils/AxiosApi';
+import ReactWindowEg from '@Molecules/ReactWindowEg';
 
 const SwrEg = () => {
     useEffect(() => {
@@ -25,6 +26,7 @@ const SwrEg = () => {
                 <span className="font-semibold">Id: </span>
                 {pokeDetais.id}
             </p>
+            <ReactWindowEg />
         </div>
     );
 };
