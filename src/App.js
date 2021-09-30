@@ -6,6 +6,7 @@ import HomeScreen from '@Pages/HomeScreen';
 import FormikForm from '@Pages/FormikForm';
 import ReactChart from '@Pages/ReactChart';
 import SampleComponents from '@Pages/SampleComponents';
+import DragNDrop from '@Pages/DragNDrop';
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Route path="/swr" component={SwrEg} />
                 <Route path="/videojs" component={VideoJsEg} />
                 <Route path="/react-charts" component={ReactChart} />
+                <Route path="/drag-n-drop" component={DragNDrop} />
             </Switch>
         </BrowserRouter>
     );

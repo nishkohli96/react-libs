@@ -19,7 +19,10 @@ const LinksList = () => {
                 React-charts
             </Link>
             <Link className="link" to="/zoom">
-                zoom web sdk
+                Zoom web sdk
+            </Link>
+            <Link className="link" to="/drag-n-drop">
+                Drag and drop list
             </Link>
         </div>
     );
