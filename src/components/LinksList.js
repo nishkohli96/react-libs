@@ -13,7 +13,7 @@ const LinksList = () => {
                 Swr with Axios
             </Link>
             <Link className="link" to="/videojs">
-                VideoJS Example
+                VideoJS, React-player
             </Link>
             <Link className="link" to="/react-charts">
                 React-charts
@@ -23,6 +23,25 @@ const LinksList = () => {
             </Link>
             <Link className="link" to="/drag-n-drop">
                 Drag and drop list
+            </Link>
+            <Link className="link" to="/redux">
+                Redux Egs
+            </Link>
+
+            <Link className="link" to="/videojs">
+                VideoJS, React-player
+            </Link>
+            <Link className="link" to="/react-charts">
+                React-charts
+            </Link>
+            <Link className="link" to="/zoom">
+                Zoom web sdk
+            </Link>
+            <Link className="link" to="/drag-n-drop">
+                Drag and drop list
+            </Link>
+            <Link className="link" to="/redux">
+                Redux Egs
             </Link>
         </div>
     );
