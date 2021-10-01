@@ -20,6 +20,7 @@ While building app for production, comment/remove `import tailwind.css` line in 
 - [faker](https://www.npmjs.com/package/faker)
 - [formik](https://www.npmjs.com/package/formik)
 - [material-ui](https://material-ui.com/)
+- [react-beautiful-dnd](https://www.npmjs.com/package/react-beautiful-dnd)
 - [react-charts](https://www.npmjs.com/package/react-charts)
 - [react-csv](https://www.npmjs.com/package/react-csv)
 - [react-icons](https://www.npmjs.com/package/react-icons)

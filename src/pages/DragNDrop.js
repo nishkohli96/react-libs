@@ -3,9 +3,10 @@ import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 // fake data generator
 const getItems = (count) =>
-    Array.from({ length: count }, (v, k) => k).map((k) => ({
+    Array.from({ length: count }, (v, k) => k).map((k, index) => ({
         id: `item-${k}`,
         content: `item ${k}`,
+        position: index,
     }));
 
 // a little function to help us with reordering the result
@@ -14,6 +15,8 @@ const reorder = (list, startIndex, endIndex) => {
     const [removed] = result.splice(startIndex, 1);
     result.splice(endIndex, 0, removed);
 
+    /* Updating new positions */
+    result.map((ele, index) => (ele.position = index));
     return result;
 };
 
@@ -53,6 +56,7 @@ const DragNDrop = () => {
             result.source.index,
             result.destination.index
         );
+        console.log(result.source.index, result.destination.index);
         console.log('orderedItems: ', orderedItems);
 
         setItems(orderedItems);
