@@ -1,4 +1,4 @@
-import VideoPlayer from '@Atoms/VideoPlayer';
+import VideoPlayer from '_Atoms/VideoPlayer';
 
 const VideoJsEg = () => {
     const videoJsOptions = {

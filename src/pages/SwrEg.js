@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import axiosApi from '@Utils/AxiosApi';
-import ReactWindowEg from '@Molecules/ReactWindowEg';
+import axiosApi from '_Utils/AxiosApi';
+import ReactWindowEg from '_Molecules/ReactWindowEg';
 
 const SwrEg = () => {
     useEffect(() => {

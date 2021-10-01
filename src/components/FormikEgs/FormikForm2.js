@@ -3,8 +3,8 @@ import Textfield from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 /* Can use Schema like Yup or own validation function to validate form*/
-import { YupSchema } from '@Utils/FormHelpers';
-// import { formValidations } from '@Utils/FormHelpers';
+import { YupSchema } from '_Utils/FormHelpers';
+// import { formValidations } from '_Utils/FormHelpers';
 
 const formDefaults = {
     fullName: '',

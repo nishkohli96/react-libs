@@ -1,7 +1,7 @@
 import React from 'react';
 import { Chart } from 'react-charts';
 import Button from '@material-ui/core/Button';
-import useChartConfig from '@Utils/useChartConfig';
+import useChartConfig from '_Utils/useChartConfig';
 
 const getRandomInt = () => {
     const min = 0;
@@ -36,20 +36,14 @@ const ReactChart = () => {
         return res;
     };
 
-    const {
-        data,
-        getSeriesStyle,
-        getDatumStyle,
-        onFocus,
-        dataSeries,
-        axes,
-    } = useChartConfig({
-        series: 1 /* Values for each label */,
-        datums: dataSet.length /* Num of labels */,
-        yMax: getYMax(dataSet),
-        dataType: 'integer',
-        dataSet,
-    });
+    const { data, getSeriesStyle, getDatumStyle, onFocus, dataSeries, axes } =
+        useChartConfig({
+            series: 1 /* Values for each label */,
+            datums: dataSet.length /* Num of labels */,
+            yMax: getYMax(dataSet),
+            dataType: 'integer',
+            dataSet,
+        });
 
     return (
         <div className="fullscreen">

@@ -2,7 +2,7 @@ import React from 'react';
 import videojs from 'video.js';
 import ReactPlayer from 'react-player';
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
-import fieryace from '@Images/fireyace.png';
+import fieryace from '_Images/fireyace.png';
 import 'video.js/dist/video-js.css';
 
 class VideoPlayer extends React.Component {

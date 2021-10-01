@@ -1,4 +1,4 @@
-import LinksList from '@Components/LinksList';
+import LinksList from '_Components/LinksList';
 
 const HomeScreen = () => {
     return (

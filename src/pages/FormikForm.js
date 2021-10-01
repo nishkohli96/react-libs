@@ -1,8 +1,8 @@
 import Divider from '@material-ui/core/Divider';
 
-import FormikForm1 from '@Components/FormikEgs/FormikForm1';
-import FormikForm2 from '@Components/FormikEgs/FormikForm2';
-import FormikForm3 from '@Components/FormikEgs/FormikForm3';
+import FormikForm1 from '_Components/FormikEgs/FormikForm1';
+import FormikForm2 from '_Components/FormikEgs/FormikForm2';
+import FormikForm3 from '_Components/FormikEgs/FormikForm3';
 
 const FormikForm = () => {
     return (

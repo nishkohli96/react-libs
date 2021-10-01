@@ -6,6 +6,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
+    "@reduxjs/toolkit": "^1.6.1",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "@zoomus/websdk": "^1.9.6",
     "aos": "^2.3.4",
@@ -26,6 +27,7 @@
     "react-icons": "^4.2.0",
     "react-player": "^2.9.0",
     "react-query": "^3.17.2",
+    "react-redux": "^7.2.5",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-toastify": "^7.0.4",

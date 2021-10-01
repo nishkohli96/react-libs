@@ -1,15 +1,15 @@
 import { lazy } from 'react';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
-const HomeScreen = lazy(() => import('@Pages/HomeScreen'));
-const FormikForm = lazy(() => import('@Pages/FormikForm'));
-const SampleComponents = lazy(() => import('@Pages/SampleComponents'));
-const SwrEg = lazy(() => import('@Pages/SwrEg'));
-const VideoJsEg = lazy(() => import('@Pages/VideoJsEg'));
-const ReactChart = lazy(() => import('@Pages/ReactChart'));
-const ZoomEg = lazy(() => import('@Pages/ZoomEg'));
-const DragNDrop = lazy(() => import('@Pages/DragNDrop'));
-const Page404 = lazy(() => import('@Pages/Page404'));
+const HomeScreen = lazy(() => import('_Pages/HomeScreen'));
+const FormikForm = lazy(() => import('_Pages/FormikForm'));
+const SampleComponents = lazy(() => import('_Pages/SampleComponents'));
+const SwrEg = lazy(() => import('_Pages/SwrEg'));
+const VideoJsEg = lazy(() => import('_Pages/VideoJsEg'));
+const ReactChart = lazy(() => import('_Pages/ReactChart'));
+const ZoomEg = lazy(() => import('_Pages/ZoomEg'));
+const DragNDrop = lazy(() => import('_Pages/DragNDrop'));
+const Page404 = lazy(() => import('_Pages/Page404'));
 
 const Routing = () => {
     return (

@@ -1,9 +1,9 @@
-import CogoToastEg from '@Atoms/CogoToastEg';
-import GlassComp from '@Atoms/GlassComp';
-import ReactCsv from '@Atoms/ReactCsv';
-import AosDiv from '@Atoms/AosDiv';
-import ReactQueryEg from '@Atoms/ReactQueryEg';
-import ReactToastifyEg from '@Atoms/ReactToastifyEg';
+import CogoToastEg from '_Atoms/CogoToastEg';
+import GlassComp from '_Atoms/GlassComp';
+import ReactCsv from '_Atoms/ReactCsv';
+import AosDiv from '_Atoms/AosDiv';
+import ReactQueryEg from '_Atoms/ReactQueryEg';
+import ReactToastifyEg from '_Atoms/ReactToastifyEg';
 
 const SampleComponents = () => {
     return (
