@@ -1,48 +1,22 @@
 import { Link } from 'react-router-dom';
 
 const LinksList = () => {
+    const LinkComponent = ({ path = '', text = '' }) => (
+        <div className="link">
+            <Link to={path}>{text}</Link>
+        </div>
+    );
+
     return (
         <div className="root">
-            <Link className="link" to="/formik">
-                Formik
-            </Link>
-            <Link className="link" to="/sample">
-                Sample Components
-            </Link>
-            <Link className="link" to="/swr">
-                Swr with Axios
-            </Link>
-            <Link className="link" to="/videojs">
-                VideoJS, React-player
-            </Link>
-            <Link className="link" to="/react-charts">
-                React-charts
-            </Link>
-            <Link className="link" to="/zoom">
-                Zoom web sdk
-            </Link>
-            <Link className="link" to="/drag-n-drop">
-                Drag and drop list
-            </Link>
-            <Link className="link" to="/redux">
-                Redux Egs
-            </Link>
-
-            <Link className="link" to="/videojs">
-                VideoJS, React-player
-            </Link>
-            <Link className="link" to="/react-charts">
-                React-charts
-            </Link>
-            <Link className="link" to="/zoom">
-                Zoom web sdk
-            </Link>
-            <Link className="link" to="/drag-n-drop">
-                Drag and drop list
-            </Link>
-            <Link className="link" to="/redux">
-                Redux Egs
-            </Link>
+            <LinkComponent path="/formik" text="Formik" />
+            <LinkComponent path="/sample" text="Sample Components" />
+            <LinkComponent path="/swr" text="Swr with Axios" />
+            <LinkComponent path="/videojs" text="VideoJS &amp; React-player" />
+            <LinkComponent path="/react-charts" text="React-charts" />
+            <LinkComponent path="/zoom" text="Zoom web sdk" />
+            <LinkComponent path="/drag-n-drop" text="Drag and drop list" />
+            <LinkComponent path="/redux" text="Redux Egs" />
         </div>
     );
 };

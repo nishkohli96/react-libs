@@ -13,7 +13,7 @@
 		@apply w-screen p-5 min-h-screen overflow-y-auto;
 	}
 	.root {
-		@apply p-5 bg-red-300 flex-wrap;
+		@apply p-5 bg-red-300 flex flex-wrap;
 	}
 	.heading {
 		@apply text-3xl text-navyb mx-auto mb-5;
@@ -22,7 +22,7 @@
 		@apply text-xl text-gray-600 my-2;
 	}
 	.link {
-		@apply m-4 text-red-600 p-2 bg-green-200;
+		@apply m-4 text-red-600 p-2 bg-green-200 cursor-pointer;
 	}
 	.formdiv {
 		@apply px-7 py-5 bg-vlblue w-auto;

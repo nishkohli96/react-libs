@@ -8,17 +8,11 @@ const ReduxEg = () => {
     return (
         <div className="fullscreen">
             <div>
-                <button
-                    aria-label="Increment value"
-                    onClick={() => dispatch(increment())}
-                >
+                <button className="link" onClick={() => dispatch(increment())}>
                     Increment
                 </button>
                 <span>{count}</span>
-                <button
-                    aria-label="Decrement value"
-                    onClick={() => dispatch(decrement())}
-                >
+                <button className="link" onClick={() => dispatch(decrement())}>
                     Decrement
                 </button>
             </div>
