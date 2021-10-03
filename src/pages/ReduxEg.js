@@ -5,10 +5,12 @@ import {
     increment,
     incrementByAmount,
 } from '_Store/counter.slice';
-import { printInfo, fetchBankInfo } from '_Store/bankInfo.slice';
+import { fetchBankInfo } from '_Store/bankInfo.slice';
 
 const ReduxEg = () => {
     const count = useSelector((state) => state.counter.value);
+    const bankInfo = useSelector((state) => state.bank.bankInfo);
+
     const dispatch = useDispatch();
 
     return (
@@ -42,13 +44,13 @@ const ReduxEg = () => {
                 <div className="text-blue-400">BankInfo Example ( Async ) </div>
                 <button
                     className="link"
-                    onClick={() => dispatch(fetchBankInfo())}
+                    onClick={() =>
+                        dispatch(fetchBankInfo({ ifsc: 'KARB0000001' }))
+                    }
                 >
                     Get Bank Info
                 </button>
-                <button className="link" onClick={() => dispatch(printInfo())}>
-                    Console.log Bank Info
-                </button>
+                <div className="text-red-400">{bankInfo.BANK}</div>
             </div>
         </div>
     );
