@@ -1,5 +1,14 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
-import { persistStore, persistReducer } from 'redux-persist';
+import {
+    persistStore,
+    persistReducer,
+    FLUSH,
+    REHYDRATE,
+    PAUSE,
+    PERSIST,
+    PURGE,
+    REGISTER,
+} from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
 import counterReducer from './counter.slice';
@@ -21,11 +30,22 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-// export const store = createStore(persistedReducer);
+/* https://redux.js.org/style-guide/style-guide#do-not-put-non-serializable-values-in-state-or-actions */
 export const store = configureStore({
     reducer: persistedReducer,
     middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware().concat(apiSlice.middleware),
+        getDefaultMiddleware({
+            serializableCheck: {
+                ignoredActions: [
+                    FLUSH,
+                    REHYDRATE,
+                    PAUSE,
+                    PERSIST,
+                    PURGE,
+                    REGISTER,
+                ],
+            },
+        }).concat(apiSlice.middleware),
 });
 
 export const persistor = persistStore(store);
