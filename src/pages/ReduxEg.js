@@ -13,6 +13,13 @@ const ReduxEg = () => {
 
     const dispatch = useDispatch();
 
+    /*  Refer these links for more info on fetching data using thunks,
+        and say filtering from an arrayObj in state 
+
+        - https://redux.js.org/tutorials/essentials/part-5-async-logic
+        - https://redux.js.org/tutorials/essentials/part-6-performance-normalization
+
+    */
     return (
         <div className="fullscreen">
             <div>
