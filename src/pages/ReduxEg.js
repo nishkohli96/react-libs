@@ -6,6 +6,7 @@ import {
     incrementByAmount,
 } from '_Store/counter.slice';
 import { fetchBankInfo } from '_Store/bankInfo.slice';
+import { useGetBankInfoQuery } from '_Store/api.slice';
 
 const ReduxEg = () => {
     const count = useSelector((state) => state.counter.value);
@@ -18,8 +19,16 @@ const ReduxEg = () => {
 
         - https://redux.js.org/tutorials/essentials/part-5-async-logic
         - https://redux.js.org/tutorials/essentials/part-6-performance-normalization
-
     */
+
+    const {
+        data: bankInfoData,
+        isLoading: bankInfoLoading,
+        isSuccess: bankInfoFetchSuccess,
+        // isError,
+        // error
+    } = useGetBankInfoQuery();
+
     return (
         <div className="fullscreen">
             <div>
@@ -57,7 +66,17 @@ const ReduxEg = () => {
                 >
                     Get Bank Info
                 </button>
-                <div className="text-red-400">{bankInfo.BANK}</div>
+                <div className="text-red-400">
+                    <b>Data fetched using createAsyncThunk:</b> {bankInfo.BANK}
+                </div>
+                {bankInfoLoading && (
+                    <div className="text-pink-500">Fetching Data....</div>
+                )}
+                {bankInfoFetchSuccess && (
+                    <div className="text-red-400">
+                        <b>Data fetched using RTK-Query:</b> {bankInfoData.BANK}
+                    </div>
+                )}
             </div>
         </div>
     );

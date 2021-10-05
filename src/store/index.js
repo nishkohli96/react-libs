@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from './counter.slice';
 import bankInfoReducer from './bankInfo.slice';
+import { apiSlice } from './api.slice';
 
 export default configureStore({
     reducer: {
@@ -8,5 +9,8 @@ export default configureStore({
             respective slice */
         bank: bankInfoReducer,
         counter: counterReducer,
+        [apiSlice.reducerPath]: apiSlice.reducer,
     },
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware().concat(apiSlice.middleware),
 });
