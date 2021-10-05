@@ -28,6 +28,7 @@ While building app for production, comment/remove `import tailwind.css` line in 
 - [react-query](https://www.npmjs.com/package/react-query)
 - [react-redux](https://www.npmjs.com/package/react-redux)
 - [@reduxjs/toolkit](https://www.npmjs.com/package/@reduxjs/toolkit)
+- [redux-perist](https://www.npmjs.com/package/redux-persist)
 - [react-toastify](https://www.npmjs.com/package/react-toastify)
 - [react-window](https://www.npmjs.com/package/react-window)
 - [tailwind-css](https://tailwindcss.com/)
