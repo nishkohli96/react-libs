@@ -26,7 +26,8 @@ const ReduxEg = () => {
         isLoading: bankInfoLoading,
         isSuccess: bankInfoFetchSuccess,
         // isError,
-        // error
+        // error,
+        // refetch
     } = useGetBankInfoQuery();
 
     return (
@@ -66,6 +67,8 @@ const ReduxEg = () => {
                 >
                     Get Bank Info
                 </button>
+
+                {/* <button onClick={refetch}>Refetch Posts</button> */}
                 <div className="text-red-400">
                     <b>Data fetched using createAsyncThunk:</b> {bankInfo.BANK}
                 </div>
