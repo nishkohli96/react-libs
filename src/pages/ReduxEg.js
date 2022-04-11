@@ -70,14 +70,16 @@ const ReduxEg = () => {
 
                 {/* <button onClick={refetch}>Refetch Posts</button> */}
                 <div className="text-red-400">
-                    <b>Data fetched using createAsyncThunk:</b> {bankInfo.BANK}
+                    <b>Data fetched using createAsyncThunk:</b>{' '}
+                    {JSON.stringify(bankInfo)}
                 </div>
                 {bankInfoLoading && (
                     <div className="text-pink-500">Fetching Data....</div>
                 )}
                 {bankInfoFetchSuccess && (
                     <div className="text-red-400">
-                        <b>Data fetched using RTK-Query:</b> {bankInfoData.BANK}
+                        <b>Data fetched using RTK-Query:</b>{' '}
+                        {JSON.stringify(bankInfoData)}
                     </div>
                 )}
             </div>

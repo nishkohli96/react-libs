@@ -18,6 +18,7 @@ While building app for production, comment/remove `import tailwind.css` line in 
 - [axios](https://www.npmjs.com/package/axios)
 - [cogo-toast](https://www.npmjs.com/package/cogo-toast)
 - [faker](https://www.npmjs.com/package/faker)
+- [fontsource](https://fontsource.org/)
 - [formik](https://www.npmjs.com/package/formik)
 - [material-ui](https://material-ui.com/)
 - [react-beautiful-dnd](https://www.npmjs.com/package/react-beautiful-dnd)

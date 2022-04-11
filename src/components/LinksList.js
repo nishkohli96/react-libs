@@ -17,6 +17,7 @@ const LinksList = () => {
             <LinkComponent path="/zoom" text="Zoom web sdk" />
             <LinkComponent path="/drag-n-drop" text="Drag and drop list" />
             <LinkComponent path="/redux" text="Redux Egs" />
+            <LinkComponent path="/font-source" text="Font Source" />
         </div>
     );
 };

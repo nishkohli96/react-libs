@@ -10,6 +10,7 @@ const ReactChart = lazy(() => import('_Pages/ReactChart'));
 const ZoomEg = lazy(() => import('_Pages/ZoomEg'));
 const DragNDrop = lazy(() => import('_Pages/DragNDrop'));
 const ReduxEgs = lazy(() => import('_Pages/ReduxEg'));
+const FontSourceEgs = lazy(() => import('_Pages/FontSourceEgs'));
 const Page404 = lazy(() => import('_Pages/Page404'));
 
 const Routing = () => {
@@ -25,6 +26,7 @@ const Routing = () => {
                 <Route path="/videojs" component={VideoJsEg} />
                 <Route path="/react-charts" component={ReactChart} />
                 <Route path="/drag-n-drop" component={DragNDrop} />
+                <Route path="/font-source" component={FontSourceEgs} />
                 <Route path="/redux" component={ReduxEgs} />
                 <Route component={Page404} />
             </Switch>

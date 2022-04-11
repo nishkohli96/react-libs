@@ -1,6 +1,10 @@
 #zmmtg-root {
-	display: none;
-	z-index: 10000;
+    display: none;
+    z-index: 10000;
+}
+
+body {
+    padding: 10px;
 }
 
 @tailwind base;
@@ -8,35 +12,35 @@
 @tailwind utilities;
 
 @layer components {
-	/* w-max for width: fit-content */
-	.fullscreen {
-		@apply w-screen p-5 min-h-screen overflow-y-auto;
-	}
-	.root {
-		@apply p-5 bg-red-300 flex flex-wrap;
-	}
-	.heading {
-		@apply text-3xl text-navyb mx-auto mb-5;
-	}
-	.sub-heading {
-		@apply text-xl text-gray-600 my-2;
-	}
-	.link {
-		@apply m-4 text-red-600 p-2 bg-green-200 cursor-pointer;
-	}
-	.formdiv {
-		@apply px-7 py-5 bg-vlblue w-auto;
-	}
-	.textfield {
-		@apply w-full;
-	}
-	.errText {
-		@apply mt-2 text-red-400;
-	}
-	.code {
-		@apply bg-gray-300 text-black text-2xl px-3 py-1;
-	}
-	.btn {
-		@apply px-4 py-2 m-2 bg-green-400 text-white;
-	}
+    /* w-max for width: fit-content */
+    .fullscreen {
+        @apply w-screen p-5 min-h-screen overflow-y-auto;
+    }
+    .root {
+        @apply p-5 bg-red-300 flex flex-wrap;
+    }
+    .heading {
+        @apply text-3xl text-navyb mx-auto mb-5;
+    }
+    .sub-heading {
+        @apply text-xl text-gray-600 my-2;
+    }
+    .link {
+        @apply m-4 text-red-600 p-2 bg-green-200 cursor-pointer;
+    }
+    .formdiv {
+        @apply px-7 py-5 bg-vlblue w-auto;
+    }
+    .textfield {
+        @apply w-full;
+    }
+    .errText {
+        @apply mt-2 text-red-400;
+    }
+    .code {
+        @apply bg-gray-300 text-black text-2xl px-3 py-1;
+    }
+    .btn {
+        @apply px-4 py-2 m-2 bg-green-400 text-white;
+    }
 }
