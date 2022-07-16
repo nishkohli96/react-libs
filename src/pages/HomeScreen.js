@@ -1,4 +1,5 @@
 import LinksList from '_Components/LinksList';
+import { FontFullStyle } from '../style-dictionary-dist';
 
 const HomeScreen = () => {
     return (
@@ -7,6 +8,9 @@ const HomeScreen = () => {
             <div className="text-xl my-2 text-silver-500">
                 Click any of the links below...
             </div>
+            <span style={FontFullStyle}>
+                This text imports its styles from style-dictionary
+            </span>
             <LinksList />
         </div>
     );

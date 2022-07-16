@@ -43,7 +43,7 @@
     "yup": "^0.32.8"
   },
   "scripts": {
-    "build-dictionary": "style-dictionary build --config ./style-dictionary/config.json",
+    "build-dictionary": "style-dictionary build --config ./style-dictionary/config.js",
     "build-styles": "tailwindcss build src/assets/styles/tailwind.css -o src/assets/styles/index.css",
     "start": "yarn build-dictionary && react-app-rewired start",
     "build": "yarn build-styles && yarn build-dictionary && react-app-rewired build",
