@@ -43,9 +43,10 @@
     "yup": "^0.32.8"
   },
   "scripts": {
+    "build-dictionary": "style-dictionary build --config ./style-dictionary/config.json",
     "build-styles": "tailwindcss build src/assets/styles/tailwind.css -o src/assets/styles/index.css",
-    "start": "react-app-rewired start",
-    "build": "yarn build-styles && react-app-rewired build",
+    "start": "yarn build-dictionary && react-app-rewired start",
+    "build": "yarn build-styles && yarn build-dictionary && react-app-rewired build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -70,7 +71,8 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.13",
     "prettier": "^2.2.1",
-    "react-app-rewired": "^2.1.8"
+    "react-app-rewired": "^2.1.8",
+    "style-dictionary": "^3.7.1"
   },
   "husky": {
     "hooks": {
