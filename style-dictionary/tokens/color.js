@@ -14,6 +14,7 @@ module.exports = {
         background: {
             value: '#EEEEEE',
         },
-        default: { value: 'color.base.primary.value' },
+        withOpacity: { value: '#0066991D' },
+        default: { value: '{color.base.primary.value}' },
     },
 };

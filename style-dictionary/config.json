@@ -1,17 +1,16 @@
 {
-    "source": ["./tokens/**/*.js"],
+    "source": ["./style-dictionary/tokens/**/*.js"],
     "platforms": {
         "scss": {
             "transformGroup": "scss",
-            "prefix": "sd",
-            "buildPath": "../src/style-dictionary-dist",
+            "prefix": "token",
+            "buildPath": "../src/style-dictionary-dist/",
             "files": [
                 {
                     "destination": "variables.scss",
                     "format": "scss/variables"
                 }
-            ],
-            "actions": ["copy_assets"]
+            ]
         },
         "js": {
             "transformGroup": "js",
