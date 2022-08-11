@@ -12,6 +12,7 @@ const DragNDrop = lazy(() => import('_Pages/DragNDrop'));
 const ReduxEgs = lazy(() => import('_Pages/ReduxEg'));
 const FontSourceEgs = lazy(() => import('_Pages/FontSourceEgs'));
 const Page404 = lazy(() => import('_Pages/Page404'));
+const ReactHookForm = lazy(() => import('_Components/ReactHookForm'));
 
 const Routing = () => {
     return (
@@ -28,6 +29,7 @@ const Routing = () => {
                 <Route path="/drag-n-drop" component={DragNDrop} />
                 <Route path="/font-source" component={FontSourceEgs} />
                 <Route path="/redux" component={ReduxEgs} />
+                <Route path="/react-hook-form" component={ReactHookForm} />
                 <Route component={Page404} />
             </Switch>
         </BrowserRouter>

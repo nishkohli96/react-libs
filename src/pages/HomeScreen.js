@@ -1,4 +1,4 @@
-import LinksList from '_Components/LinksList';
+import LinksList from '../components/LinksList';
 import { FontFullStyle } from '../style-dictionary-dist';
 
 const HomeScreen = () => {
