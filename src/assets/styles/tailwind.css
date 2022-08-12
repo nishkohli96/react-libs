@@ -7,6 +7,32 @@ body {
     padding: 10px;
 }
 
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: local('Roboto-Regular'),
+        url('../roboto/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Black';
+    src: local('Roboto-Black'),
+        url('../roboto/Roboto-Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: local('Roboto-Thin'),
+        url('../roboto/Roboto-Thin.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: local('Roboto-Medium'),
+        url('../roboto/Roboto-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: local('Roboto-Light'),
+        url('../roboto/Roboto-Light.ttf') format('truetype');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
