@@ -1,14 +1,16 @@
 import { Controller, useForm, useFieldArray } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import {
-    TextField,
-    Select,
-    Divider,
     Button,
-    MenuItem,
+    Divider,
     Grid,
+    IconButton,
+    MenuItem,
+    Select,
+    TextField,
     Typography,
 } from '@material-ui/core';
+import { Add, Clear, Delete } from '@material-ui/icons';
 import { FormSchema } from './schema';
 import { FormType, Colors, ItemShape } from './types';
 
@@ -32,6 +34,7 @@ const ReactHookForm = () => {
     const {
         control,
         register,
+        reset,
         handleSubmit,
         formState: { errors },
     } = useForm<FormType>({
@@ -53,7 +56,7 @@ const ReactHookForm = () => {
     return (
         <form>
             <Typography variant="h6">React Hook Form Example</Typography>
-            <Grid container>
+            <Grid container style={{ marginBottom: 40 }}>
                 <Grid container item xs={12} style={{ margin: '20px 0px' }}>
                     <Grid item xs={4}>
                         <TextField
@@ -105,7 +108,13 @@ const ReactHookForm = () => {
                 </Grid>
                 {fields.map((field, index) => (
                     <Grid container item xs={12} key={field.id}>
-                        <Grid item xs={1}>
+                        <Grid
+                            container
+                            item
+                            xs={1}
+                            justifyContent="center"
+                            alignItems="flex-end"
+                        >
                             <span style={{ marginRight: 20 }}>
                                 Row {index + 1}
                             </span>
@@ -131,7 +140,7 @@ const ReactHookForm = () => {
                                 error={!!errors?.items?.[index]?.description}
                             />
                         </Grid>
-                        <Grid item xs={1}>
+                        <Grid container item xs={2} alignItems="flex-end">
                             <Controller
                                 control={control}
                                 name={`items.${index}.shape`}
@@ -154,9 +163,10 @@ const ReactHookForm = () => {
                                 )}
                             />
                         </Grid>
-                        <Grid item xs={2}>
+                        <Grid item xs={1}>
                             <TextField
                                 {...register(`items.${index}.length`)}
+                                style={{ width: 50 }}
                                 type="number"
                                 label="Length"
                                 helperText={
@@ -165,9 +175,10 @@ const ReactHookForm = () => {
                                 error={!!errors?.items?.[index]?.length}
                             />
                         </Grid>
-                        <Grid item xs={2}>
+                        <Grid item xs={1}>
                             <TextField
                                 {...register(`items.${index}.width`)}
+                                style={{ width: 50 }}
                                 type="number"
                                 label="Width"
                                 helperText={
@@ -176,9 +187,10 @@ const ReactHookForm = () => {
                                 error={!!errors?.items?.[index]?.width}
                             />
                         </Grid>
-                        <Grid item xs={2}>
+                        <Grid item xs={1}>
                             <TextField
                                 {...register(`items.${index}.height`)}
+                                style={{ width: 50 }}
                                 type="number"
                                 label="Height"
                                 helperText={
@@ -187,10 +199,50 @@ const ReactHookForm = () => {
                                 error={!!errors?.items?.[index]?.height}
                             />
                         </Grid>
+                        <Grid item xs={1}>
+                            <IconButton
+                                onClick={() => {
+                                    if (fields.length > 1) {
+                                        remove(index);
+                                    }
+                                }}
+                            >
+                                <Delete />
+                            </IconButton>
+                        </Grid>
+                        <Grid item xs={1}>
+                            <IconButton
+                                onClick={() => {
+                                    if (fields.length > 1) {
+                                        remove(index);
+                                    }
+                                }}
+                            >
+                                <Clear />
+                            </IconButton>
+                        </Grid>
                     </Grid>
                 ))}
                 <Grid container item xs={12} style={{ marginTop: 20 }}>
-                    <Grid item xs={6}>
+                    <Grid item xs={2}>
+                        <Button
+                            color="secondary"
+                            variant="outlined"
+                            onClick={() => append(initialFormValues.items[0])}
+                        >
+                            Add Item
+                        </Button>
+                    </Grid>
+                    <Grid item xs={2}>
+                        <Button
+                            color="primary"
+                            variant="outlined"
+                            onClick={() => reset()}
+                        >
+                            Reset Form
+                        </Button>
+                    </Grid>
+                    <Grid item xs={2}>
                         <Button
                             color="primary"
                             variant="contained"

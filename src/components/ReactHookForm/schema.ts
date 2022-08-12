@@ -34,17 +34,18 @@ export const FormSchema = object().shape(
                     length: number()
                         .nullable()
                         .notRequired()
-                        .typeError('typerrr')
                         .when('length', {
                             is: (val) => val,
                             then: (rule) => rule.min(5).max(10000),
                         })
                         .when(['width', 'height'], {
                             is: (a, b) => Boolean(a || b),
-                            then: number().required('required'),
+                            then: number()
+                                .required('required')
+                                .typeError('enter a number'),
                         }),
                     width: number()
-                        .typeError('typerrr')
+                        .nullable()
                         .notRequired()
                         .when('width', {
                             is: (val) => val,
@@ -52,13 +53,13 @@ export const FormSchema = object().shape(
                         })
                         .when(['length', 'height'], {
                             is: (a, b) => Boolean(a || b),
-                            then: number().required(),
-                        })
-                        .nullable(),
+                            then: number()
+                                .required()
+                                .typeError('enter a number'),
+                        }),
                     height: number()
                         .nullable()
                         .notRequired()
-                        .typeError('typerrr')
                         .when('width', {
                             is: (val) => val,
                             then: (rule) =>
@@ -71,7 +72,9 @@ export const FormSchema = object().shape(
                         })
                         .when(['width', 'length'], {
                             is: (a, b) => Boolean(a || b),
-                            then: number().required(),
+                            then: number()
+                                .required()
+                                .typeError('enter a number'),
                         }),
                 },
                 [
