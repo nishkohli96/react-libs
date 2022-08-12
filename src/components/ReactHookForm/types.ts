@@ -1,29 +1,29 @@
 export enum Colors {
-	Blue = 'Blue',
-	Red = 'Red',
-	Black = 'Black',
-	Orange = 'Orange',
-	White = 'White'
+    Blue = 'Blue',
+    Red = 'Red',
+    Black = 'Black',
+    Orange = 'Orange',
+    White = 'White',
 }
 export enum ItemShape {
-	Square = 'Square',
-	Cube = 'Cube',
-	Spherical = 'Spherical',
-	Irregular = 'Irregular'
+    Square = 'Square',
+    Cube = 'Cube',
+    Spherical = 'Spherical',
+    Irregular = 'Irregular',
 }
 
 interface Item {
     name: string;
     description: string;
     shape: ItemShape;
-    length: number | string;
-    width: number | string;
-    height: number | string;
+    length: number | null;
+    width: number | null;
+    height: number | null;
 }
 
 export interface FormType {
     reqdText: string;
-	optionalText: string;
-	color: Colors;
-	items: Item[]
+    quantity: number | null;
+    color: Colors;
+    items: Item[];
 }

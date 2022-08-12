@@ -15,16 +15,16 @@ import { FormType, Colors, ItemShape } from './types';
 const ReactHookForm = () => {
     const initialFormValues: FormType = {
         reqdText: 'required',
-        optionalText: '',
+        quantity: null,
         color: Object.values(Colors)[0],
         items: [
             {
                 name: '',
                 description: '',
                 shape: ItemShape[2],
-                length: '',
-                width: '',
-                height: 0,
+                length: null,
+                width: null,
+                height: null,
             },
         ],
     };
@@ -67,10 +67,11 @@ const ReactHookForm = () => {
                     </Grid>
                     <Grid item xs={4}>
                         <TextField
-                            {...register('optionalText')}
-                            label="Optional Text"
-                            error={!!errors?.reqdText}
-                            helperText={errors?.optionalText?.message}
+                            {...register('quantity')}
+                            type="number"
+                            label="Quantity"
+                            error={!!errors?.quantity}
+                            helperText={errors?.quantity?.message}
                         />
                     </Grid>
                     <Grid item xs={4}>
@@ -156,6 +157,7 @@ const ReactHookForm = () => {
                         <Grid item xs={2}>
                             <TextField
                                 {...register(`items.${index}.length`)}
+                                type="number"
                                 label="Length"
                                 helperText={
                                     errors?.items?.[index]?.length?.message
@@ -166,6 +168,7 @@ const ReactHookForm = () => {
                         <Grid item xs={2}>
                             <TextField
                                 {...register(`items.${index}.width`)}
+                                type="number"
                                 label="Width"
                                 helperText={
                                     errors?.items?.[index]?.width?.message
@@ -176,6 +179,7 @@ const ReactHookForm = () => {
                         <Grid item xs={2}>
                             <TextField
                                 {...register(`items.${index}.height`)}
+                                type="number"
                                 label="Height"
                                 helperText={
                                     errors?.items?.[index]?.height?.message
