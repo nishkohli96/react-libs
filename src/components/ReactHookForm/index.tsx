@@ -8,9 +8,10 @@ import {
     MenuItem,
     Select,
     TextField,
+    Tooltip,
     Typography,
 } from '@material-ui/core';
-import { Add, Clear, Delete } from '@material-ui/icons';
+import { Delete, Replay } from '@material-ui/icons';
 import { FormSchema } from './schema';
 import { FormType, Colors, ItemShape } from './types';
 
@@ -36,6 +37,7 @@ const ReactHookForm = () => {
         register,
         reset,
         handleSubmit,
+        setValue,
         formState: { errors },
     } = useForm<FormType>({
         resolver: yupResolver(FormSchema),
@@ -199,27 +201,32 @@ const ReactHookForm = () => {
                                 error={!!errors?.items?.[index]?.height}
                             />
                         </Grid>
-                        <Grid item xs={1}>
-                            <IconButton
-                                onClick={() => {
-                                    if (fields.length > 1) {
-                                        remove(index);
+                                          <Grid item xs={1}>
+                            <Tooltip title="Replay row data">
+                                <IconButton
+                                    onClick={() =>
+                                        setValue(
+                                            `items.${index}`,
+                                            initialFormValues.items[0]
+                                        )
                                     }
-                                }}
-                            >
-                                <Delete />
-                            </IconButton>
+                                >
+                                    <Replay />
+                                </IconButton>
+                            </Tooltip>
                         </Grid>
                         <Grid item xs={1}>
-                            <IconButton
-                                onClick={() => {
-                                    if (fields.length > 1) {
-                                        remove(index);
-                                    }
-                                }}
-                            >
-                                <Clear />
-                            </IconButton>
+                            <Tooltip title="Delete Row">
+                                <IconButton
+                                    onClick={() => {
+                                        if (fields.length > 1) {
+                                            remove(index);
+                                        }
+                                    }}
+                                >
+                                    <Delete />
+                                </IconButton>
+                            </Tooltip>
                         </Grid>
                     </Grid>
                 ))}
