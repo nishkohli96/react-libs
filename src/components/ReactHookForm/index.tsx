@@ -45,7 +45,7 @@ const ReactHookForm = () => {
         mode: 'onBlur',
     });
 
-    const { fields, append, remove } = useFieldArray({
+    const { fields, append, prepend, remove } = useFieldArray({
         control,
         name: 'items',
     });
@@ -201,7 +201,7 @@ const ReactHookForm = () => {
                                 error={!!errors?.items?.[index]?.height}
                             />
                         </Grid>
-                                          <Grid item xs={1}>
+                        <Grid item xs={1}>
                             <Tooltip title="Replay row data">
                                 <IconButton
                                     onClick={() =>
@@ -237,7 +237,21 @@ const ReactHookForm = () => {
                             variant="outlined"
                             onClick={() => append(initialFormValues.items[0])}
                         >
-                            Add Item
+                            Append Item
+                        </Button>
+                    </Grid>
+                    <Grid item xs={2}>
+                        <Button
+                            color="secondary"
+                            variant="outlined"
+                            onClick={() =>
+                                prepend({
+                                    ...initialFormValues.items[0],
+                                    name: 'Prepended Item',
+                                })
+                            }
+                        >
+                            Prepend Item
                         </Button>
                     </Grid>
                     <Grid item xs={2}>
