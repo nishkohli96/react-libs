@@ -14,6 +14,12 @@ module.exports = {
         },
         js: {
             transformGroup: 'js',
+            transform: [
+                'attribute/cti',
+                'name/cti/pascal',
+                'color/hex8',
+                'size/rem',
+            ],
             buildPath: './src/style-dictionary-dist/',
             files: [
                 {

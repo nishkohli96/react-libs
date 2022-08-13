@@ -32,6 +32,8 @@ const FontSouceEgs = () => (
         <p style={{ fontFamily: 'Roboto-Light', fontWeight: 900 }}>
             Roboto-Light
         </p>
+        <p style={{ fontFamily: 'Poppins-Regular' }}>Poppins Regular</p>
+        <p style={{ fontFamily: 'Roboto_Medium' }}>Poppins Regular</p>
     </div>
 );
 

@@ -6,6 +6,15 @@
 body {
     padding: 10px;
 }
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto_Medium';
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+}
 
 @font-face {
     font-family: 'Roboto-Regular';
@@ -40,7 +49,7 @@ body {
 @layer components {
     /* w-max for width: fit-content */
     .fullscreen {
-        @apply w-screen p-5 min-h-screen overflow-y-auto;
+        @apply min-h-screen p-5 overflow-y-auto;
     }
     .root {
         @apply p-5 bg-red-300 flex flex-wrap;

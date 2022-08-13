@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 11 Aug 2022 22:14:08 GMT
+ * Generated on Sat, 13 Aug 2022 12:52:29 GMT
  */
 
 export const ColorBasePrimary = '#61dafb';
@@ -12,6 +12,8 @@ export const ColorDefault = '#61dafb';
 export const FontSomecolor = '#666666';
 export const FontFullStyle = {
     color: '#61dafb',
-    'font-size': '12px',
+    fontSize: '18px',
     margin: 10,
+    fontFamily: 'Poppins-Regular',
 };
+export const FontSize1125 = '1.125rem';

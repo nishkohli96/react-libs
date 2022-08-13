@@ -6,8 +6,14 @@ module.exports = {
         fullStyle: {
             value: {
                 color: colorToken.color.base.primary.value,
-                'font-size': '12px',
+                fontSize: '18px',
                 margin: 10,
+                fontFamily: 'Poppins-Regular',
+            },
+        },
+        size: {
+            '1_125': {
+                value: '1.125rem',
             },
         },
     },

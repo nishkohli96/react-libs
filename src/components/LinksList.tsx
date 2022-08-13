@@ -18,7 +18,7 @@ const LinksList = () => {
             <LinkComponent path="/drag-n-drop" text="Drag and drop list" />
             <LinkComponent path="/redux" text="Redux Egs" />
             <LinkComponent path="/font-source" text="Font Source" />
-            <LinkComponent path='/react-hook-form' text='React Hook Form' />
+            <LinkComponent path="/react-hook-form" text="React Hook Form" />
         </div>
     );
 };
