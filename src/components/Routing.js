@@ -11,6 +11,7 @@ const ZoomEg = lazy(() => import('_Pages/ZoomEg'));
 const DragNDrop = lazy(() => import('_Pages/DragNDrop'));
 const ReduxEgs = lazy(() => import('_Pages/ReduxEg'));
 const FontSourceEgs = lazy(() => import('_Pages/FontSourceEgs'));
+const ReactFinalForm = lazy(() => import('_Pages/FinalForm'));
 const Page404 = lazy(() => import('_Pages/Page404'));
 const ReactHookForm = lazy(() => import('_Components/ReactHookForm'));
 
@@ -30,6 +31,7 @@ const Routing = () => {
                 <Route path="/font-source" component={FontSourceEgs} />
                 <Route path="/redux" component={ReduxEgs} />
                 <Route path="/react-hook-form" component={ReactHookForm} />
+                <Route path="/react-final-form" component={ReactFinalForm} />
                 <Route component={Page404} />
             </Switch>
         </BrowserRouter>

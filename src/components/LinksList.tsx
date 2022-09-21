@@ -19,6 +19,7 @@ const LinksList = () => {
             <LinkComponent path="/redux" text="Redux Egs" />
             <LinkComponent path="/font-source" text="Font Source" />
             <LinkComponent path="/react-hook-form" text="React Hook Form" />
+            <LinkComponent path="/react-final-form" text="React Final Form" />
         </div>
     );
 };
