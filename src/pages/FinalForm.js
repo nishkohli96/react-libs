@@ -1,14 +1,45 @@
 import { Form } from 'react-final-form';
 import { Button, Grid } from '@material-ui/core';
 import { FFSelect, FFTextField } from '_Components/atoms';
+import { object, string } from 'yup';
+import { setIn } from 'final-form';
+
+const colors = ['Red', 'Blue', 'Black', 'White'];
+
+const formSchema = object().shape({
+    fullName: string().required().min(3),
+    bio: string().required('This field is reqd').min(3),
+    color: string().required().oneOf(colors),
+});
 
 const FinalForm = () => {
     const onSubmit = (values) => console.log('vals ', values);
+
+    const validateFormValues = (schema) => async (values) => {
+        if (typeof schema === 'function') {
+            schema = schema();
+        }
+        try {
+            await schema.validate(values, { abortEarly: false });
+        } catch (err) {
+            const errors = err.inner.reduce((formError, innerError) => {
+                return setIn(formError, innerError.path, innerError.message);
+            }, {});
+
+            return errors;
+        }
+    };
+
+    const validate = validateFormValues(formSchema);
+
     return (
         <Form
             onSubmit={onSubmit}
-            initialValues={{ fullName: 'tom', color: 'Blue' }}
-            // validate={validate}
+            validate={validate}
+            // initialValues={{ fullName: 'tom', color: 'Blue' }}
+            // validate={(values) =>
+            //     formSchema.validate(values, { abortEarly: false })
+            // }
             render={({ handleSubmit }) => (
                 <form onSubmit={handleSubmit}>
                     <Grid container spacing={3}>
@@ -38,7 +69,7 @@ const FinalForm = () => {
                         <Grid item xs={4}>
                             <FFSelect
                                 fieldName="color"
-                                options={['Red', 'Blue', 'Black', 'White']}
+                                options={colors}
                                 label="Color"
                                 fullWidth
                             />

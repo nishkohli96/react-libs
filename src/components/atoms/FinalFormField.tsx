@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import {
     FormControl,
+    FormHelperText,
     InputLabel,
     MenuItem,
     Select,
@@ -20,17 +21,22 @@ export const FFTextField: FC<TextFieldProps & FFTextFieldProps> = (tfProps) => {
     const { fieldName, ...rest } = tfProps;
     return (
         <Field name={fieldName}>
-            {(props) => (
-                <TextField
-                    name={props.input.name}
-                    value={props.input.value}
-                    onChange={(e) => {
-                        props.input.onChange(e);
-                        rest.onChangeFn && rest.onChangeFn(e);
-                    }}
-                    {...rest}
-                />
-            )}
+            {({ input, meta }) => {
+                const isErr = Boolean(meta.error && meta.touched);
+                return (
+                    <TextField
+                        name={input.name}
+                        value={input.value}
+                        onChange={(e) => {
+                            input.onChange(e);
+                            rest.onChangeFn && rest.onChangeFn(e);
+                        }}
+                        error={isErr}
+                        helperText={isErr && meta.error}
+                        {...rest}
+                    />
+                );
+            }}
         </Field>
     );
 };
@@ -44,18 +50,22 @@ export const FFSelect: FC<SelectProps & FFSelectProps> = (selectProps) => {
     const { fieldName, options, ...rest } = selectProps;
     return (
         <Field name={fieldName}>
-            {(props) => (
-                <FormControl style={{ minWidth: 150 }}>
-                    <InputLabel>{rest.label}</InputLabel>
-                    <Select {...props.input} {...rest}>
-                        {options.map((option, index) => (
-                            <MenuItem key={index} value={option}>
-                                {option}
-                            </MenuItem>
-                        ))}
-                    </Select>
-                </FormControl>
-            )}
+            {({ input, meta }) => {
+                const isErr = Boolean(meta.error && meta.touched);
+                return (
+                    <FormControl error={isErr} style={{ minWidth: 150 }}>
+                        <InputLabel>{rest.label}</InputLabel>
+                        <Select {...input} {...rest}>
+                            {options.map((option, index) => (
+                                <MenuItem key={index} value={option}>
+                                    {option}
+                                </MenuItem>
+                            ))}
+                        </Select>
+                        <FormHelperText>{isErr && meta.error}</FormHelperText>
+                    </FormControl>
+                );
+            }}
         </Field>
     );
 };

@@ -24,6 +24,7 @@ While building app for production, comment/remove `import tailwind.css` line in 
 - [react-beautiful-dnd](https://www.npmjs.com/package/react-beautiful-dnd)
 - [react-charts](https://www.npmjs.com/package/react-charts)
 - [react-csv](https://www.npmjs.com/package/react-csv)
+- [react-final-form](https://final-form.org/react)
 - [react-hook-form](https://react-hook-form.com/) 
 - [react-icons](https://www.npmjs.com/package/react-icons)
 - [react-player](https://www.npmjs.com/package/react-player)
