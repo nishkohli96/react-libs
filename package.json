@@ -55,7 +55,8 @@
     "build-styles": "tailwindcss build src/assets/styles/tailwind.css -o src/assets/styles/index.css",
     "start": "yarn build-dictionary && react-app-rewired start",
     "build": "yarn build-styles && yarn build-dictionary && react-app-rewired build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -77,6 +78,7 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.3.3",
+    "cypress": "^12.5.1",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.13",
     "prettier": "^2.2.1",
