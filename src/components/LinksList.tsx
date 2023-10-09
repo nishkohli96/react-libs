@@ -20,6 +20,7 @@ const LinksList = () => {
             <LinkComponent path="/font-source" text="Font Source" />
             <LinkComponent path="/react-hook-form" text="React Hook Form" />
             <LinkComponent path="/react-final-form" text="React Final Form" />
+            <LinkComponent path="/algolia-widgets" text="Algolia-Widgets" />
         </div>
     );
 };

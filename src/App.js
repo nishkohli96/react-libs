@@ -7,6 +7,7 @@ import LoadingComp from '_Components/LoadingComp';
 import Routing from '_Components/Routing';
 import { store, persistor } from '_Store';
 import '_Styles/tailwind.css';
+import '_Styles/algolia-styles.css';
 
 function App() {
     const queryClient = new QueryClient();
