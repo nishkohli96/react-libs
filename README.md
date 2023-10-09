@@ -16,7 +16,9 @@ While building app for production, comment/remove `import tailwind.css` line in 
 
 - [aos](https://www.npmjs.com/package/aos)
 - [axios](https://www.npmjs.com/package/axios)
+- [algolia](https://www.algolia.com/doc/guides/building-search-ui/widgets/showcase/react/)
 - [cogo-toast](https://www.npmjs.com/package/cogo-toast)
+- [cypress](https://www.cypress.io/)
 - [faker](https://www.npmjs.com/package/faker)
 - [fontsource](https://fontsource.org/)
 - [formik](https://www.npmjs.com/package/formik)

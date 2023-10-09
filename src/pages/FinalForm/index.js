@@ -1,6 +1,6 @@
 import { Form } from 'react-final-form';
 import { Button, Grid } from '@material-ui/core';
-import { FFSelect, FFTextField } from '_Components/atoms';
+import { FFSelect, FFTextField } from 'components/atoms';
 import { object, string } from 'yup';
 import { setIn } from 'final-form';
 

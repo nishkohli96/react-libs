@@ -14,6 +14,7 @@ const FontSourceEgs = lazy(() => import('_Pages/FontSourceEgs'));
 const ReactFinalForm = lazy(() => import('_Pages/FinalForm'));
 const Page404 = lazy(() => import('_Pages/Page404'));
 const ReactHookForm = lazy(() => import('_Components/ReactHookForm'));
+const AlgoliaWidgets = lazy(() => import('_Pages/algolia-widgets'));
 
 const Routing = () => {
     return (
@@ -32,6 +33,7 @@ const Routing = () => {
                 <Route path="/redux" component={ReduxEgs} />
                 <Route path="/react-hook-form" component={ReactHookForm} />
                 <Route path="/react-final-form" component={ReactFinalForm} />
+                <Route path="/algolia-widgets" component={AlgoliaWidgets} />
                 <Route component={Page404} />
             </Switch>
         </BrowserRouter>

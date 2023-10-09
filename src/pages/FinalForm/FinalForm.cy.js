@@ -1,5 +1,4 @@
-import React from 'react';
-import FinalForm from './FinalForm';
+import FinalForm from '.';
 
 describe('<FinalForm />', () => {
     it('renders', () => {
