@@ -9,7 +9,7 @@ import { YupSchema } from '_Utils/FormHelpers';
 const formDefaults = {
   fullName: '',
   email: '',
-  password: ''
+  password: '',
 };
 
 const FormikForm1 = () => {
@@ -19,13 +19,17 @@ const FormikForm1 = () => {
     validationSchema: YupSchema,
     onSubmit: values => {
       alert(JSON.stringify(values, null, 2));
-    }
+    },
   });
 
   return (
     <div className="container mb-5">
       <div className="heading">
-        Form using <span className="code">useFormik()</span> Hook
+        Form using
+        {' '}
+        <span className="code">useFormik()</span>
+        {' '}
+        Hook
       </div>
 
       {/* Provide name & id field the same as key that in initialValues */}
@@ -43,7 +47,9 @@ const FormikForm1 = () => {
               required
             />
             {formik.touched.fullName && formik.errors.fullName ? (
-              <div className="errText">{formik.errors.fullName}</div>
+              <div className="errText">
+                {formik.errors.fullName}
+              </div>
             ) : null}
           </div>
 
@@ -59,7 +65,9 @@ const FormikForm1 = () => {
               required
             />
             {formik.touched.email && formik.errors.email ? (
-              <div className="errText">{formik.errors.email}</div>
+              <div className="errText">
+                {formik.errors.email}
+              </div>
             ) : null}
           </div>
 
@@ -76,7 +84,9 @@ const FormikForm1 = () => {
               required
             />
             {formik.touched.password && formik.errors.password ? (
-              <div className="errText">{formik.errors.password}</div>
+              <div className="errText">
+                {formik.errors.password}
+              </div>
             ) : null}
           </div>
         </div>
@@ -93,7 +103,7 @@ const styles = {
   submitBtn: {
     marginTop: '20px',
     backgroundColor: '#F27C59',
-    color: '#FFFFFF'
-  }
+    color: '#FFFFFF',
+  },
 };
 export default FormikForm1;

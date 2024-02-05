@@ -25,7 +25,13 @@ const PaginationWidget = (props: PaginationProps) => {
           </div>
           <div className="text-center">
             <h5>
-              Page {currentRefinement + 1} of {nbPages}
+              Page
+              {' '}
+              {currentRefinement + 1}
+              {' '}
+              of
+              {' '}
+              {nbPages}
             </h5>
           </div>
         </Fragment>

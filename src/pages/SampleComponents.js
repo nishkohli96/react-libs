@@ -5,17 +5,15 @@ import AosDiv from '_Atoms/AosDiv';
 import ReactQueryEg from '_Atoms/ReactQueryEg';
 import ReactToastifyEg from '_Atoms/ReactToastifyEg';
 
-const SampleComponents = () => {
-  return (
-    <div className="container p-5">
-      <CogoToastEg />
-      <ReactToastifyEg />
-      <GlassComp />
-      <ReactCsv />
-      <ReactQueryEg />
-      <AosDiv />
-    </div>
-  );
-};
+const SampleComponents = () => (
+  <div className="container p-5">
+    <CogoToastEg />
+    <ReactToastifyEg />
+    <GlassComp />
+    <ReactCsv />
+    <ReactQueryEg />
+    <AosDiv />
+  </div>
+);
 
 export default SampleComponents;

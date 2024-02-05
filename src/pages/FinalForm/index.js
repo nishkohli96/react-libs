@@ -4,12 +4,14 @@ import { FFSelect, FFTextField } from 'components/atoms';
 import { object, string } from 'yup';
 import { setIn } from 'final-form';
 
-const colors = ['Red', 'Blue', 'Black', 'White'];
+const colors = [
+  'Red', 'Blue', 'Black', 'White',
+];
 
 const formSchema = object().shape({
   fullName: string().required().min(3),
   bio: string().required('This field is reqd').min(3),
-  color: string().required().oneOf(colors)
+  color: string().required().oneOf(colors),
 });
 
 const FinalForm = () => {
@@ -22,9 +24,7 @@ const FinalForm = () => {
     try {
       await schema.validate(values, { abortEarly: false });
     } catch (err) {
-      const errors = err.inner.reduce((formError, innerError) => {
-        return setIn(formError, innerError.path, innerError.message);
-      }, {});
+      const errors = err.inner.reduce((formError, innerError) => setIn(formError, innerError.path, innerError.message), {});
 
       return errors;
     }

@@ -17,28 +17,26 @@ const ReactHookForm = lazy(() => import('_Components/ReactHookForm'));
 const AlgoliaWidgets = lazy(() => import('_Pages/algolia-widgets'));
 const RtePage = lazy(() => import('_Pages/rte'));
 
-const Routing = () => {
-  return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={HomeScreen} />
-        <Route path="/zoom" component={ZoomEg} />
-        <Route path="/formik" component={FormikForm} />
-        <Route path="/sample" component={SampleComponents} />
-        <Route path="/swr" component={SwrEg} />
-        <Route path="/videojs" component={VideoJsEg} />
-        <Route path="/react-charts" component={ReactChart} />
-        <Route path="/drag-n-drop" component={DragNDrop} />
-        <Route path="/font-source" component={FontSourceEgs} />
-        <Route path="/redux" component={ReduxEgs} />
-        <Route path="/react-hook-form" component={ReactHookForm} />
-        <Route path="/react-final-form" component={ReactFinalForm} />
-        <Route path="/algolia-widgets" component={AlgoliaWidgets} />
-        <Route path="/rte" component={RtePage} />
-        <Route component={Page404} />
-      </Switch>
-    </BrowserRouter>
-  );
-};
+const Routing = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={HomeScreen} />
+      <Route path="/zoom" component={ZoomEg} />
+      <Route path="/formik" component={FormikForm} />
+      <Route path="/sample" component={SampleComponents} />
+      <Route path="/swr" component={SwrEg} />
+      <Route path="/videojs" component={VideoJsEg} />
+      <Route path="/react-charts" component={ReactChart} />
+      <Route path="/drag-n-drop" component={DragNDrop} />
+      <Route path="/font-source" component={FontSourceEgs} />
+      <Route path="/redux" component={ReduxEgs} />
+      <Route path="/react-hook-form" component={ReactHookForm} />
+      <Route path="/react-final-form" component={ReactFinalForm} />
+      <Route path="/algolia-widgets" component={AlgoliaWidgets} />
+      <Route path="/rte" component={RtePage} />
+      <Route component={Page404} />
+    </Switch>
+  </BrowserRouter>
+);
 
 export default Routing;

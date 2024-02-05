@@ -8,13 +8,9 @@ module.exports = {
         color: colorToken.color.base.primary.value,
         fontSize: '18px',
         margin: 10,
-        fontFamily: 'Poppins-Regular'
-      }
+        fontFamily: 'Poppins-Regular',
+      },
     },
-    size: {
-      '1_125': {
-        value: '1.125rem'
-      }
-    }
-  }
+    size: { '1_125': { value: '1.125rem' } },
+  },
 };

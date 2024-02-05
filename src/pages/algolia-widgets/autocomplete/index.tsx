@@ -20,7 +20,7 @@ const Autocomplete = () => {
      *  function will only call once in every 500 ms.
      */
     const fetchProducts = setTimeout(async () => {
-      if (Boolean(inputValue)) {
+      if (inputValue) {
         setLoading(true);
         const products = await fetchAlgoliaData(inputValue);
         setOptions(products ?? []);
@@ -50,7 +50,7 @@ const Autocomplete = () => {
       value={value}
       filterOptions={x => x}
       noOptionsText={
-        Boolean(inputValue)
+        inputValue
           ? 'No Results Found'
           : 'Type something to fetch results...'
       }
@@ -73,7 +73,10 @@ const Autocomplete = () => {
           placeholder="Search for products in Autocomplete...."
           InputProps={{
             ...params.InputProps,
-            style: { padding: '5px 10px', background: 'white' },
+            style: {
+              padding: '5px 10px',
+              background: 'white',
+            },
             endAdornment: (
               <Fragment>
                 {loading ? (
@@ -90,7 +93,7 @@ const Autocomplete = () => {
                   </IconButton>
                 )}
               </Fragment>
-            )
+            ),
           }}
         />
       )}

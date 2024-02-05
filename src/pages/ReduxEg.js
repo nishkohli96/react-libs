@@ -3,7 +3,7 @@ import {
   decrement,
   decreaseAmt,
   increment,
-  incrementByAmount
+  incrementByAmount,
 } from '_Store/counter.slice';
 import { fetchBankInfo } from '_Store/bankInfo.slice';
 import { useGetBankInfoQuery } from '_Store/api.slice';
@@ -15,7 +15,7 @@ const ReduxEg = () => {
   const dispatch = useDispatch();
 
   /*  Refer these links for more info on fetching data using thunks,
-        and say filtering from an arrayObj in state 
+        and say filtering from an arrayObj in state
 
         - https://redux.js.org/tutorials/essentials/part-5-async-logic
         - https://redux.js.org/tutorials/essentials/part-6-performance-normalization
@@ -24,7 +24,7 @@ const ReduxEg = () => {
   const {
     data: bankInfoData,
     isLoading: bankInfoLoading,
-    isSuccess: bankInfoFetchSuccess
+    isSuccess: bankInfoFetchSuccess,
     // isError,
     // error,
     // refetch
@@ -43,7 +43,9 @@ const ReduxEg = () => {
         <button className="link" onClick={() => dispatch(decrement())}>
           Decrement
         </button>
-        <span>{count}</span>
+        <span>
+          {count}
+        </span>
         <button className="link" onClick={() => dispatch(increment())}>
           Increment
         </button>
@@ -63,14 +65,18 @@ const ReduxEg = () => {
 
         {/* <button onClick={refetch}>Refetch Posts</button> */}
         <div className="text-red-400">
-          <b>Data fetched using createAsyncThunk:</b> {JSON.stringify(bankInfo)}
+          <b>Data fetched using createAsyncThunk:</b>
+          {' '}
+          {JSON.stringify(bankInfo)}
         </div>
         {bankInfoLoading && (
           <div className="text-pink-500">Fetching Data....</div>
         )}
         {bankInfoFetchSuccess && (
           <div className="text-red-400">
-            <b>Data fetched using RTK-Query:</b> {JSON.stringify(bankInfoData)}
+            <b>Data fetched using RTK-Query:</b>
+            {' '}
+            {JSON.stringify(bankInfoData)}
           </div>
         )}
       </div>

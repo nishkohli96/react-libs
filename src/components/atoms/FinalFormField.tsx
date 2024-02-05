@@ -7,7 +7,7 @@ import {
   Select,
   SelectProps,
   TextField,
-  TextFieldProps
+  TextFieldProps,
 } from '@material-ui/core';
 import { Field } from 'react-final-form';
 
@@ -54,7 +54,9 @@ export const FFSelect: FC<SelectProps & FFSelectProps> = selectProps => {
         const isErr = Boolean(meta.error && meta.touched);
         return (
           <FormControl error={isErr} style={{ minWidth: 150 }}>
-            <InputLabel>{rest.label}</InputLabel>
+            <InputLabel>
+              {rest.label}
+            </InputLabel>
             <Select {...input} {...rest}>
               {options.map((option, index) => (
                 <MenuItem key={index} value={option}>
@@ -62,7 +64,9 @@ export const FFSelect: FC<SelectProps & FFSelectProps> = selectProps => {
                 </MenuItem>
               ))}
             </Select>
-            <FormHelperText>{isErr && meta.error}</FormHelperText>
+            <FormHelperText>
+              {isErr && meta.error}
+            </FormHelperText>
           </FormControl>
         );
       }}

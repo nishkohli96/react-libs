@@ -18,7 +18,12 @@ const RangeSlider = (props: UseRangeProps) => {
     refine([newRange?.[0], newRange?.[1]]);
   };
   return (
-    <div style={{ padding: 10, display: 'flex', alignItems: 'center' }}>
+    <div style={{
+      padding: 10,
+      display: 'flex',
+      alignItems: 'center',
+    }}
+    >
       <span>0</span>
       <Slider
         min={props.min}

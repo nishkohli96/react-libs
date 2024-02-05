@@ -7,8 +7,8 @@ const getRandomInt = () => {
   const min = 0;
   const max = 100;
   const nullChance = 0;
-  const randomNum =
-    Math.random() < nullChance
+  const randomNum
+    = Math.random() < nullChance
       ? null
       : min + Math.round(Math.random() * (max - min));
   return randomNum;
@@ -18,7 +18,7 @@ const ReactChart = () => {
   const [dataSet, setDataSet] = React.useState([0]);
 
   const randomizeData = React.useCallback(() => {
-    let arr = new Array(10).fill(0);
+    const arr = new Array(10).fill(0);
     for (let i = 0; i < 9; i++) {
       arr[i] = getRandomInt();
     }
@@ -36,13 +36,13 @@ const ReactChart = () => {
     return res;
   };
 
-  const { data, getSeriesStyle, getDatumStyle, onFocus, dataSeries, axes } =
-    useChartConfig({
+  const { data, getSeriesStyle, getDatumStyle, onFocus, dataSeries, axes }
+    = useChartConfig({
       series: 1 /* Values for each label */,
       datums: dataSet.length /* Num of labels */,
       yMax: getYMax(dataSet),
       dataType: 'integer',
-      dataSet
+      dataSet,
     });
 
   return (
@@ -70,12 +70,12 @@ const styles = {
     width: 500,
     height: 500,
     marginLeft: 40,
-    margin: 20
+    margin: 20,
   },
   btn: {
     backgroundColor: '#E85B5A',
-    color: 'white'
-  }
+    color: 'white',
+  },
 };
 
 export default ReactChart;

@@ -6,7 +6,7 @@ const getItems = count =>
   Array.from({ length: count }, (v, k) => k).map((k, index) => ({
     id: `item-${k}`,
     content: `item ${k}`,
-    position: index
+    position: index,
   }));
 
 // a little function to help us with reordering the result
@@ -31,7 +31,7 @@ const getItemStyle = (isDragging, draggableStyle) => ({
   background: isDragging ? 'lightgreen' : 'grey',
 
   // styles we need to apply on draggables
-  ...draggableStyle
+  ...draggableStyle,
 });
 
 const getListStyle = isDraggingOver => ({
@@ -39,7 +39,7 @@ const getListStyle = isDraggingOver => ({
   height: 400,
   padding: grid,
   width: 450,
-  overflow: 'scroll'
+  overflow: 'scroll',
 });
 
 const DragNDrop = () => {
@@ -54,7 +54,7 @@ const DragNDrop = () => {
     const orderedItems = reorder(
       items,
       result.source.index,
-      result.destination.index
+      result.destination.index,
     );
     console.log(result.source.index, result.destination.index);
     console.log('orderedItems: ', orderedItems);
@@ -81,7 +81,7 @@ const DragNDrop = () => {
                       {...provided.dragHandleProps}
                       style={getItemStyle(
                         snapshot.isDragging,
-                        provided.draggableProps.style
+                        provided.draggableProps.style,
                       )}
                     >
                       {item.content}

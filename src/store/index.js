@@ -7,7 +7,7 @@ import {
   PAUSE,
   PERSIST,
   PURGE,
-  REGISTER
+  REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
@@ -16,16 +16,16 @@ import bankInfoReducer from './bankInfo.slice';
 import { apiSlice } from './api.slice';
 
 const rootReducer = combineReducers({
-  /*  Keys in reducer object must be the same as "name" in their 
+  /*  Keys in reducer object must be the same as "name" in their
         respective slice */
   bank: bankInfoReducer,
   counter: counterReducer,
-  [apiSlice.reducerPath]: apiSlice.reducer
+  [apiSlice.reducerPath]: apiSlice.reducer,
 });
 
 const persistConfig = {
   key: 'root',
-  storage
+  storage,
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -36,9 +36,11 @@ export const store = configureStore({
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {
-        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
-      }
-    }).concat(apiSlice.middleware)
+        ignoredActions: [
+          FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER,
+        ],
+      },
+    }).concat(apiSlice.middleware),
 });
 
 export const persistor = persistStore(store);

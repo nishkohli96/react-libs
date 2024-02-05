@@ -1,6 +1,11 @@
 import { FixedSizeList as List, FixedSizeGrid as Grid } from 'react-window';
 
-const Row = ({ index, style }) => <div style={style}>Row {index}</div>;
+const Row = ({ index, style }) => (
+  <div style={style}>
+    Row
+    {index}
+  </div>
+);
 
 /* Row */
 const RowExample = () => (
@@ -10,7 +15,12 @@ const RowExample = () => (
 );
 
 /* Column */
-const Column = ({ index, style }) => <div style={style}>Column {index}</div>;
+const Column = ({ index, style }) => (
+  <div style={style}>
+    Column
+    {index}
+  </div>
+);
 
 const ColumnExample = () => (
   <List
@@ -27,7 +37,11 @@ const ColumnExample = () => (
 /* Matrix */
 const Cell = ({ columnIndex, rowIndex, style }) => (
   <div style={style}>
-    Item {rowIndex},{columnIndex}
+    Item
+    {' '}
+    {rowIndex}
+    ,
+    {columnIndex}
   </div>
 );
 

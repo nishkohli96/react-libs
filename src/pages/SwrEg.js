@@ -3,9 +3,8 @@ import axiosApi from '_Utils/AxiosApi';
 import ReactWindowEg from '_Molecules/ReactWindowEg';
 
 const SwrEg = () => {
-  useEffect(() => {
-    getPokemonDetails();
-  }, []);
+
+  const [pokeDetais, setPokeDetais] = useState({});
 
   async function getPokemonDetails() {
     const resp = await axiosApi.get('/pikachu');
@@ -13,7 +12,9 @@ const SwrEg = () => {
     console.log(resp);
   }
 
-  const [pokeDetais, setPokeDetais] = useState({});
+  useEffect(() => {
+    getPokemonDetails();
+  }, []);
 
   return (
     <div className="fullscreen">

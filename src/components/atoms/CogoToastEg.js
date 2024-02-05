@@ -9,7 +9,7 @@ const CogoToastEg = () => {
       },
       hideAfter: 3, // in seconds
       position: 'bottom-center',
-      heading: 'Success'
+      heading: 'Success',
     });
   };
 
@@ -19,7 +19,7 @@ const CogoToastEg = () => {
         <div>
           <b>Awesome!</b>
           <div>Isn't it?</div>
-        </div>
+        </div>,
       );
     });
   };
@@ -29,11 +29,13 @@ const CogoToastEg = () => {
       <p className="sub-heading">Cogo-Toast</p>
       <button className="btn" onClick={() => openToast()}>
         {' '}
-        Open Success Toast{' '}
+        Open Success Toast
+        {' '}
       </button>
       <button className="btn" onClick={() => openInfoToast()}>
         {' '}
-        Open Info Toast{' '}
+        Open Info Toast
+        {' '}
       </button>
     </div>
   );

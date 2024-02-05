@@ -17,7 +17,9 @@ const RangeInput = (props: UseRangeProps) => {
           placeholder={`${props.min ?? 0}`}
           onChange={e => setMin(e.target.value)}
         />
-        <span>{` to `}</span>
+        <span>
+          {' to '}
+        </span>
         <TextField
           value={max}
           label="Max Price"

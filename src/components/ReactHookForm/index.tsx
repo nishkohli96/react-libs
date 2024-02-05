@@ -9,7 +9,7 @@ import {
   Select,
   TextField,
   Tooltip,
-  Typography
+  Typography,
 } from '@material-ui/core';
 import { Delete, Replay } from '@material-ui/icons';
 import { FormSchema } from './schema';
@@ -27,9 +27,9 @@ const ReactHookForm = () => {
         shape: ItemShape[2],
         length: null,
         width: null,
-        height: null
-      }
-    ]
+        height: null,
+      },
+    ],
   };
 
   const {
@@ -38,16 +38,16 @@ const ReactHookForm = () => {
     reset,
     handleSubmit,
     setValue,
-    formState: { errors }
+    formState: { errors },
   } = useForm<FormType>({
     resolver: yupResolver(FormSchema),
     defaultValues: initialFormValues,
-    mode: 'onBlur'
+    mode: 'onBlur',
   });
 
   const { fields, append, prepend, remove } = useFieldArray({
     control,
-    name: 'items'
+    name: 'items',
   });
 
   const submitForm = (values: FormType) => {
@@ -111,7 +111,10 @@ const ReactHookForm = () => {
               justifyContent="center"
               alignItems="flex-end"
             >
-              <span style={{ marginRight: 20 }}>Row {index + 1}</span>
+              <span style={{ marginRight: 20 }}>
+                Row
+                {index + 1}
+              </span>
             </Grid>
             <Grid item xs={2}>
               <TextField
@@ -180,8 +183,7 @@ const ReactHookForm = () => {
               <Tooltip title="Replay row data">
                 <IconButton
                   onClick={() =>
-                    setValue(`items.${index}`, initialFormValues.items[0])
-                  }
+                    setValue(`items.${index}`, initialFormValues.items[0])}
                 >
                   <Replay />
                 </IconButton>
@@ -219,9 +221,8 @@ const ReactHookForm = () => {
               onClick={() =>
                 prepend({
                   ...initialFormValues.items[0],
-                  name: 'Prepended Item'
-                })
-              }
+                  name: 'Prepended Item',
+                })}
             >
               Prepend Item
             </Button>

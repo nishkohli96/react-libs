@@ -22,9 +22,7 @@ const ListResults = (props: RefinementListProps): ReactElement => {
       {items.map(item => (
         <div
           key={item.value}
-          className={classNames('ais-RefinementList-item', {
-            'ais-RefinementList-item--selected': item.isRefined
-          })}
+          className={classNames('ais-RefinementList-item', { 'ais-RefinementList-item--selected': item.isRefined })}
         >
           <label className="ais-RefinementList-label">
             <input
@@ -34,7 +32,9 @@ const ListResults = (props: RefinementListProps): ReactElement => {
               checked={item.isRefined}
               onChange={() => refine(item.value)}
             />
-            <span className="ais-RefinementList-labelText">{item.label}</span>
+            <span className="ais-RefinementList-labelText">
+              {item.label}
+            </span>
             <span className="ais-RefinementList-count">
               {` (${item.count})`}
             </span>

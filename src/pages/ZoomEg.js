@@ -17,7 +17,7 @@ const ZoomEg = () => {
       </Button>
 
       <div style={styles.container}>
-        <div id="zmmtg-root"></div>
+        <div id="zmmtg-root" />
       </div>
       <p>Footer</p>
     </div>
@@ -33,25 +33,25 @@ const startMeeting = () => {
 
   const timestamp = new Date().getTime() - 30000;
   const msg = Buffer.from(apiKey + meetingNumber + timestamp + role).toString(
-    'base64'
+    'base64',
   );
   const hash = '234';
   // createHmac('sha256', apiSecret).update(msg).digest('base64');
   const signature = Buffer.from(
     `${apiKey}.${meetingNumber}
-		  .${timestamp}.${role}.${hash}`
+		  .${timestamp}.${role}.${hash}`,
   ).toString('base64');
 
   /* Generate sign from api */
   ZoomMtg.init({
     leaveUrl: '/schedule',
     isSupportAV: true,
-    success: function () {
+    success () {
       ZoomMtg.join({
-        signature: signature,
-        meetingNumber: meetingNumber,
+        signature,
+        meetingNumber,
         userName: 'tom',
-        apiKey: apiKey,
+        apiKey,
         userEmail: 'tom@gmail.com',
         passWord: pswd,
         success: success => {
@@ -59,9 +59,9 @@ const startMeeting = () => {
         },
         error: error => {
           console.log(error);
-        }
+        },
       });
-    }
+    },
   });
 };
 
@@ -69,23 +69,23 @@ const styles = {
   fullScreen: {
     backgroundColor: 'powderblue',
     width: '100vw',
-    height: '100vh'
+    height: '100vh',
   },
   container: {
     padding: 30,
     margin: 30,
     width: 800,
     height: 500,
-    backgroundColor: 'silver'
+    backgroundColor: 'silver',
   },
   root: {
     display: 'block',
-    backgroundColor: '#414141'
+    backgroundColor: '#414141',
   },
   btn: {
     backgroundColor: '#123432',
-    color: 'white'
-  }
+    color: 'white',
+  },
 };
 
 export default ZoomEg;

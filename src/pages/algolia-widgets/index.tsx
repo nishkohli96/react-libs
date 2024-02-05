@@ -3,7 +3,7 @@ import {
   InstantSearch,
   Configure,
   PoweredBy,
-  Stats
+  Stats,
 } from 'react-instantsearch';
 import AlgoliaConfig from './algolia-config';
 import Autocomplete from './autocomplete';
@@ -18,12 +18,12 @@ const searchClient = algoliasearch(AlgoliaConfig.APP_ID, AlgoliaConfig.API_KEY);
 
 /* https://www.algolia.com/doc/guides/building-search-ui/widgets/showcase/react/ */
 
-const AlgoliaWidgetsPage = () => {
-  // TODO: window.aa('setUserToken', 'user-id');
-  // cookie consent service like OneTrust or TrustArc,
-  // https://www.algolia.com/doc/guides/building-search-ui/events/react/#set-the-insights-option-to-true
+const AlgoliaWidgetsPage = () =>
+// TODO: window.aa('setUserToken', 'user-id');
+// cookie consent service like OneTrust or TrustArc,
+// https://www.algolia.com/doc/guides/building-search-ui/events/react/#set-the-insights-option-to-true
 
-  return (
+  (
     <div style={{ padding: '10px 20px 40px 20px' }}>
       <Autocomplete />
       <h1>Algolia Widgets</h1>
@@ -50,15 +50,13 @@ const AlgoliaWidgetsPage = () => {
                     translations={{
                       rootElementText({ nbHits, processingTimeMS }) {
                         return `${nbHits} results in ${processingTimeMS} ms`;
-                      }
+                      },
                     }}
                   />
                 </div>
                 <div className=" d-flex col-6 justify-content-end">
                   <PoweredBy
-                    classNames={{
-                      root: 'ais-PoweredBy--root'
-                    }}
+                    classNames={{ root: 'ais-PoweredBy--root' }}
                     theme="dark"
                   />
                 </div>
@@ -70,8 +68,8 @@ const AlgoliaWidgetsPage = () => {
         </div>
       </InstantSearch>
     </div>
-  );
-};
+  )
+;
 
 export default AlgoliaWidgetsPage;
 

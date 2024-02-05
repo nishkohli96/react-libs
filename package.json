@@ -1,5 +1,5 @@
 {
-  "name": "@nish1896/react-libs",
+  "name": "nish1896-react-libs",
   "version": "1.0.0",
   "author": "Nishant Kohli",
   "dependencies": {
@@ -61,7 +61,7 @@
     "@nish1896/eslint-config": "^1.0.3",
     "cypress": "^12.5.1",
     "eslint": "^8.56.0",
-    "husky": "^4.2.5",
+    "husky": "^9.0.10",
     "lint-staged": "^10.2.13",
     "prettier": "^2.2.1",
     "react-app-rewired": "^2.1.8",
@@ -75,12 +75,8 @@
     "build": "yarn build-styles && yarn build-dictionary && react-app-rewired build",
     "eject": "react-scripts eject",
     "lint": "eslint --fix .",
-    "cypress:open": "cypress open"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "cypress:open": "cypress open",
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.{js, jsx, ts, tsx, md, html, css}": [

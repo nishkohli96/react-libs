@@ -12,7 +12,7 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
     sendEvent(
       AlgoliaConfig.ALGOLIA_EVENTS.click,
       hit,
-      AlgoliaConfig.USER_EVENTS.product_click
+      AlgoliaConfig.USER_EVENTS.product_click,
     );
   };
 
@@ -20,7 +20,7 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
     sendEvent(
       AlgoliaConfig.ALGOLIA_EVENTS.conversion,
       hit,
-      AlgoliaConfig.USER_EVENTS.product_purchased
+      AlgoliaConfig.USER_EVENTS.product_purchased,
     );
   };
 
@@ -33,11 +33,9 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
             key={hit.objectID}
             style={{
               padding: '1rem',
-              marginBottom: '2rem'
+              marginBottom: '2rem',
             }}
-            sx={{
-              minHeight: theme => (theme.breakpoints.up('md') ? 400 : 'auto')
-            }}
+            sx={{ minHeight: theme => (theme.breakpoints.up('md') ? 400 : 'auto') }}
             onClick={() => handleClickOnHit(hit)}
           >
             <div className="d-flex d-md-block justify-content-center">
@@ -47,7 +45,7 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
                 style={{
                   width: 85,
                   height: 160,
-                  marginBottom: '1rem'
+                  marginBottom: '1rem',
                 }}
               />
             </div>
@@ -59,7 +57,10 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
             </p>
             <div
               className="d-flex d-md-block justify-content-center"
-              style={{ position: 'absolute', bottom: 0 }}
+              style={{
+                position: 'absolute',
+                bottom: 0,
+              }}
             >
               <div className="row">
                 <div className="col-4">

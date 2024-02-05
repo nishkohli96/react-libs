@@ -8,20 +8,22 @@ module.exports = {
       files: [
         {
           destination: 'index.scss',
-          format: 'scss/variables'
-        }
-      ]
+          format: 'scss/variables',
+        },
+      ],
     },
     js: {
       transformGroup: 'js',
-      transform: ['attribute/cti', 'name/cti/pascal', 'color/hex8', 'size/rem'],
+      transform: [
+        'attribute/cti', 'name/cti/pascal', 'color/hex8', 'size/rem',
+      ],
       buildPath: './src/style-dictionary-dist/',
       files: [
         {
           destination: 'index.js',
-          format: 'javascript/es6'
-        }
-      ]
-    }
-  }
+          format: 'javascript/es6',
+        },
+      ],
+    },
+  },
 };

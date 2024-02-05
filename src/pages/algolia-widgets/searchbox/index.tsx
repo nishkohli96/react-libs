@@ -45,11 +45,7 @@ const SearchBox = () => {
         placeholder="Search for a Product..."
         fullWidth
         inputProps={{ style: { padding: '8px 12px' } }}
-        InputProps={{
-          ...(Boolean(inputValue) && {
-            endAdornment: <TextFieldEndAdornment />
-          })
-        }}
+        InputProps={{ ...(Boolean(inputValue) && { endAdornment: <TextFieldEndAdornment /> }) }}
       />
     </div>
   );

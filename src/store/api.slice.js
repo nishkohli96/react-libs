@@ -12,15 +12,15 @@ export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'https://ifsc.razorpay.com' }),
   // The "endpoints" represent operations and requests for this server
   tagTypes: ['Bank'],
-  /*  The queries can be re-fetched manually, or automatically 
+  /*  The queries can be re-fetched manually, or automatically
         using "tags" for cache invalidation */
   endpoints: builder => ({
     // The `getPosts` endpoint is a "query" operation that returns data
     getBankInfo: builder.query({
       // The URL for the request is '/fakeApi/posts'
       query: () => '/HDFC0001380',
-      providesTags: ['Bank']
-    })
+      providesTags: ['Bank'],
+    }),
     /* Post Query */
     // addNewPost: builder.mutation({
     //     query: initialPost => ({
@@ -31,10 +31,10 @@ export const apiSlice = createApi({
     //     }),
     //      invalidatesTags: ['Bank']
     //   })
-  })
+  }),
 });
 
-/* 
+/*
     Export the auto-generated hook for the `getPost` query endpoint.
     For GET methods 'Query' Suffix at the end, for for others 'Mutation'
     suffix at the end.

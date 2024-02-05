@@ -1,0 +1,5 @@
+# config files
+.eslintrc.js
+config-overrides.js
+cypress.config.ts
+tailwind.config.js

@@ -2,7 +2,7 @@ import { ReactElement, Fragment } from 'react';
 import {
   useCurrentRefinements,
   CurrentRefinementsProps,
-  ClearRefinements
+  ClearRefinements,
 } from 'react-instantsearch';
 import classNames from 'classnames';
 import IconButton from '@material-ui/core/IconButton';
@@ -17,22 +17,22 @@ import AlgoliaConfig from '../algolia-config';
  */
 
 const CurrentRefinementWidget = (
-  props: CurrentRefinementsProps
+  props: CurrentRefinementsProps,
 ): ReactElement => {
   const { items, refine } = useCurrentRefinements(props);
   return (
     <div
-      className={classNames('ais-CurrentRefinements--root', {
-        'ais-CurrentRefinements--noRefinementRoot': items.length === 0
-      })}
+      className={classNames('ais-CurrentRefinements--root', { 'ais-CurrentRefinements--noRefinementRoot': items.length === 0 })}
     >
       {items.length > 0 && <h6>Filters Applied</h6>}
       {items.map(refinementItem => {
-        const isPriceFilter =
-          refinementItem.attribute === AlgoliaConfig.FACET_ATTRIBUTES.price;
+        const isPriceFilter
+          = refinementItem.attribute === AlgoliaConfig.FACET_ATTRIBUTES.price;
         return (
           <Fragment key={refinementItem.attribute}>
-            <h5>{refinementItem.attribute.toUpperCase()}</h5>
+            <h5>
+              {refinementItem.attribute.toUpperCase()}
+            </h5>
             {isPriceFilter ? (
               <div
                 key={refinementItem.label}
@@ -42,7 +42,7 @@ const CurrentRefinementWidget = (
                   {refinementItem?.refinements?.[0]?.value}
                   {` <= ${AlgoliaConfig.FACET_ATTRIBUTES.price} < `}
                   {Math.round(
-                    parseFloat(`${refinementItem?.refinements?.[1]?.value}`)
+                    parseFloat(`${refinementItem?.refinements?.[1]?.value}`),
                   )}
                 </span>
                 <IconButton
@@ -60,8 +60,12 @@ const CurrentRefinementWidget = (
                     key={refinement.label}
                     className="ais-CurrentRefinements--refinement-item"
                   >
-                    <span>{refinement.label}</span>
-                    <span>{` (${refinement.count})`}</span>
+                    <span>
+                      {refinement.label}
+                    </span>
+                    <span>
+                      {` (${refinement.count})`}
+                    </span>
                     <IconButton onClick={() => refine(refinement)}>
                       <CloseIcon />
                     </IconButton>
@@ -76,11 +80,9 @@ const CurrentRefinementWidget = (
         classNames={{
           root: 'ais-ClearRefinements--root',
           button: 'ais-ClearRefinements--button',
-          disabledButton: 'ais-ClearRefinements--button-disabled'
+          disabledButton: 'ais-ClearRefinements--button-disabled',
         }}
-        translations={{
-          resetButtonText: 'Clear Refinements'
-        }}
+        translations={{ resetButtonText: 'Clear Refinements' }}
         // excludedAttributes={['brand']}
       />
     </div>

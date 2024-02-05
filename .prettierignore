@@ -1,22 +1,22 @@
-
+# folders
+node_modules
 public
 build
 dist
+.next
+.vercel
 
-src/assets/images
-
-.env
-.env.prod
-.env.testing
-
-.eslintrc.json
-.eslintcache
-
+# config-files
+package.json
+tsconfig.json
+yarn.lock
+package-lock.json
+.eslintrc.js
 .gitignore
 .prettierignore
 .prettierrc
 
-package.json
-README.md
-yarn.lock
-yarn-error.log
+# custom files
+*.md
+*.log
+*.d.ts

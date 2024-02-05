@@ -8,9 +8,7 @@ import 'video.js/dist/video-js.css';
 class VideoPlayer extends React.Component {
   constructor() {
     super();
-    this.state = {
-      videoPlaying: false
-    };
+    this.state = { videoPlaying: false };
   }
 
   componentDidMount() {
@@ -82,10 +80,7 @@ class VideoPlayer extends React.Component {
         </div>
         <PlayCircleOutlineIcon
           onClick={() =>
-            this.setState({
-              videoPlaying: !this.state.videoPlaying
-            })
-          }
+            this.setState({ videoPlaying: !this.state.videoPlaying })}
         />
       </div>
     );

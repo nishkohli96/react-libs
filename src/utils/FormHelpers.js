@@ -10,7 +10,7 @@ export const formValidations = values => {
 
   if (!values.email) {
     errors.email = 'Required';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+  } else if (!(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i).test(values.email)) {
     errors.email = 'Invalid email address';
   }
 
@@ -21,5 +21,5 @@ export const YupSchema = Yup.object({
   fullName: Yup.string()
     .max(10, 'Must be 10 characters or less')
     .required('Required'),
-  email: Yup.string().email('Invalid email address').required('Required')
+  email: Yup.string().email('Invalid email address').required('Required'),
 });

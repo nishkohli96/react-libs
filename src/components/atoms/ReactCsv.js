@@ -16,14 +16,14 @@ class ReactCsv extends Component {
         of 1 line between headers & data */
   state = {
     dynamicData: [[]],
-    startDownload: false
+    startDownload: false,
   };
 
   staticData = [
     [],
     ['Joy', 'joy@gmail.com', 24],
     ['Tim', 'tim@gmail.com', 15],
-    ['Max', 'max@gmail.com', 8]
+    ['Max', 'max@gmail.com', 8],
   ];
 
   headers = ['Name', 'Email', 'Age'];
@@ -31,13 +31,16 @@ class ReactCsv extends Component {
 
   downloadApiData = async () => {
     // this.setState({ dynamicData: data, startDownload: false })
-    /*  Let the async opn of changing state be done, then download the updated 
+    /*  Let the async opn of changing state be done, then download the updated
             data, else prev state data wud b downloaded */
     const resp = await axios.get('https://ifsc.razorpay.com/KARB0000001');
-    let arr = [[]];
+    const arr = [[]];
     arr.push([resp?.data?.bank, resp?.data?.ifsc]);
 
-    this.setState({ dynamicData: arr, startDownload: true });
+    this.setState({
+      dynamicData: arr,
+      startDownload: true,
+    });
 
     setTimeout(() => {
       this.csvRef.current.link.click();
@@ -48,7 +51,8 @@ class ReactCsv extends Component {
     return (
       <div style={{ margin: '10px 0px' }}>
         <div>
-          Lets go for a{' '}
+          Lets go for a
+          {' '}
           <span>
             <FaBeer />
           </span>
@@ -59,7 +63,7 @@ class ReactCsv extends Component {
             color: 'green',
             size: 25,
             title: 'android',
-            className: 'global-class-name'
+            className: 'global-class-name',
           }}
         >
           <DiAndroid />
@@ -67,8 +71,16 @@ class ReactCsv extends Component {
         <p>
           <b>Faker dummy data</b>
         </p>
-        <p> Faker Name - {faker.name.findName()}</p>
-        <p> Faker Company Name - {faker.company.companyName()}</p>
+        <p>
+          {' '}
+          Faker Name -
+          {faker.name.findName()}
+        </p>
+        <p>
+          {' '}
+          Faker Company Name -
+          {faker.company.companyName()}
+        </p>
         <CSVLink
           data={this.staticData}
           headers={this.headers}
@@ -77,7 +89,7 @@ class ReactCsv extends Component {
           style={{
             textDecoration: 'none',
             backgroundColor: '#fe979c',
-            marginRight: 20
+            marginRight: 20,
           }}
         >
           Download static CSV Data
@@ -85,7 +97,10 @@ class ReactCsv extends Component {
 
         <button
           onClick={this.downloadApiData}
-          style={{ backgroundColor: '#007aba', color: 'white' }}
+          style={{
+            backgroundColor: '#007aba',
+            color: 'white',
+          }}
         >
           Download data from API
         </button>

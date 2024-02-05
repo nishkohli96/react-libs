@@ -14,7 +14,7 @@ const ReactToastifyEg = () => {
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
-      type: 'info'
+      type: 'info',
     });
 
   const dismiss = () => toast.dismiss(toastId.current);
