@@ -41,14 +41,14 @@ const SearchBox = () => {
     <div className="col-12" style={{ marginBottom: 20 }}>
       <TextField
         value={inputValue}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={e => setQuery(e.target.value)}
         placeholder="Search for a Product..."
         fullWidth
         inputProps={{ style: { padding: '8px 12px' } }}
         InputProps={{
           ...(Boolean(inputValue) && {
-            endAdornment: <TextFieldEndAdornment />,
-          }),
+            endAdornment: <TextFieldEndAdornment />
+          })
         }}
       />
     </div>

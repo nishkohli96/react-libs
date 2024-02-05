@@ -17,39 +17,39 @@ import axios from 'axios';
     Can similarly pass more functions for other HTTP methods
 */
 export const fetchBankInfo = createAsyncThunk(
-    'bank/fetchBankInfo',
-    async (payload) => {
-        const response = await axios.get(
-            `https://ifsc.razorpay.com/${payload.ifsc}`
-        );
-        return response.data;
-    }
+  'bank/fetchBankInfo',
+  async payload => {
+    const response = await axios.get(
+      `https://ifsc.razorpay.com/${payload.ifsc}`
+    );
+    return response.data;
+  }
 );
 
 export const bankInfoSlice = createSlice({
-    name: 'bank',
-    initialState: {
-        bankInfo: {},
-    },
-    reducers: {},
-    extraReducers(builder) {
-        /*  Cases to handle for Pending, Resolved or Rejected state of
+  name: 'bank',
+  initialState: {
+    bankInfo: {}
+  },
+  reducers: {},
+  extraReducers(builder) {
+    /*  Cases to handle for Pending, Resolved or Rejected state of
             a Promise */
-        builder
-            .addCase(fetchBankInfo.pending, (state, action) => {
-                console.log('fetching');
-            })
-            .addCase(fetchBankInfo.fulfilled, (state, action) => {
-                console.log('succeeded');
-                state.bankInfo = action.payload;
-                /*  Can do sth like this for an array -  
+    builder
+      .addCase(fetchBankInfo.pending, (state, action) => {
+        console.log('fetching');
+      })
+      .addCase(fetchBankInfo.fulfilled, (state, action) => {
+        console.log('succeeded');
+        state.bankInfo = action.payload;
+        /*  Can do sth like this for an array -  
                     -> state.posts.push(action.payload)
                 */
-            })
-            .addCase(fetchBankInfo.rejected, (state, action) => {
-                console.log('failed');
-            });
-    },
+      })
+      .addCase(fetchBankInfo.rejected, (state, action) => {
+        console.log('failed');
+      });
+  }
 });
 
 export default bankInfoSlice.reducer;

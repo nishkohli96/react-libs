@@ -4,28 +4,28 @@
 */
 
 const GlassComp = () => {
-    return (
-        <div style={styles.container}>
-            <div style={styles.transparent}>
-                <p className="heading">Glass Effect</p>
-            </div>
-        </div>
-    );
+  return (
+    <div style={styles.container}>
+      <div style={styles.transparent}>
+        <p className="heading">Glass Effect</p>
+      </div>
+    </div>
+  );
 };
 
 const styles = {
-    container: {
-        margin: 5,
-        padding: 5,
-        backgroundColor: '#FF5071',
-    },
-    transparent: {
-        backgroundColor: '#ffffff',
-        borderRadius: 10,
-        padding: 5,
-        width: 'fit-content',
-        opacity: 0.3,
-    },
+  container: {
+    margin: 5,
+    padding: 5,
+    backgroundColor: '#FF5071'
+  },
+  transparent: {
+    backgroundColor: '#ffffff',
+    borderRadius: 10,
+    padding: 5,
+    width: 'fit-content',
+    opacity: 0.3
+  }
 };
 
 export default GlassComp;

@@ -48,7 +48,7 @@ const Autocomplete = () => {
         setOpen(false);
       }}
       value={value}
-      filterOptions={(x) => x}
+      filterOptions={x => x}
       noOptionsText={
         Boolean(inputValue)
           ? 'No Results Found'
@@ -61,15 +61,15 @@ const Autocomplete = () => {
       onInputChange={(event, newInputValue) => {
         setInputValue(newInputValue);
       }}
-      getOptionLabel={(option) => option.name}
+      getOptionLabel={option => option.name}
       options={options}
       loading={loading}
-      renderInput={(params) => (
+      renderInput={params => (
         <TextField
           {...params}
           value={inputValue}
           fullWidth
-          variant='outlined'
+          variant="outlined"
           placeholder="Search for products in Autocomplete...."
           InputProps={{
             ...params.InputProps,
@@ -90,7 +90,7 @@ const Autocomplete = () => {
                   </IconButton>
                 )}
               </Fragment>
-            ),
+            )
           }}
         />
       )}

@@ -1,28 +1,40 @@
 import { Link } from 'react-router-dom';
 
 const LinksList = () => {
-    const LinkComponent = ({ path = '', text = '' }) => (
-        <div className="link">
-            <Link to={path}>{text}</Link>
-        </div>
-    );
+  const LinkComponent = ({ path = '', text = '' }) => (
+    <div className="link">
+      <Link to={path}>{text}</Link>
+    </div>
+  );
 
-    return (
-        <div className="root">
-            <LinkComponent path="/formik" text="Formik" />
-            <LinkComponent path="/sample" text="Sample Components" />
-            <LinkComponent path="/swr" text="Swr with Axios" />
-            <LinkComponent path="/videojs" text="VideoJS &amp; React-player" />
-            <LinkComponent path="/react-charts" text="React-charts" />
-            <LinkComponent path="/zoom" text="Zoom web sdk" />
-            <LinkComponent path="/drag-n-drop" text="Drag and drop list" />
-            <LinkComponent path="/redux" text="Redux Egs" />
-            <LinkComponent path="/font-source" text="Font Source" />
-            <LinkComponent path="/react-hook-form" text="React Hook Form" />
-            <LinkComponent path="/react-final-form" text="React Final Form" />
-            <LinkComponent path="/algolia-widgets" text="Algolia-Widgets" />
-        </div>
-    );
+  /* Alphabetically ordered */
+  const routePaths = [
+    { name: '/algolia-widgets', text: 'Algolia Widgets' },
+    { name: '/drag-n-drop', text: 'Drag and drop list' },
+    { name: '/font-source', text: 'Font Source' },
+    { name: '/formik', text: 'Formik' },
+    { name: '/sample', text: 'Sample Components' },
+    { name: '/swr', text: 'Swr with Axios' },
+    { name: '/react-charts', text: 'React-charts' },
+    { name: '/react-hook-form', text: 'React Hook Form' },
+    { name: '/react-final-form', text: 'React Final Form' },
+    { name: '/redux', text: 'Redux Egs' },
+    { name: '/rte', text: 'Rich Text Editors' },
+    { name: '/videojs', text: 'VideoJS & React-player' },
+    { name: '/zoom', text: 'Zoom web sdk' }
+  ];
+
+  return (
+    <div className="root">
+      {routePaths.map(path => (
+        <LinkComponent
+          path={path.name}
+          text={path.text}
+          key={path.name.replace('/', '')}
+        />
+      ))}
+    </div>
+  );
 };
 
 export default LinksList;

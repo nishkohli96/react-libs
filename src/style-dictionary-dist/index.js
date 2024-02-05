@@ -11,9 +11,9 @@ export const ColorWithOpacity = '#006699';
 export const ColorDefault = '#61dafb';
 export const FontSomecolor = '#666666';
 export const FontFullStyle = {
-    color: '#61dafb',
-    fontSize: '18px',
-    margin: 10,
-    fontFamily: 'Poppins-Regular',
+  color: '#61dafb',
+  fontSize: '18px',
+  margin: 10,
+  fontFamily: 'Poppins-Regular'
 };
 export const FontSize1125 = '1.125rem';

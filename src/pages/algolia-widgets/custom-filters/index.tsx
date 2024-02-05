@@ -18,14 +18,14 @@ const CustomFilters = () => {
       { label: 'Less than 50', end: 49.99 },
       { label: 'Between 50 - 300', start: 50, end: 299.99 },
       { label: 'Between 300 - 700', start: 300, end: 699.99 },
-      { label: 'More than 700', start: 700 },
-    ],
+      { label: 'More than 700', start: 700 }
+    ]
   };
 
   const rangeInputProps: UseRangeProps = {
     attribute: AlgoliaConfig.FACET_ATTRIBUTES.price,
     min: 0,
-    max: 1000,
+    max: 1000
   };
 
   return (

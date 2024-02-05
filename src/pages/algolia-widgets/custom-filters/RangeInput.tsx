@@ -15,14 +15,14 @@ const RangeInput = (props: UseRangeProps) => {
           value={min}
           label="Min Price"
           placeholder={`${props.min ?? 0}`}
-          onChange={(e) => setMin(e.target.value)}
+          onChange={e => setMin(e.target.value)}
         />
         <span>{` to `}</span>
         <TextField
           value={max}
           label="Max Price"
           placeholder={`${props.max ?? 0}`}
-          onChange={(e) => setMax(e.target.value)}
+          onChange={e => setMax(e.target.value)}
         />
       </div>
       <div>

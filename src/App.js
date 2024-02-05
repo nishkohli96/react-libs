@@ -10,24 +10,21 @@ import '_Styles/tailwind.css';
 import '_Styles/algolia-styles.css';
 
 function App() {
-    const queryClient = new QueryClient();
+  const queryClient = new QueryClient();
 
-    return (
-        <StrictMode>
-            <Suspense fallback={<LoadingComp />}>
-                <Provider store={store}>
-                    <PersistGate
-                        loading={<LoadingComp />}
-                        persistor={persistor}
-                    >
-                        <QueryClientProvider client={queryClient}>
-                            <Routing />
-                        </QueryClientProvider>
-                    </PersistGate>
-                </Provider>
-            </Suspense>
-        </StrictMode>
-    );
+  return (
+    <StrictMode>
+      <Suspense fallback={<LoadingComp />}>
+        <Provider store={store}>
+          <PersistGate loading={<LoadingComp />} persistor={persistor}>
+            <QueryClientProvider client={queryClient}>
+              <Routing />
+            </QueryClientProvider>
+          </PersistGate>
+        </Provider>
+      </Suspense>
+    </StrictMode>
+  );
 }
 
 export default App;

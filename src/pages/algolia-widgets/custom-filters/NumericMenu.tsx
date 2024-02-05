@@ -7,7 +7,7 @@ const NumericMenu = (props: UseNumericMenuProps) => {
   const { items, refine } = useNumericMenu(props);
   return (
     <div>
-      {items.map((item) => (
+      {items.map(item => (
         <FormGroup key={item.value}>
           <FormControlLabel
             control={

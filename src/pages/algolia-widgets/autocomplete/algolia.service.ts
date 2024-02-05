@@ -23,7 +23,7 @@ export const fetchAlgoliaData = async (
       page: page ?? 0,
       facetFilters: facetFilters,
       clickAnalytics: true,
-      getRankingInfo: true,
+      getRankingInfo: true
     });
     return products.hits ?? [];
   } catch (err) {

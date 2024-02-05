@@ -27,16 +27,16 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
   return (
     <div className="d-flex row">
       {hits.length > 0 ? (
-        hits.map((hit) => (
+        hits.map(hit => (
           <Box
             className="col-12 col-md-6 col-lg-4"
             key={hit.objectID}
             style={{
               padding: '1rem',
-              marginBottom: '2rem',
+              marginBottom: '2rem'
             }}
             sx={{
-              minHeight: (theme) => (theme.breakpoints.up('md') ? 400 : 'auto'),
+              minHeight: theme => (theme.breakpoints.up('md') ? 400 : 'auto')
             }}
             onClick={() => handleClickOnHit(hit)}
           >
@@ -47,7 +47,7 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
                 style={{
                   width: 85,
                   height: 160,
-                  marginBottom: '1rem',
+                  marginBottom: '1rem'
                 }}
               />
             </div>
@@ -66,7 +66,7 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
                   <Button
                     color="primary"
                     variant="outlined"
-                    onClick={(e) => {
+                    onClick={e => {
                       /**
                        *  Reqd to send only one click event,
                        *  else 2 api calls of same click event
@@ -83,7 +83,7 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
                   <Button
                     color="secondary"
                     variant="outlined"
-                    onClick={(e) => {
+                    onClick={e => {
                       e.stopPropagation();
                       handleConversionOnHit(hit);
                     }}

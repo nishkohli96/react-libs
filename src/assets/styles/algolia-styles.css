@@ -1,78 +1,78 @@
 .ais-PoweredBy--root {
-    margin: 10px 0px;
+  margin: 10px 0px;
 }
 
 .ais-PoweredBy-logo {
-    height: 1.25rem;
+  height: 1.25rem;
 }
 
 .ais-Stats-text {
-    font-weight: 600;
-    font-style: italic;
-    color: brown;
+  font-weight: 600;
+  font-style: italic;
+  color: brown;
 }
 
 .ais-Highlight-highlighted {
-    color: mediumslateblue;
-    font-weight: bold;
-    background-color: transparent;
-    padding: 0;
+  color: mediumslateblue;
+  font-weight: bold;
+  background-color: transparent;
+  padding: 0;
 }
 
 .ais-CurrentRefinements--root {
-    border: 1px dotted dodgerblue;
-    border-radius: 5px;
-    padding: 10px 20px 20px;
-    width: fit-content;
-    margin: 15px 0px;
+  border: 1px dotted dodgerblue;
+  border-radius: 5px;
+  padding: 10px 20px 20px;
+  width: fit-content;
+  margin: 15px 0px;
 }
 
 .ais-CurrentRefinements--noRefinementRoot {
-    display: none;
+  display: none;
 }
 
 .ais-CurrentRefinements--refinement-item {
-    border-radius: 10px;
-    background: cadetblue;
-    color: wheat;
-    padding: 3px 10px;
-    width: fit-content;
-    margin-bottom: 10px;
+  border-radius: 10px;
+  background: cadetblue;
+  color: wheat;
+  padding: 3px 10px;
+  width: fit-content;
+  margin-bottom: 10px;
 }
 
 .ais-RefinementList-checkbox {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .ais-RefinementList-labelText {
-    color: palevioletred;
-    font-weight: 400;
+  color: palevioletred;
+  font-weight: 400;
 }
 
 .ais-RefinementList-count {
-    color: slateblue;
+  color: slateblue;
 }
 
 .ais-ClearRefinements--root {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .ais-ClearRefinements--button {
-    border: none;
-    border-radius: 5px;
-    min-width: 150px;
-    background-color: #006699;
-    color: whitesmoke;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  min-width: 150px;
+  background-color: #006699;
+  color: whitesmoke;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .ais-ClearRefinements--button-disabled {
-    opacity: 0.5;
-    background-color: #4c4c4c;
+  opacity: 0.5;
+  background-color: #4c4c4c;
 }
 
 .ais-Pagination-item {
-    display: inline-block;
-    padding: 0 10px;
+  display: inline-block;
+  padding: 0 10px;
 }
