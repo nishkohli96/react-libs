@@ -1,4 +1,4 @@
-import { createHmac } from 'crypto';
+// import { createHmac } from 'crypto';
 import { ZoomMtg } from '@zoomus/websdk';
 import Button from '@material-ui/core/Button';
 
@@ -35,7 +35,8 @@ const startMeeting = () => {
     const msg = Buffer.from(apiKey + meetingNumber + timestamp + role).toString(
         'base64'
     );
-    const hash = createHmac('sha256', apiSecret).update(msg).digest('base64');
+    const hash = '234';
+    // createHmac('sha256', apiSecret).update(msg).digest('base64');
     const signature = Buffer.from(
         `${apiKey}.${meetingNumber}
 		  .${timestamp}.${role}.${hash}`

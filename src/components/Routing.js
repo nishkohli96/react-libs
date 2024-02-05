@@ -22,7 +22,6 @@ const Routing = () => {
             <Switch>
                 <Route exact path="/" component={HomeScreen} />
                 <Route path="/zoom" component={ZoomEg} />
-                <Route exact path="/" component={HomeScreen} />
                 <Route path="/formik" component={FormikForm} />
                 <Route path="/sample" component={SampleComponents} />
                 <Route path="/swr" component={SwrEg} />
