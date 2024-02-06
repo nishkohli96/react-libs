@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useQuery, useQueries } from 'react-query';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const SingleQueryEg = () => {
   /* isError, error also included below, can use as per requirement */
@@ -51,14 +51,14 @@ const MultipleQueryEg = () => {
   return (
     <div>
       <div className="text-blue-400">Multiple React-Query Example</div>
-      {results.map(res =>
+      {results.map((res, idx) =>
         res?.isSuccess ? (
-          <div className="text-blue-800">
+          <div className="text-blue-800" key={idx}>
             Data:
             {res?.data?.BANK}
           </div>
         ) : (
-          <div className="text-red-300">ERROR</div>
+          <div className="text-red-300" key={idx}>ERROR</div>
         ))}
     </div>
   );

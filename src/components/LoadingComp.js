@@ -1,12 +1,4 @@
-import CircularProgress from '@material-ui/core/CircularProgress';
-
-const LoadingComp = () => (
-  <div className="fullscreen">
-    <div style={styles.centreDiv}>
-      <CircularProgress />
-    </div>
-  </div>
-);
+import CircularProgress from '@mui/material/CircularProgress';
 
 const styles = {
   centreDiv: {
@@ -16,5 +8,13 @@ const styles = {
     alignItems: 'center',
   },
 };
+
+const LoadingComp = () => (
+  <div className="fullscreen">
+    <div style={styles.centreDiv}>
+      <CircularProgress />
+    </div>
+  </div>
+);
 
 export default LoadingComp;

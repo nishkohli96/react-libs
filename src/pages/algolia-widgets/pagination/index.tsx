@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { useHits, usePagination, PaginationProps } from 'react-instantsearch';
-import Pagination from '@material-ui/lab/Pagination';
+import Pagination from '@mui/material/Pagination';
 
 const PaginationWidget = (props: PaginationProps) => {
   const { hits } = useHits();

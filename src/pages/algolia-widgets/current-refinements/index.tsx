@@ -5,8 +5,8 @@ import {
   ClearRefinements,
 } from 'react-instantsearch';
 import classNames from 'classnames';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 import AlgoliaConfig from '../algolia-config';
 
 /**

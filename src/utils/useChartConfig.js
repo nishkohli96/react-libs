@@ -53,10 +53,6 @@ const options = {
 
 const optionKeys = Object.keys(options);
 
-function makeDataFrom(dataType, series, datums, dataSet) {
-  return [...new Array(series || Math.max(Math.round(Math.random() * 5), 1))].map(() => makeSeries(dataType, datums, dataSet));
-}
-
 function makeSeries(dataType, datums, dataSet) {
   const start = 0;
   const length = datums;
@@ -65,8 +61,10 @@ function makeSeries(dataType, datums, dataSet) {
     label: 'Value',
     data: [...new Array(length)].map((_, i) => {
       let x = start + i;
-      /* You can define your custom data type here, & pass
-                from the parent component */
+      /**
+       * You can define your custom data type here,
+       * & pass from the parent component.
+       */
       if (dataType === 'integer') {
         x = `${i + 1}`;
       }
@@ -77,6 +75,10 @@ function makeSeries(dataType, datums, dataSet) {
       };
     }),
   };
+}
+
+function makeDataFrom(dataType, series, datums, dataSet) {
+  return [...new Array(series || Math.max(Math.round(Math.random() * 5), 1))].map(() => makeSeries(dataType, datums, dataSet));
 }
 
 export default function useChartConfig({

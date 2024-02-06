@@ -7,7 +7,8 @@ const CogoToastEg = () => {
       onClick: () => {
         // hide();
       },
-      hideAfter: 3, // in seconds
+      /* in seconds */
+      hideAfter: 3,
       position: 'bottom-center',
       heading: 'Success',
     });
@@ -18,7 +19,9 @@ const CogoToastEg = () => {
       cogoToast.error(
         <div>
           <b>Awesome!</b>
-          <div>Isn't it?</div>
+          <div>
+            {'Isn\'t it?'}
+          </div>
         </div>,
       );
     });

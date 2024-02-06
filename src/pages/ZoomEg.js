@@ -1,27 +1,32 @@
 // import { createHmac } from 'crypto';
 import { ZoomMtg } from '@zoomus/websdk';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 
 ZoomMtg.setZoomJSLib('https://source.zoom.us/1.9.6/lib', '/av');
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();
 
-const ZoomEg = () => {
-  console.log('here');
-  return (
-    <div style={styles.fullScreen}>
-      <p>Header</p>
-
-      <Button style={styles.btn} onClick={() => startMeeting()}>
-        Start Meeting
-      </Button>
-
-      <div style={styles.container}>
-        <div id="zmmtg-root" />
-      </div>
-      <p>Footer</p>
-    </div>
-  );
+const styles = {
+  fullScreen: {
+    backgroundColor: 'powderblue',
+    width: '100vw',
+    height: '100vh',
+  },
+  container: {
+    padding: 30,
+    margin: 30,
+    width: 800,
+    height: 500,
+    backgroundColor: 'silver',
+  },
+  root: {
+    display: 'block',
+    backgroundColor: '#414141',
+  },
+  btn: {
+    backgroundColor: '#123432',
+    color: 'white',
+  },
 };
 
 const startMeeting = () => {
@@ -65,27 +70,22 @@ const startMeeting = () => {
   });
 };
 
-const styles = {
-  fullScreen: {
-    backgroundColor: 'powderblue',
-    width: '100vw',
-    height: '100vh',
-  },
-  container: {
-    padding: 30,
-    margin: 30,
-    width: 800,
-    height: 500,
-    backgroundColor: 'silver',
-  },
-  root: {
-    display: 'block',
-    backgroundColor: '#414141',
-  },
-  btn: {
-    backgroundColor: '#123432',
-    color: 'white',
-  },
+const ZoomEg = () => {
+  console.log('here');
+  return (
+    <div style={styles.fullScreen}>
+      <p>Header</p>
+
+      <Button style={styles.btn} onClick={() => startMeeting()}>
+        Start Meeting
+      </Button>
+
+      <div style={styles.container}>
+        <div id="zmmtg-root" />
+      </div>
+      <p>Footer</p>
+    </div>
+  );
 };
 
 export default ZoomEg;

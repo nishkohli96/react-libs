@@ -1,4 +1,4 @@
-import type { Hit, BaseHit } from 'instantsearch.js';
+import type { BaseHit } from 'instantsearch.js';
 
 export interface ProductInfo extends BaseHit {
   objectID: string;

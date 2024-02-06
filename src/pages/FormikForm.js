@@ -1,4 +1,4 @@
-import Divider from '@material-ui/core/Divider';
+import Divider from '@mui/material/Divider';
 
 import FormikForm1 from '_Components/FormikEgs/FormikForm1';
 import FormikForm2 from '_Components/FormikEgs/FormikForm2';

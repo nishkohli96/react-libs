@@ -1,7 +1,20 @@
 import React from 'react';
 import { Chart } from 'react-charts';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import useChartConfig from '_Utils/useChartConfig';
+
+const styles = {
+  chartContainer: {
+    width: 500,
+    height: 500,
+    marginLeft: 40,
+    margin: 20,
+  },
+  btn: {
+    backgroundColor: '#E85B5A',
+    color: 'white',
+  },
+};
 
 const getRandomInt = () => {
   const min = 0;
@@ -19,7 +32,7 @@ const ReactChart = () => {
 
   const randomizeData = React.useCallback(() => {
     const arr = new Array(10).fill(0);
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i < 9; i += 1) {
       arr[i] = getRandomInt();
     }
     setDataSet(arr);
@@ -38,8 +51,10 @@ const ReactChart = () => {
 
   const { data, getSeriesStyle, getDatumStyle, onFocus, dataSeries, axes }
     = useChartConfig({
-      series: 1 /* Values for each label */,
-      datums: dataSet.length /* Num of labels */,
+      /* Values for each label */
+      series: 1,
+      /* Num of labels */
+      datums: dataSet.length,
       yMax: getYMax(dataSet),
       dataType: 'integer',
       dataSet,
@@ -63,19 +78,6 @@ const ReactChart = () => {
       </Button>
     </div>
   );
-};
-
-const styles = {
-  chartContainer: {
-    width: 500,
-    height: 500,
-    marginLeft: 40,
-    margin: 20,
-  },
-  btn: {
-    backgroundColor: '#E85B5A',
-    color: 'white',
-  },
 };
 
 export default ReactChart;

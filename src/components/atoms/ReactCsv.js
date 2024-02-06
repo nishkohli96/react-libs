@@ -9,7 +9,8 @@ import { DiAndroid } from 'react-icons/di';
 class ReactCsv extends Component {
   constructor() {
     super();
-    this.csvRef = createRef(); // useRef for function components
+    /* useRef for function components */
+    this.csvRef = createRef();
   }
 
   /*  purposely added empty array inside array, so that there is a spacing
@@ -31,8 +32,10 @@ class ReactCsv extends Component {
 
   downloadApiData = async () => {
     // this.setState({ dynamicData: data, startDownload: false })
-    /*  Let the async opn of changing state be done, then download the updated
-            data, else prev state data wud b downloaded */
+    /**
+     * Let the async opn of changing state be done, then download
+     * the updateddata, else prev state data wud be downloaded.
+     */
     const resp = await axios.get('https://ifsc.razorpay.com/KARB0000001');
     const arr = [[]];
     arr.push([resp?.data?.bank, resp?.data?.ifsc]);

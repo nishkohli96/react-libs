@@ -1,7 +1,7 @@
 import React from 'react';
 import videojs from 'video.js';
 import ReactPlayer from 'react-player';
-import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
+import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import fieryace from '_Images/fireyace.png';
 import 'video.js/dist/video-js.css';
 
@@ -22,7 +22,7 @@ class VideoPlayer extends React.Component {
       this.play();
 
       // How about an event listener?
-      this.on('ended', function () {
+      this.on('ended', function endVideo() {
         videojs.log('Awww...over so soon?!');
       });
     });
@@ -62,6 +62,7 @@ class VideoPlayer extends React.Component {
                 supports HTML5 video
               </a>
             </p>
+            <track kind="captions" />
           </video>
         </div>
 

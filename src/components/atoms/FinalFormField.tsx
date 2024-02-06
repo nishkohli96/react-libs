@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { ChangeEvent, FC } from 'react';
 import {
   FormControl,
   FormHelperText,
@@ -8,13 +8,13 @@ import {
   SelectProps,
   TextField,
   TextFieldProps,
-} from '@material-ui/core';
+} from '@mui/material';
 import { Field } from 'react-final-form';
 
 interface FFTextFieldProps {
   fieldName: string;
   /* custom function to run during onChange of the field */
-  onChangeFn?: Function;
+  onChangeFn?: (e: ChangeEvent) => void;
 }
 
 export const FFTextField: FC<TextFieldProps & FFTextFieldProps> = tfProps => {

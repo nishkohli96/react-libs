@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import { useRefinementList, RefinementListProps } from 'react-instantsearch';
 import classNames from 'classnames';
-import TextField from '@material-ui/core/TextField';
+import TextField from '@mui/material/TextField';
 
 const ListResults = (props: RefinementListProps): ReactElement => {
   /*

@@ -1,6 +1,6 @@
 import { useFormik } from 'formik';
-import Textfield from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import Textfield from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 /* Can use Schema like Yup or own validation function to validate form*/
 import { YupSchema } from '_Utils/FormHelpers';
@@ -10,6 +10,14 @@ const formDefaults = {
   fullName: '',
   email: '',
   password: '',
+};
+
+const styles = {
+  submitBtn: {
+    marginTop: '20px',
+    backgroundColor: '#F27C59',
+    color: '#FFFFFF',
+  },
 };
 
 const FormikForm1 = () => {
@@ -99,11 +107,4 @@ const FormikForm1 = () => {
   );
 };
 
-const styles = {
-  submitBtn: {
-    marginTop: '20px',
-    backgroundColor: '#F27C59',
-    color: '#FFFFFF',
-  },
-};
 export default FormikForm1;

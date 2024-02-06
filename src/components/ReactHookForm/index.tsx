@@ -10,8 +10,8 @@ import {
   TextField,
   Tooltip,
   Typography,
-} from '@material-ui/core';
-import { Delete, Replay } from '@material-ui/icons';
+} from '@mui/material';
+import { Delete, Replay } from '@mui/icons-material';
 import { FormSchema } from './schema';
 import { FormType, Colors, ItemShape } from './types';
 

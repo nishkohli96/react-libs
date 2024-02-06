@@ -3,14 +3,6 @@
     https://css-tricks.com/frosting-glass-css-filters/
 */
 
-const GlassComp = () => (
-  <div style={styles.container}>
-    <div style={styles.transparent}>
-      <p className="heading">Glass Effect</p>
-    </div>
-  </div>
-);
-
 const styles = {
   container: {
     margin: 5,
@@ -25,5 +17,13 @@ const styles = {
     opacity: 0.3,
   },
 };
+
+const GlassComp = () => (
+  <div style={styles.container}>
+    <div style={styles.transparent}>
+      <p className="heading">Glass Effect</p>
+    </div>
+  </div>
+);
 
 export default GlassComp;

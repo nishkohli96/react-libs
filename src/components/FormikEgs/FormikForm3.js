@@ -76,8 +76,10 @@ const FormikForm3 = () => (
         firstName: '',
         lastName: '',
         email: '',
-        acceptedTerms: false, // added for our checkbox
-        jobType: '', // added for our select
+        /* added for our checkbox */
+        acceptedTerms: false,
+        /* added for our select */
+        jobType: '',
       }}
       validationSchema={Yup.object({
         firstName: Yup.string()
