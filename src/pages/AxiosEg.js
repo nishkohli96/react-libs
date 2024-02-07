@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import Divider from '@mui/material/Divider';
+import ReactQueryEg from '_Atoms/ReactQueryEg';
 import axiosApi from '_Utils/AxiosApi';
 
 const AxiosEg = () => {
@@ -26,6 +28,8 @@ const AxiosEg = () => {
         <span className="font-semibold">Id: </span>
         {pokeDetais.id}
       </p>
+      <Divider sx={{ my: '20px' }}/>
+      <ReactQueryEg />
     </div>
   );
 };

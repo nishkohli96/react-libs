@@ -12,12 +12,16 @@ const LinksList = () => {
   /* Alphabetically ordered */
   const routePaths = [
     {
+      name: '/aos-glass-icons',
+      text: 'Aos & react-icons',
+    },
+    {
       name: '/algolia-widgets',
       text: 'Algolia Widgets',
     },
     {
       name: '/axios',
-      text: 'Axios',
+      text: 'Axios & React-Query',
     },
     {
       name: '/color-pickers',
@@ -26,6 +30,10 @@ const LinksList = () => {
     {
       name: '/drag-n-drop',
       text: 'Drag and drop list *',
+    },
+    {
+      name: '/faker-csv',
+      text: 'Faker & react-csv',
     },
     {
       name: '/font-source',
@@ -60,12 +68,12 @@ const LinksList = () => {
       text: 'Rich Text Editors',
     },
     {
-      name: '/sample',
-      text: 'Sample Components',
+      name: '/toasts',
+      text: 'Toasts - cogo & react-toastify',
     },
     {
       name: '/videojs',
-      text: 'VideoJS & React-player',
+      text: 'VideoJS * & React-player',
     },
     {
       name: '/zoom',

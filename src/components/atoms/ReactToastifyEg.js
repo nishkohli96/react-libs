@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
+import Button from '@mui/material/Button';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ReactToastifyEg = () => {
@@ -22,11 +23,11 @@ const ReactToastifyEg = () => {
 
   return (
     <div>
-      <button style={{ backgroundColor: '#ff5423' }} onClick={notify}>
+      <Button sx={{ backgroundColor: '#ff5423' }} onClick={notify}>
         React-Toastify Btn
-      </button>
-      <button onClick={dismiss}>Dismiss Toast</button>
-      <button onClick={dismissAll}>Dismiss All Toasts</button>
+      </Button>
+      <Button onClick={dismiss}>Dismiss Toast</Button>
+      <Button onClick={dismissAll}>Dismiss All Toasts</Button>
       <ToastContainer />
     </div>
   );

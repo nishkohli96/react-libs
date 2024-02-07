@@ -10,17 +10,15 @@ const SingleQueryEg = () => {
   /* Need to use QueryClient Provider at root level, check index.js */
   return (
     <div>
-      <div className="text-blue-400">React-Query Example</div>
+      <div className="text-blue-400">Single-Query Example</div>
       {isLoading ? (
         <CircularProgress variant="indeterminate" />
       ) : (
         <div>
-          Data Fetched
-          {' '}
-          <b>Bank Name</b>
-          :
-          {' '}
-          {data?.BANK}
+          <b>Data Fetched</b>
+          <div>
+            {JSON.stringify(data)}
+          </div>
         </div>
       )}
     </div>
@@ -48,10 +46,7 @@ const MultipleQueryEg = () => {
 
 
   return (
-    <div>
-      <div className="my-5 text-red-600">
-        ** You are looking at the v3 version of react-query. Starting with v4, react-query is now available as @tanstack/react-query
-      </div>
+    <div className="mt-5">
       <div className="text-blue-400">Multiple React-Query Example</div>
       {results.map((res, idx) =>
         res?.isSuccess ? (
@@ -68,6 +63,9 @@ const MultipleQueryEg = () => {
 
 const ReactQueryEg = () => (
   <>
+    <div className="my-5 text-red-600">
+      ** You are looking at the v3 version of react-query. Starting with v4, react-query is now available as @tanstack/react-query
+    </div>
     <SingleQueryEg />
     <MultipleQueryEg />
   </>

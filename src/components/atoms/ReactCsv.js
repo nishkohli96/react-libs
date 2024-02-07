@@ -1,10 +1,6 @@
 import { Component, createRef } from 'react';
 import axios from 'axios';
 import { CSVLink } from 'react-csv';
-import { faker } from '@faker-js/faker';
-import { IconContext } from 'react-icons';
-import { FaBeer } from 'react-icons/fa';
-import { DiAndroid } from 'react-icons/di';
 
 class ReactCsv extends Component {
   constructor() {
@@ -46,48 +42,13 @@ class ReactCsv extends Component {
     });
 
     setTimeout(() => {
-      this.csvRef.current.link.click();
+      this.csvRef?.current?.link?.click();
     }, 3000);
   };
 
   render() {
     return (
       <div style={{ margin: '10px 0px' }}>
-        <div>
-          Lets go for a
-          {' '}
-          <span>
-            <FaBeer />
-          </span>
-          ?
-        </div>
-        <IconContext.Provider
-          value={{
-            color: 'green',
-            size: 25,
-            title: 'android',
-            className: 'global-class-name',
-          }}
-        >
-          <DiAndroid />
-        </IconContext.Provider>
-        <p>
-          <b>Faker dummy data</b>
-        </p>
-        <p>
-          {' '}
-          Faker Name -
-          {faker.person.fullName()}
-        </p>
-        <p>
-          {' '}
-          Faker  Email -
-          {faker.internet.email()}
-        </p>
-        <p>
-          Faker Airline -
-          {faker.airline.airline().name}
-        </p>
         <CSVLink
           data={this.staticData}
           headers={this.headers}
