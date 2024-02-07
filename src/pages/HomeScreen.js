@@ -1,4 +1,4 @@
-import LinksList from '../components/LinksList';
+import LinksList from '_Routes/LinksList';
 import { FontFullStyle } from '../style-dictionary-dist';
 
 const HomeScreen = () => (

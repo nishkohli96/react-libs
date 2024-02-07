@@ -20,3 +20,7 @@ package-lock.json
 *.md
 *.log
 *.d.ts
+*.js
+*.ts
+*.jsx
+*.tsx

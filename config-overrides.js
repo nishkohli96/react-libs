@@ -12,6 +12,7 @@ module.exports = override(
     '_Images': path.resolve(__dirname, './src/assets/images'),
     '_Molecules': path.resolve(__dirname, './src/components/molecules'),
     '_Pages': path.resolve(__dirname, './src/pages'),
+    '_Routes': path.resolve(__dirname, './src/routes'),
     '_Store': path.resolve(__dirname, './src/store'),
     '_Styles': path.resolve(__dirname, './src/assets/styles'),
     '_Utils': path.resolve(__dirname, './src/utils'),

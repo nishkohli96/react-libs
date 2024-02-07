@@ -6,18 +6,20 @@ import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 
 /* Custom Plugins */
-import { CodeBlock, CodeBlockEditing } from '@ckeditor/ckeditor5-code-block'
+import { CodeBlock, CodeBlockEditing } from '@ckeditor/ckeditor5-code-block';
 import { FindAndReplace } from '@ckeditor/ckeditor5-find-and-replace';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 
-export default function CkEditor() {
+export default function CkEditorAdvanced() {
   return (
     <CKEditor
       editor={ClassicEditor}
       data="<p>Hello from CKEditor&nbsp;5!</p>"
       config={{
-        plugins: [ Essentials, Paragraph, Bold, Italic ],
-		toolbar: [ 'bold', 'italic' ]
+        plugins: [
+          Essentials, Paragraph, Bold, Italic,
+        ],
+        toolbar: ['bold', 'italic'],
       }}
     />
   );

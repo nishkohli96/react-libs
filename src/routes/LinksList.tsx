@@ -16,6 +16,10 @@ const LinksList = () => {
       text: 'Algolia Widgets',
     },
     {
+      name: '/color-pickers',
+      text: 'Color Pickers',
+    },
+    {
       name: '/drag-n-drop',
       text: 'Drag and drop list',
     },

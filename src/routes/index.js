@@ -16,6 +16,7 @@ const Page404 = lazy(() => import('_Pages/Page404'));
 const ReactHookForm = lazy(() => import('_Components/ReactHookForm'));
 const AlgoliaWidgets = lazy(() => import('_Pages/algolia-widgets'));
 const RtePage = lazy(() => import('_Pages/rte'));
+const ColorPickers = lazy(() => import('_Pages/color-pickers'));
 
 const Routing = () => (
   <BrowserRouter>
@@ -34,6 +35,7 @@ const Routing = () => (
       <Route path="/react-final-form" component={ReactFinalForm} />
       <Route path="/algolia-widgets" component={AlgoliaWidgets} />
       <Route path="/rte" component={RtePage} />
+      <Route path="/color-pickers" component={ColorPickers} />
       <Route component={Page404} />
     </Switch>
   </BrowserRouter>

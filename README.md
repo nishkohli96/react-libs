@@ -17,14 +17,17 @@ While building app for production, comment/remove `import tailwind.css` line in 
 - [aos](https://www.npmjs.com/package/aos)
 - [axios](https://www.npmjs.com/package/axios)
 - [algolia](https://www.algolia.com/doc/guides/building-search-ui/widgets/showcase/react/)
+- [ck-editor-react](https://www.npmjs.com/package/@ckeditor/ckeditor5-react) - 6.2.0
 - [cogo-toast](https://www.npmjs.com/package/cogo-toast)
 - [cypress](https://www.cypress.io/)
 - [faker](https://www.npmjs.com/package/faker)
 - [fontsource](https://fontsource.org/)
 - [formik](https://www.npmjs.com/package/formik)
-- [material-ui](https://material-ui.com/)
+- [mui](https://mui.com/) - 5.15.7
+- [mui-rte](https://www.npmjs.com/package/mui-rte) - 2.0.1
 - [react-beautiful-dnd](https://www.npmjs.com/package/react-beautiful-dnd)
 - [react-charts](https://www.npmjs.com/package/react-charts)
+- [react-color](https://casesandberg.github.io/react-color/) - 2.19.3
 - [react-csv](https://www.npmjs.com/package/react-csv)
 - [react-final-form](https://final-form.org/react)
 - [react-hook-form](https://react-hook-form.com/) 

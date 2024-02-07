@@ -5,7 +5,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import LoadingComp from '_Components/LoadingComp';
-import Routing from '_Components/Routing';
+import Routing from '_Routes';
 import { store, persistor } from '_Store';
 import '_Styles/tailwind.css';
 import '_Styles/algolia-styles.css';
