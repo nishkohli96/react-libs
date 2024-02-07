@@ -16,7 +16,7 @@ While building app for production, comment/remove `import tailwind.css` line in 
 
 - [aos](https://www.npmjs.com/package/aos)
 - [axios](https://www.npmjs.com/package/axios)
-- [algolia](https://www.algolia.com/doc/guides/building-search-ui/widgets/showcase/react/)
+- [algolia](https://www.algolia.com/doc/guides/building-search-ui/widgets/showcase/react/) - 4.22.1 & [react-instantsearch](https://www.npmjs.com/package/react-instantsearch)
 - [ck-editor-react](https://www.npmjs.com/package/@ckeditor/ckeditor5-react) - 6.2.0
 - [cogo-toast](https://www.npmjs.com/package/cogo-toast)
 - [cypress](https://www.cypress.io/)
@@ -25,7 +25,7 @@ While building app for production, comment/remove `import tailwind.css` line in 
 - [formik](https://www.npmjs.com/package/formik)
 - [mui](https://mui.com/) - 5.15.7
 - [mui-rte](https://www.npmjs.com/package/mui-rte) - 2.0.1
-- [react-beautiful-dnd](https://www.npmjs.com/package/react-beautiful-dnd)
+- [react-beautiful-dnd](https://www.npmjs.com/package/react-beautiful-dnd) - 13.1.1
 - [react-charts](https://www.npmjs.com/package/react-charts)
 - [react-color](https://casesandberg.github.io/react-color/) - 2.19.3
 - [react-csv](https://www.npmjs.com/package/react-csv)

@@ -1,7 +1,8 @@
 import { useHits, UseHitsProps, Highlight } from 'react-instantsearch';
 import type { Hit } from 'instantsearch.js';
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import AlgoliaConfig from '../algolia-config';
 import { ProductInfo } from '../types';
 
@@ -25,20 +26,23 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
   };
 
   return (
-    <div className="d-flex row">
+    <Grid container>
       {hits.length > 0 ? (
         hits.map(hit => (
-          <Box
-            className="col-12 col-md-6 col-lg-4"
+          <Grid
+            container
+            xs={12}
+            md={6}
+            lg={4}
             key={hit.objectID}
-            style={{
+            sx={{
               padding: '1rem',
               marginBottom: '2rem',
+              minHeight: theme => (theme.breakpoints.up('md') ? 400 : 'auto'),
             }}
-            sx={{ minHeight: theme => (theme.breakpoints.up('md') ? 400 : 'auto') }}
             onClick={() => handleClickOnHit(hit)}
           >
-            <div className="d-flex d-md-block justify-content-center">
+            <Grid container item xs={12} justifyContent="center">
               <img
                 src={hit.image}
                 alt={hit.name}
@@ -48,22 +52,17 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
                   marginBottom: '1rem',
                 }}
               />
-            </div>
-            <h5>
+            </Grid>
+            <Typography variant='h5'>
               <Highlight hit={hit} attribute="name" />
-            </h5>
-            <p>
+            </Typography>
+            <Typography>
               <Highlight hit={hit} attribute="brand" />
-            </p>
-            <div
-              className="d-flex d-md-block justify-content-center"
-              style={{
-                position: 'absolute',
-                bottom: 0,
-              }}
+            </Typography>
+            <Grid item
+            sx={{ mt:'30px'}}
             >
-              <div className="row">
-                <div className="col-4">
+              <Grid item xs={4}>
                   <Button
                     color="primary"
                     variant="outlined"
@@ -79,8 +78,7 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
                   >
                     Click
                   </Button>
-                </div>
-                <div className="col-8">
+                <Grid className="col-8">
                   <Button
                     color="secondary"
                     variant="outlined"
@@ -91,17 +89,17 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
                   >
                     Conversion
                   </Button>
-                </div>
-              </div>
-            </div>
-          </Box>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
         ))
       ) : (
         <div className="col-12 d-flex justify-content-center ">
           <h5>No Results Found...</h5>
         </div>
       )}
-    </div>
+    </Grid>
   );
 };
 

@@ -15,7 +15,7 @@ const ListResults = (props: RefinementListProps): ReactElement => {
     <div className="ais-RefinementList">
       <TextField
         placeholder="Search for brands"
-        style={{ margin: '10px 0px' }}
+        sx={{ margin: '10px 0px' }}
         inputProps={{ style: { padding: '8px 12px' } }}
         onChange={e => searchForItems(e.currentTarget.value)}
       />

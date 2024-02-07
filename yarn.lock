@@ -2104,20 +2104,20 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.1.tgz#16308cea045f0fc777b6ff20a9f25474dd8293d2"
   integrity sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==
 
-"@fontsource/covered-by-your-grace@^4.5.6":
-  version "4.5.9"
-  resolved "https://registry.yarnpkg.com/@fontsource/covered-by-your-grace/-/covered-by-your-grace-4.5.9.tgz#cb4db6252879841e40bf41e52a94ac50f17b818e"
-  integrity sha512-m/YEaLHBXEtXRqEt07XH3WrNBsyrp6ayx6jCVsqlqZGTyaGkoa4x+OM4H2l8sBRr/w9EOdfBOTLHlkfpVXyayQ==
+"@fontsource/covered-by-your-grace@^5.0.8":
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/covered-by-your-grace/-/covered-by-your-grace-5.0.8.tgz#e0b8e9187a6499caa837ab5eb5fcaa020bb3511b"
+  integrity sha512-6gFVG0Cc1ucX7MZ3yAfZmvzJOwv3P41f3mmuag/D/wUDukm/+x4SeZ7KNYk4i0Yj8hSfuabO6pHjNfxvLcHNcw==
 
-"@fontsource/crimson-pro@^4.5.7":
-  version "4.5.11"
-  resolved "https://registry.yarnpkg.com/@fontsource/crimson-pro/-/crimson-pro-4.5.11.tgz#41d2cf7a5270aedaaa22902f75cccc6f61437140"
-  integrity sha512-AQcsh0g6Tmh708JJYDmxV8itXu+k6ZFokETxJAxJVg0rj9Dz3p9QZWUqqWNfrjChJDL86yBDKyV3sB2BjW1XFg==
+"@fontsource/crimson-pro@^5.0.16":
+  version "5.0.16"
+  resolved "https://registry.yarnpkg.com/@fontsource/crimson-pro/-/crimson-pro-5.0.16.tgz#a4e3cde5ca3f70e77cc1efe83946d900d8d6a26a"
+  integrity sha512-GeVJ6Vj6Z0B8qf6Qni6OihMCZsdHr57hpMYeshjT+yuvfJ0FxrlFAA9MSEgE23fz/GUpWcdheH6WrGRrogoG9w==
 
-"@fontsource/roboto@^4.5.5":
-  version "4.5.8"
-  resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-4.5.8.tgz#56347764786079838faf43f0eeda22dd7328437f"
-  integrity sha512-CnD7zLItIzt86q4Sj3kZUiLcBk1dSk81qcqgMGaZe7SQ1P8hFNxhMl5AZthK1zrDM5m74VVhaOpuMGIL4gagaA==
+"@fontsource/roboto@^5.0.8":
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-5.0.8.tgz#613b477a56f21b5705db1a67e995c033ef317f76"
+  integrity sha512-XxPltXs5R31D6UZeLIV1td3wTXU3jzd3f2DLsXI8tytMGBkIsGcc9sIyiupRtA8y73HAhuSCeweOoBqf6DbWCA==
 
 "@hookform/resolvers@^2.9.7":
   version "2.9.11"
@@ -3875,7 +3875,7 @@ algoliasearch-helper@3.16.2:
   dependencies:
     "@algolia/events" "^4.0.1"
 
-algoliasearch@^4.18.0:
+algoliasearch@^4.22.1:
   version "4.22.1"
   resolved "https://registry.yarnpkg.com/algoliasearch/-/algoliasearch-4.22.1.tgz#f10fbecdc7654639ec20d62f109c1b3a46bc6afc"
   integrity sha512-jwydKFQJKIx9kIZ8Jm44SdpigFwRGPESaxZBaHSV0XWN2yBJAOT4mT7ppvlrpA4UGzz92pqFnVKr/kaZXrcreg==
@@ -7462,10 +7462,10 @@ ini@^1.3.5:
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.8.tgz#a29da425b48806f34767a4efce397269af28432c"
   integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
 
-instantsearch.js@4.64.2:
-  version "4.64.2"
-  resolved "https://registry.yarnpkg.com/instantsearch.js/-/instantsearch.js-4.64.2.tgz#e0780c1a86e231547218836221dea1cf54b565e8"
-  integrity sha512-omCljdxpIheFsPWneGDxkx2OqKpW44RJGt0bWkp+n5KjMnQ66+N5VgKid7pUiiu4TGGHDn4Q0c2CzFv5hoGm5Q==
+instantsearch.js@4.64.3:
+  version "4.64.3"
+  resolved "https://registry.yarnpkg.com/instantsearch.js/-/instantsearch.js-4.64.3.tgz#6957b13728010f5bbcf7d484d2a9556f5dd9bdd6"
+  integrity sha512-vqXlfQWOCRZRujzsVK0dn+N/fBrBLa6rdwnsie1f4hE+95SEc3I8qAi/c3lQXrU9PXGLlBMnJBKrysauFix0uw==
   dependencies:
     "@algolia/events" "^4.0.1"
     "@algolia/ui-components-highlight-vdom" "^1.2.2"
@@ -10596,7 +10596,7 @@ react-app-rewired@^2.1.8:
   dependencies:
     semver "^5.6.0"
 
-react-beautiful-dnd@^13.1.0:
+react-beautiful-dnd@^13.1.1:
   version "13.1.1"
   resolved "https://registry.yarnpkg.com/react-beautiful-dnd/-/react-beautiful-dnd-13.1.1.tgz#b0f3087a5840920abf8bb2325f1ffa46d8c4d0a2"
   integrity sha512-0Lvs4tq2VcrEjEgDXHjT98r+63drkKEgqyxdA7qD3mvKwga6a5SscbdLPO2IExotU1jW8L0Ksdl0Cj2AF67nPQ==
@@ -10718,24 +10718,24 @@ react-icons@^4.2.0:
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.12.0.tgz#54806159a966961bfd5cdb26e492f4dafd6a8d78"
   integrity sha512-IBaDuHiShdZqmfc/TwHu6+d6k2ltNCf3AszxNmjJc1KUfXdEeRJOKyNvLmAHaarhzGmTSVygNdyu8/opXv2gaw==
 
-react-instantsearch-core@7.5.4:
-  version "7.5.4"
-  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-7.5.4.tgz#a0b89c3a61ef2d26c63c0cb8bdc5e655290d038d"
-  integrity sha512-WDgfgAmma4cEufsoYOfrXezsdzdn0ZF+Op2TczIcu1JHg6LulcFkmMUneKFF1AjpP8mfiKsP2MjQQqscY2IIyQ==
+react-instantsearch-core@7.5.5:
+  version "7.5.5"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-7.5.5.tgz#746848187f10afc850c695f4cc282e06d7dbc893"
+  integrity sha512-96Y7w9dVZA2KQC0eDrb5//yRA1jph8+Q985vya36xM8VLhnVu5x4o424BE/E8ZOQPR1wlEX+cE0w0NgK+Om0TQ==
   dependencies:
     "@babel/runtime" "^7.1.2"
     algoliasearch-helper "3.16.2"
-    instantsearch.js "4.64.2"
+    instantsearch.js "4.64.3"
     use-sync-external-store "^1.0.0"
 
-react-instantsearch@^7.0.1:
-  version "7.5.4"
-  resolved "https://registry.yarnpkg.com/react-instantsearch/-/react-instantsearch-7.5.4.tgz#2c4a939d4060966d2fc9efe73d20983fde7b04bc"
-  integrity sha512-vw1OZojMyiC91rIBwyVDWgbry5lFTt1CzZ+k1+6Gz4YD/MVaNv0rU7HYFjE4mIjV+Ar+dbUTn9qgPIfJK2IQ2Q==
+react-instantsearch@^7.5.5:
+  version "7.5.5"
+  resolved "https://registry.yarnpkg.com/react-instantsearch/-/react-instantsearch-7.5.5.tgz#9b2eed497bf06f39735ecc7be4fc57e1a3829f56"
+  integrity sha512-dWLQXWbzUAxjb2u18FNm0d4gcFL6Bv4mDFjWgv7OSWr6nHFp7piK3c93pqLAXmfZjrx4WcIfVWQBq5xkJ8XbbA==
   dependencies:
     "@babel/runtime" "^7.1.2"
-    instantsearch.js "4.64.2"
-    react-instantsearch-core "7.5.4"
+    instantsearch.js "4.64.3"
+    react-instantsearch-core "7.5.5"
 
 react-is@^16.13.1, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.6:
   version "16.13.1"

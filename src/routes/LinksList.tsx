@@ -21,7 +21,7 @@ const LinksList = () => {
     },
     {
       name: '/drag-n-drop',
-      text: 'Drag and drop list',
+      text: 'Drag and drop list *',
     },
     {
       name: '/font-source',
@@ -70,6 +70,7 @@ const LinksList = () => {
   ];
 
   return (
+    <div>
     <div className="root">
       {routePaths.map(path => (
         <LinkComponent
@@ -78,6 +79,8 @@ const LinksList = () => {
           key={path.name.replace('/', '')}
         />
       ))}
+    </div>
+      <div className='text-red-800'>{'* -> not working as expected '}</div> 
     </div>
   );
 };
