@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
 import HomeScreen from '_Pages/HomeScreen';
 import Page404 from '_Pages/Page404';
@@ -24,27 +24,27 @@ const ZoomEg = lazy(() => import('_Pages/ZoomEg'));
 
 const Routing = () => (
   <BrowserRouter>
-    <Switch>
-      <Route exact path="/" component={HomeScreen} />
-      <Route path="/algolia-widgets" component={AlgoliaWidgets} />
-      <Route path="/aos-glass-icons" component={AosGlassIcons} />
-      <Route path="/axios" component={AxiosEg} />
-      <Route path="/color-pickers" component={ColorPickers} />
-      <Route path="/drag-n-drop" component={DragNDrop} />
-      <Route path="/faker-csv" component={FakerCsv} />
-      <Route path="/font-source" component={FontSourceEgs} />
-      <Route path="/formik" component={FormikForm} />
-      <Route path="/react-charts" component={ReactChart} />
-      <Route path="/react-hook-form" component={ReactHookForm} />
-      <Route path="/react-final-form" component={ReactFinalForm} />
-      <Route path="/react-window" component={ReactWindowEg} />
-      <Route path="/redux" component={ReduxEgs} />
-      <Route path="/rte" component={RtePage} />
-      <Route path="/toasts" component={ToastEgs} />
-      <Route path="/videojs" component={VideoJsEg} />
-      <Route path="/zoom" component={ZoomEg} />
-      <Route component={Page404} />
-    </Switch>
+    <Routes>
+      <Route path="/" element={<HomeScreen />} />
+      <Route path="/algolia-widgets" element={<AlgoliaWidgets/>} />
+      <Route path="/aos-glass-icons" element={<AosGlassIcons/>} />
+      <Route path="/axios" element={<AxiosEg/>} />
+      <Route path="/color-pickers" element={<ColorPickers/>} />
+      <Route path="/drag-n-drop" element={<DragNDrop/>} />
+      <Route path="/faker-csv" element={<FakerCsv/>} />
+      <Route path="/font-source" element={<FontSourceEgs/>} />
+      <Route path="/formik" element={<FormikForm/>} />
+      <Route path="/react-charts" element={<ReactChart/>} />
+      <Route path="/react-hook-form" element={<ReactHookForm/>} />
+      <Route path="/react-final-form" element={<ReactFinalForm/>} />
+      <Route path="/react-window" element={<ReactWindowEg/>} />
+      <Route path="/redux" element={<ReduxEgs/>} />
+      <Route path="/rte" element={<RtePage/>} />
+      <Route path="/toasts" element={<ToastEgs/>} />
+      <Route path="/videojs" element={<VideoJsEg/>} />
+      <Route path="/zoom" element={<ZoomEg/>} />
+      <Route element={<Page404/>} />
+    </Routes>
   </BrowserRouter>
 );
 
