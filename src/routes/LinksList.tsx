@@ -75,10 +75,6 @@ const LinksList = () => {
       name: '/videojs',
       text: 'VideoJS * & React-player',
     },
-    {
-      name: '/zoom',
-      text: 'Zoom web sdk',
-    },
   ];
 
   return (

@@ -1,4 +1,4 @@
-// import { createHmac } from 'crypto';
+import { createHmac } from 'crypto';
 import { ZoomMtg } from '@zoomus/websdk';
 import Button from '@mui/material/Button';
 
@@ -40,8 +40,7 @@ const startMeeting = () => {
   const msg = Buffer.from(apiKey + meetingNumber + timestamp + role).toString(
     'base64',
   );
-  const hash = '234';
-  // createHmac('sha256', apiSecret).update(msg).digest('base64');
+  const hash = createHmac('sha256', apiSecret).update(msg).digest('base64');
   const signature = Buffer.from(
     `${apiKey}.${meetingNumber}
 		  .${timestamp}.${role}.${hash}`,
@@ -70,22 +69,19 @@ const startMeeting = () => {
   });
 };
 
-const ZoomEg = () => {
-  console.log('here');
-  return (
-    <div style={styles.fullScreen}>
-      <p>Header</p>
+const ZoomEg = () => (
+  <div style={styles.fullScreen}>
+    <p>Header</p>
 
-      <Button style={styles.btn} onClick={() => startMeeting()}>
-        Start Meeting
-      </Button>
+    <Button style={styles.btn} onClick={() => alert('check code only')}>
+      Start Meeting
+    </Button>
 
-      <div style={styles.container}>
-        <div id="zmmtg-root" />
-      </div>
-      <p>Footer</p>
+    <div style={styles.container}>
+      <div id="zmmtg-root" />
     </div>
-  );
-};
+    <p>Footer</p>
+  </div>
+);
 
 export default ZoomEg;

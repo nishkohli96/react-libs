@@ -20,7 +20,6 @@ const ReduxEgs = lazy(() => import('_Pages/ReduxEg'));
 const RtePage = lazy(() => import('_Pages/rte'));
 const ToastEgs = lazy(() => import('_Pages/Toasts'));
 const VideoJsEg = lazy(() => import('_Pages/VideoJsEg'));
-const ZoomEg = lazy(() => import('_Pages/ZoomEg'));
 
 const Routing = () => (
   <BrowserRouter>
@@ -42,7 +41,6 @@ const Routing = () => (
       <Route path="/rte" element={<RtePage/>} />
       <Route path="/toasts" element={<ToastEgs/>} />
       <Route path="/videojs" element={<VideoJsEg/>} />
-      <Route path="/zoom" element={<ZoomEg/>} />
       <Route element={<Page404/>} />
     </Routes>
   </BrowserRouter>
