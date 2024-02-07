@@ -16,6 +16,10 @@ const LinksList = () => {
       text: 'Algolia Widgets',
     },
     {
+      name: '/axios',
+      text: 'Axios',
+    },
+    {
       name: '/color-pickers',
       text: 'Color Pickers',
     },
@@ -32,14 +36,6 @@ const LinksList = () => {
       text: 'Formik',
     },
     {
-      name: '/sample',
-      text: 'Sample Components',
-    },
-    {
-      name: '/swr',
-      text: 'Swr with Axios',
-    },
-    {
       name: '/react-charts',
       text: 'React-charts',
     },
@@ -52,12 +48,20 @@ const LinksList = () => {
       text: 'React Final Form',
     },
     {
+      name: '/react-window',
+      text: 'React Window',
+    },
+    {
       name: '/redux',
       text: 'Redux Egs',
     },
     {
       name: '/rte',
       text: 'Rich Text Editors',
+    },
+    {
+      name: '/sample',
+      text: 'Sample Components',
     },
     {
       name: '/videojs',
@@ -71,16 +75,18 @@ const LinksList = () => {
 
   return (
     <div>
-    <div className="root">
-      {routePaths.map(path => (
-        <LinkComponent
-          path={path.name}
-          text={path.text}
-          key={path.name.replace('/', '')}
-        />
-      ))}
-    </div>
-      <div className='text-red-800'>{'* -> not working as expected '}</div> 
+      <div className="root">
+        {routePaths.map(path => (
+          <LinkComponent
+            path={path.name}
+            text={path.text}
+            key={path.name.replace('/', '')}
+          />
+        ))}
+      </div>
+      <div className="text-red-800">
+        {'* -> not working as expected '}
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { Component, createRef } from 'react';
 import axios from 'axios';
 import { CSVLink } from 'react-csv';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import { IconContext } from 'react-icons';
 import { FaBeer } from 'react-icons/fa';
 import { DiAndroid } from 'react-icons/di';
@@ -77,12 +77,16 @@ class ReactCsv extends Component {
         <p>
           {' '}
           Faker Name -
-          {faker.name.findName()}
+          {faker.person.fullName()}
         </p>
         <p>
           {' '}
-          Faker Company Name -
-          {faker.company.companyName()}
+          Faker  Email -
+          {faker.internet.email()}
+        </p>
+        <p>
+          Faker Airline -
+          {faker.airline.airline().name}
         </p>
         <CSVLink
           data={this.staticData}

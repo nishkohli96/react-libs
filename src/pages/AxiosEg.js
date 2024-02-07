@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import axiosApi from '_Utils/AxiosApi';
-import ReactWindowEg from '_Molecules/ReactWindowEg';
 
-const SwrEg = () => {
+const AxiosEg = () => {
 
   const [pokeDetais, setPokeDetais] = useState({});
 
@@ -27,9 +26,8 @@ const SwrEg = () => {
         <span className="font-semibold">Id: </span>
         {pokeDetais.id}
       </p>
-      <ReactWindowEg />
     </div>
   );
 };
 
-export default SwrEg;
+export default AxiosEg;

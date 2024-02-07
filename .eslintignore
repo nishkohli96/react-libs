@@ -8,3 +8,5 @@ tailwind.config.js
 cypress
 *.cy.js
 *.cy.ts
+
+style-dictionary-dist

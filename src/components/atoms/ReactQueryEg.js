@@ -46,10 +46,12 @@ const MultipleQueryEg = () => {
     },
   ]);
 
-  console.log('multiple query results ', results);
 
   return (
     <div>
+      <div className="my-5 text-red-600">
+        ** You are looking at the v3 version of react-query. Starting with v4, react-query is now available as @tanstack/react-query
+      </div>
       <div className="text-blue-400">Multiple React-Query Example</div>
       {results.map((res, idx) =>
         res?.isSuccess ? (

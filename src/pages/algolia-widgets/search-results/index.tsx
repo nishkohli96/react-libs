@@ -53,31 +53,32 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
                 }}
               />
             </Grid>
-            <Typography variant='h5'>
+            <Typography variant="h5">
               <Highlight hit={hit} attribute="name" />
             </Typography>
             <Typography>
               <Highlight hit={hit} attribute="brand" />
             </Typography>
-            <Grid item
-            sx={{ mt:'30px'}}
+            <Grid
+              item
+              sx={{ mt: '30px' }}
             >
               <Grid item xs={4}>
-                  <Button
-                    color="primary"
-                    variant="outlined"
-                    onClick={e => {
-                      /**
+                <Button
+                  color="primary"
+                  variant="outlined"
+                  onClick={e => {
+                    /**
                        *  Reqd to send only one click event,
                        *  else 2 api calls of same click event
                        *  will be made
                        **/
-                      e.stopPropagation();
-                      handleClickOnHit(hit);
-                    }}
-                  >
-                    Click
-                  </Button>
+                    e.stopPropagation();
+                    handleClickOnHit(hit);
+                  }}
+                >
+                  Click
+                </Button>
                 <Grid className="col-8">
                   <Button
                     color="secondary"
