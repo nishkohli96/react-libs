@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "author": "Nishant Kohli",
   "dependencies": {
-    "@bpmn-io/form-js": "1.7.0",
+    "@bpmn-io/form-js-editor": "^1.7.0",
+    "@bpmn-io/form-js-viewer":"^1.7.0",
     "@ckeditor/ckeditor5-build-classic": "^41.0.0",
     "@ckeditor/ckeditor5-code-block": "^41.0.0",
     "@ckeditor/ckeditor5-find-and-replace": "^41.0.0",
@@ -52,6 +53,7 @@
     "react-toastify": "^10.0.4",
     "react-window": "^1.8.10",
     "redux-persist": "^6.0.0",
+    "short-unique-id": "^5.0.3",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "video.js": "^7.10.2",
     "videojs-youtube": "^2.6.1",

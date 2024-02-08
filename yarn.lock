@@ -1376,7 +1376,7 @@
     preact "^10.5.14"
     showdown "^2.1.0"
 
-"@bpmn-io/form-js@1.7.0":
+"@bpmn-io/form-js@^1.7.0":
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/@bpmn-io/form-js/-/form-js-1.7.0.tgz#47053948384478537c0910b109f8352f8f49075d"
   integrity sha512-k+TfanfVnNwp+Xy3OirfPgnACfyrhHlzkcOnCLjHnipJXKJmTW0ddlGAprP49hgnUxrfjJUXipQ5xKhPpz3ZDA==
@@ -11544,6 +11544,11 @@ shell-quote@^1.7.3, shell-quote@^1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.8.1.tgz#6dbf4db75515ad5bac63b4f1894c3a154c766680"
   integrity sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==
+
+short-unique-id@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/short-unique-id/-/short-unique-id-5.0.3.tgz#bc6975dc5e8b296960ff5ac91ddabbc7ddb693d9"
+  integrity sha512-yhniEILouC0s4lpH0h7rJsfylZdca10W9mDJRAFh3EpcSUanCHGb0R7kcFOIUCZYSAPo0PUD5ZxWQdW0T4xaug==
 
 showdown@^2.1.0:
   version "2.1.0"

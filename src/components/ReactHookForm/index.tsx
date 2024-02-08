@@ -58,6 +58,15 @@ const ReactHookForm = () => {
   return (
     <form>
       <Typography variant="h6">React Hook Form Example</Typography>
+      <Typography variant="body1" color="error">
+        upgrading to
+        <b>yup v1.x</b>
+        {' '}
+        is breaking stuff. Maybe switch to
+        <b>joi</b>
+        {' '}
+        for validation...
+      </Typography>
       <Grid container style={{ marginBottom: 40 }}>
         <Grid container item xs={12} style={{ margin: '20px 0px' }}>
           <Grid item xs={4}>
@@ -103,7 +112,7 @@ const ReactHookForm = () => {
           </Typography>
         </Grid>
         {fields.map((field, index) => (
-          <Grid container item xs={12} key={field.id}>
+          <Grid container item xs={12} key={field.id} sx={{ mb: '20px' }}>
             <Grid
               container
               item
@@ -149,35 +158,34 @@ const ReactHookForm = () => {
                 )}
               />
             </Grid>
-            <Grid item xs={1}>
-              <TextField
-                {...register(`items.${index}.length`)}
-                style={{ width: 50 }}
-                type="number"
-                label="Length"
-                helperText={errors?.items?.[index]?.length?.message}
-                error={!!errors?.items?.[index]?.length}
-              />
-            </Grid>
-            <Grid item xs={1}>
-              <TextField
-                {...register(`items.${index}.width`)}
-                style={{ width: 50 }}
-                type="number"
-                label="Width"
-                helperText={errors?.items?.[index]?.width?.message}
-                error={!!errors?.items?.[index]?.width}
-              />
-            </Grid>
-            <Grid item xs={1}>
-              <TextField
-                {...register(`items.${index}.height`)}
-                style={{ width: 50 }}
-                type="number"
-                label="Height"
-                helperText={errors?.items?.[index]?.height?.message}
-                error={!!errors?.items?.[index]?.height}
-              />
+            <Grid container item xs={3} spacing={1}>
+              <Grid item xs={4}>
+                <TextField
+                  {...register(`items.${index}.length`)}
+                  type="number"
+                  label="Length"
+                  helperText={errors?.items?.[index]?.length?.message}
+                  error={!!errors?.items?.[index]?.length}
+                />
+              </Grid>
+              <Grid item xs={4}>
+                <TextField
+                  {...register(`items.${index}.width`)}
+                  type="number"
+                  label="Width"
+                  helperText={errors?.items?.[index]?.width?.message}
+                  error={!!errors?.items?.[index]?.width}
+                />
+              </Grid>
+              <Grid item xs={4}>
+                <TextField
+                  {...register(`items.${index}.height`)}
+                  type="number"
+                  label="Height"
+                  helperText={errors?.items?.[index]?.height?.message}
+                  error={!!errors?.items?.[index]?.height}
+                />
+              </Grid>
             </Grid>
             <Grid item xs={1}>
               <Tooltip title="Replay row data">
@@ -209,7 +217,10 @@ const ReactHookForm = () => {
             <Button
               color="secondary"
               variant="outlined"
-              onClick={() => append(initialFormValues.items[0])}
+              onClick={() => append({
+                ...initialFormValues.items[0],
+                name: 'Appended Item',
+              })}
             >
               Append Item
             </Button>

@@ -40,6 +40,10 @@ const LinksList = () => {
       text: 'Font Source',
     },
     {
+      name: '/form-js',
+      text: 'Form-JS',
+    },
+    {
       name: '/formik',
       text: 'Formik',
     },
@@ -65,7 +69,7 @@ const LinksList = () => {
     },
     {
       name: '/rte',
-      text: 'Rich Text Editors',
+      text: 'Rich Text Editors **',
     },
     {
       name: '/toasts',
@@ -89,7 +93,10 @@ const LinksList = () => {
         ))}
       </div>
       <div className="text-red-800">
-        {'* -> not working as expected '}
+        {'* -> not working as expected'}
+      </div>
+      <div className="text-yellow-500">
+        {'** -> TODO: ck editor with custom plugins'}
       </div>
     </div>
   );

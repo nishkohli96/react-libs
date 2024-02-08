@@ -2,7 +2,6 @@ import Typography from '@mui/material/Typography';
 import { TitledContainer } from '../../components/atoms';
 import MuiRte from './Mui';
 import CkEditor from './CkEditor';
-import CkEditorAdvanced from './CkEditorAdvanced';
 
 export default function RtePage() {
 

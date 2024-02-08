@@ -11,6 +11,7 @@ const ColorPickers = lazy(() => import('_Pages/color-pickers'));
 const DragNDrop = lazy(() => import('_Pages/DragNDrop'));
 const FakerCsv = lazy(() => import('_Pages/FakerCsv'));
 const FontSourceEgs = lazy(() => import('_Pages/FontSourceEgs'));
+const FormJSPage = lazy(() => import('_Pages/form-js'));
 const FormikForm = lazy(() => import('_Pages/FormikForm'));
 const ReactChart = lazy(() => import('_Pages/ReactChart'));
 const ReactHookForm = lazy(() => import('_Components/ReactHookForm'));
@@ -32,6 +33,7 @@ const Routing = () => (
       <Route path="/drag-n-drop" element={<DragNDrop/>} />
       <Route path="/faker-csv" element={<FakerCsv/>} />
       <Route path="/font-source" element={<FontSourceEgs/>} />
+      <Route path="/form-js" element={<FormJSPage/>} />
       <Route path="/formik" element={<FormikForm/>} />
       <Route path="/react-charts" element={<ReactChart/>} />
       <Route path="/react-hook-form" element={<ReactHookForm/>} />

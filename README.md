@@ -23,6 +23,7 @@ While building app for production, comment/remove `import tailwind.css` line in 
 - [faker](https://fakerjs.dev/) - 8.4.0
 - [fontsource](https://fontsource.org/)
 - [formik](https://www.npmjs.com/package/formik) - 2.4.5
+- [formjs-viewer](https://github.com/bpmn-io/form-js/tree/develop/packages/form-js-viewer) 1.7.0 & [formjs-editor](https://github.com/bpmn-io/form-js/tree/develop/packages/form-js-editor) 1.7.0
 - [mui](https://mui.com/) - 5.15.7
 - [mui-rte](https://www.npmjs.com/package/mui-rte) - 2.0.1
 - [react-beautiful-dnd](https://www.npmjs.com/package/react-beautiful-dnd) - 13.1.1
