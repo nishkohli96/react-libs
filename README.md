@@ -30,7 +30,7 @@ While building app for production, comment/remove `import tailwind.css` line in 
 - [react-color](https://casesandberg.github.io/react-color/) - 2.19.3
 - [react-csv](https://www.npmjs.com/package/react-csv) - 2.2.2
 - [react-final-form](https://final-form.org/react) - 6.5.9
-- [react-hook-form](https://react-hook-form.com/) with [yup](https://www.npmjs.com/package/yup) validation
+- [react-hook-form](https://react-hook-form.com/) -7.50.1 with [yup](https://www.npmjs.com/package/yup) validation
 - [react-icons](https://www.npmjs.com/package/react-icons) - 5.0.1
 - [react-player](https://www.npmjs.com/package/react-player) - 2.14.1
 - [react-query](https://www.npmjs.com/package/react-query) - 3.39.3
