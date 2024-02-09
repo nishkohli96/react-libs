@@ -15,10 +15,24 @@ const CustomFilters = () => {
     attribute: 'price',
     items: [
       { label: 'All' },
-      { label: 'Less than 50', end: 49.99 },
-      { label: 'Between 50 - 300', start: 50, end: 299.99 },
-      { label: 'Between 300 - 700', start: 300, end: 699.99 },
-      { label: 'More than 700', start: 700 },
+      {
+        label: 'Less than 50',
+        end: 49.99,
+      },
+      {
+        label: 'Between 50 - 300',
+        start: 50,
+        end: 299.99,
+      },
+      {
+        label: 'Between 300 - 700',
+        start: 300,
+        end: 699.99,
+      },
+      {
+        label: 'More than 700',
+        start: 700,
+      },
     ],
   };
 

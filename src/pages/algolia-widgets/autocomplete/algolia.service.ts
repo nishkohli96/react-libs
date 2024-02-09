@@ -4,24 +4,24 @@ import { ProductInfo } from '../types';
 
 const searchClient = algoliasearch(
   AlgoliaConfig.APP_ID,
-  AlgoliaConfig.API_KEY
+  AlgoliaConfig.API_KEY,
 ).initIndex(AlgoliaConfig.DEFAULT_INDEX);
 
 export const fetchAlgoliaData = async (
   query: string,
   page?: number,
   facetFilters?: string[],
-  numericFilters?: string[]
+  numericFilters?: string[],
 ): Promise<ProductInfo[]> => {
   try {
     const products = await searchClient.search<ProductInfo>(query, {
       attributesToRetrieve: ['*'],
       facets: ['*'],
       filters: '',
-      numericFilters: numericFilters,
+      numericFilters,
       hitsPerPage: AlgoliaConfig.CONFIG.hitsPerPage,
       page: page ?? 0,
-      facetFilters: facetFilters,
+      facetFilters,
       clickAnalytics: true,
       getRankingInfo: true,
     });

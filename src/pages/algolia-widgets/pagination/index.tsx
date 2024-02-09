@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { useHits, usePagination, PaginationProps } from 'react-instantsearch';
-import Pagination from '@material-ui/lab/Pagination';
+import Pagination from '@mui/material/Pagination';
 
 const PaginationWidget = (props: PaginationProps) => {
   const { hits } = useHits();
@@ -25,7 +25,13 @@ const PaginationWidget = (props: PaginationProps) => {
           </div>
           <div className="text-center">
             <h5>
-              Page {currentRefinement + 1} of {nbPages}
+              Page
+              {' '}
+              {currentRefinement + 1}
+              {' '}
+              of
+              {' '}
+              {nbPages}
             </h5>
           </div>
         </Fragment>

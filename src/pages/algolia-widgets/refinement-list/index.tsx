@@ -1,28 +1,27 @@
 import { Fragment } from 'react';
+import Typography from '@mui/material/Typography';
 import { RefinementList } from 'react-instantsearch';
 import ListResults from './ListResults';
 import AlgoliaConfig from '../algolia-config';
 
-const RefinementListWidget = () => {
-  return (
-    <Fragment>
-      <h6>Refinement List</h6>
-      <h5>Filter By Brand</h5>
-      <ListResults
-        attribute={AlgoliaConfig.FACET_ATTRIBUTES.brand}
-        showMore
-        // sortBy={["name:desc"]}
-      />
-      <h5>Filter By Categories</h5>
-      <RefinementList
-        attribute={AlgoliaConfig.FACET_ATTRIBUTES.categories}
-        searchable
-        // transformItems={(items) =>
-        // 	items.filter((item) => item.count >= 10)
-        // }
-      />
-    </Fragment>
-  );
-};
+const RefinementListWidget = () => (
+  <Fragment>
+    <Typography variant="h5">Refinement List</Typography>
+    <Typography variant="h6">Filter By Brand</Typography>
+    <ListResults
+      attribute={AlgoliaConfig.FACET_ATTRIBUTES.brand}
+      showMore
+      // sortBy={["name:desc"]}
+    />
+    <Typography variant="h6">Filter By Categories</Typography>
+    <RefinementList
+      attribute={AlgoliaConfig.FACET_ATTRIBUTES.categories}
+      searchable
+      // transformItems={(items) =>
+      // 	items.filter((item) => item.count >= 10)
+      // }
+    />
+  </Fragment>
+);
 
 export default RefinementListWidget;

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useSearchBox } from 'react-instantsearch';
-import TextField from '@material-ui/core/TextField';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import CloseIcon from '@material-ui/icons/Close';
+import TextField from '@mui/material/TextField';
+import CircularProgress from '@mui/material/CircularProgress';
+import InputAdornment from '@mui/material/InputAdornment';
+import CloseIcon from '@mui/icons-material/Close';
 
 /* https://www.algolia.com/doc/api-reference/widgets/search-box/react/#hook-example */
 
@@ -41,15 +41,11 @@ const SearchBox = () => {
     <div className="col-12" style={{ marginBottom: 20 }}>
       <TextField
         value={inputValue}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={e => setQuery(e.target.value)}
         placeholder="Search for a Product..."
         fullWidth
         inputProps={{ style: { padding: '8px 12px' } }}
-        InputProps={{
-          ...(Boolean(inputValue) && {
-            endAdornment: <TextFieldEndAdornment />,
-          }),
-        }}
+        InputProps={{ ...(Boolean(inputValue) && { endAdornment: <TextFieldEndAdornment /> }) }}
       />
     </div>
   );

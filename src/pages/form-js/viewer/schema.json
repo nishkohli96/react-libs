@@ -1,0 +1,215 @@
+{
+  "components": [
+    {
+      "label": "Full Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0ld52du",
+        "columns": 6
+      },
+      "id": "Field_0gr6e3o",
+      "key": "fullName",
+      "appearance": {},
+      "validate": {
+        "required": true,
+        "minLength": 3,
+        "maxLength": 48
+      },
+      "properties": {}
+    },
+    {
+      "values": [
+        {
+          "label": "Admin",
+          "value": "admin"
+        },
+        {
+          "label": "Worker",
+          "value": "worker"
+        },
+        {
+          "label": "Manager",
+          "value": "manager"
+        }
+      ],
+      "label": "Role",
+      "type": "select",
+      "layout": {
+        "row": "Row_0ld52du",
+        "columns": null
+      },
+      "id": "Field_0zszgf2",
+      "key": "role",
+      "searchable": true,
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "components": [
+        {
+          "label": "Part Name",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_003c1m9",
+            "columns": 6
+          },
+          "id": "Field_044a46w",
+          "key": "partName",
+          "validate": {
+            "minLength": 2,
+            "required": true
+          },
+          "properties": {}
+        },
+        {
+          "subtype": "date",
+          "dateLabel": "Captured On",
+          "label": "Date time",
+          "type": "datetime",
+          "layout": {
+            "row": "Row_003c1m9",
+            "columns": null
+          },
+          "id": "Field_01e5cwc",
+          "key": "capturedOn"
+        },
+        {
+          "label": "Notes",
+          "type": "textarea",
+          "layout": {
+            "row": "Row_003c1m9",
+            "columns": null
+          },
+          "id": "Field_0rsos03",
+          "key": "notes",
+          "validate": {
+            "minLength": 3
+          }
+        }
+      ],
+      "showOutline": true,
+      "isRepeating": true,
+      "allowAddRemove": true,
+      "defaultRepetitions": 1,
+      "label": "Recordings",
+      "type": "dynamiclist",
+      "layout": {
+        "row": "Row_0mwzxe5",
+        "columns": 12
+      },
+      "id": "Field_1xf1w3j",
+      "path": "recordings",
+      "verticalAlignment": "start"
+    },
+    {
+      "values": [
+        {
+          "label": "Value",
+          "value": "value"
+        }
+      ],
+      "label": "Tags",
+      "type": "taglist",
+      "layout": {
+        "row": "Row_0mwzxe5",
+        "columns": null
+      },
+      "id": "Field_1rdzgce",
+      "key": "tags"
+    },
+    {
+      "values": [
+        {
+          "label": "Gear",
+          "value": "gear"
+        },
+        {
+          "label": "Headlamps",
+          "value": "headlamps"
+        },
+        {
+          "label": "Music System",
+          "value": "musicSystem"
+        }
+      ],
+      "label": "Parts",
+      "type": "checklist",
+      "layout": {
+        "row": "Row_0tmum2w",
+        "columns": 12
+      },
+      "id": "Field_0rc3m9t",
+      "key": "parts",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Male",
+          "value": "male"
+        },
+        {
+          "label": "Female",
+          "value": "female"
+        },
+        {
+          "label": "Others",
+          "value": "others"
+        }
+      ],
+      "label": "Gender",
+      "type": "radio",
+      "layout": {
+        "row": "Row_0tmum2w",
+        "columns": null
+      },
+      "id": "Field_1e79vtt",
+      "key": "gender",
+      "validate": {
+        "required": true
+      },
+      "defaultValue": "<none>"
+    },
+    {
+      "label": "Agree to Terms & Conditions ",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0bwh4pd",
+        "columns": 12
+      },
+      "id": "Field_14uhzv8",
+      "key": "tnc",
+      "disabled": false
+    },
+    {
+      "action": "submit",
+      "label": "Submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_06j0jq0",
+        "columns": 6
+      },
+      "id": "Field_0kzrevy"
+    },
+    {
+      "action": "reset",
+      "label": "Reset",
+      "type": "button",
+      "layout": {
+        "row": "Row_06j0jq0",
+        "columns": 6
+      },
+      "id": "Field_1wgmq8y"
+    }
+  ],
+  "type": "default",
+  "id": "Form_1v48k0d",
+  "exporter": {
+    "name": "form-js (https://demo.bpmn.io)",
+    "version": "1.6.4"
+  },
+  "schemaVersion": 14
+}

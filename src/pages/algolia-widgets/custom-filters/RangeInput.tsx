@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useRange, UseRangeProps } from 'react-instantsearch';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 const RangeInput = (props: UseRangeProps) => {
   const { refine } = useRange(props);
@@ -15,14 +15,16 @@ const RangeInput = (props: UseRangeProps) => {
           value={min}
           label="Min Price"
           placeholder={`${props.min ?? 0}`}
-          onChange={(e) => setMin(e.target.value)}
+          onChange={e => setMin(e.target.value)}
         />
-        <span>{` to `}</span>
+        <span>
+          {' to '}
+        </span>
         <TextField
           value={max}
           label="Max Price"
           placeholder={`${props.max ?? 0}`}
-          onChange={(e) => setMax(e.target.value)}
+          onChange={e => setMax(e.target.value)}
         />
       </div>
       <div>

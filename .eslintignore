@@ -1,0 +1,12 @@
+# config files
+.eslintrc.js
+config-overrides.js
+cypress.config.ts
+tailwind.config.js
+
+# cypress
+cypress
+*.cy.js
+*.cy.ts
+
+style-dictionary-dist

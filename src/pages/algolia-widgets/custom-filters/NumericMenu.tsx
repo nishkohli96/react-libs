@@ -1,13 +1,13 @@
 import { useNumericMenu, UseNumericMenuProps } from 'react-instantsearch';
-import FormGroup from '@material-ui/core/FormGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 const NumericMenu = (props: UseNumericMenuProps) => {
   const { items, refine } = useNumericMenu(props);
   return (
     <div>
-      {items.map((item) => (
+      {items.map(item => (
         <FormGroup key={item.value}>
           <FormControlLabel
             control={

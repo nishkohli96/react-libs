@@ -1,7 +1,8 @@
 import { useHits, UseHitsProps, Highlight } from 'react-instantsearch';
 import type { Hit } from 'instantsearch.js';
-import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import AlgoliaConfig from '../algolia-config';
 import { ProductInfo } from '../types';
 
@@ -12,7 +13,7 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
     sendEvent(
       AlgoliaConfig.ALGOLIA_EVENTS.click,
       hit,
-      AlgoliaConfig.USER_EVENTS.product_click
+      AlgoliaConfig.USER_EVENTS.product_click,
     );
   };
 
@@ -20,27 +21,28 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
     sendEvent(
       AlgoliaConfig.ALGOLIA_EVENTS.conversion,
       hit,
-      AlgoliaConfig.USER_EVENTS.product_purchased
+      AlgoliaConfig.USER_EVENTS.product_purchased,
     );
   };
 
   return (
-    <div className="d-flex row">
+    <Grid container>
       {hits.length > 0 ? (
-        hits.map((hit) => (
-          <Box
-            className="col-12 col-md-6 col-lg-4"
+        hits.map(hit => (
+          <Grid
+            container
+            xs={12}
+            md={6}
+            lg={4}
             key={hit.objectID}
-            style={{
+            sx={{
               padding: '1rem',
               marginBottom: '2rem',
-            }}
-            sx={{
-              minHeight: (theme) => (theme.breakpoints.up('md') ? 400 : 'auto'),
+              minHeight: theme => (theme.breakpoints.up('md') ? 400 : 'auto'),
             }}
             onClick={() => handleClickOnHit(hit)}
           >
-            <div className="d-flex d-md-block justify-content-center">
+            <Grid container item xs={12} justifyContent="center">
               <img
                 src={hit.image}
                 alt={hit.name}
@@ -50,57 +52,55 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
                   marginBottom: '1rem',
                 }}
               />
-            </div>
-            <h5>
+            </Grid>
+            <Typography variant="h5">
               <Highlight hit={hit} attribute="name" />
-            </h5>
-            <p>
+            </Typography>
+            <Typography>
               <Highlight hit={hit} attribute="brand" />
-            </p>
-            <div
-              className="d-flex d-md-block justify-content-center"
-              style={{ position: 'absolute', bottom: 0 }}
+            </Typography>
+            <Grid
+              item
+              sx={{ mt: '30px' }}
             >
-              <div className="row">
-                <div className="col-4">
-                  <Button
-                    color="primary"
-                    variant="outlined"
-                    onClick={(e) => {
-                      /**
+              <Grid item xs={4}>
+                <Button
+                  color="primary"
+                  variant="outlined"
+                  onClick={e => {
+                    /**
                        *  Reqd to send only one click event,
                        *  else 2 api calls of same click event
                        *  will be made
                        **/
-                      e.stopPropagation();
-                      handleClickOnHit(hit);
-                    }}
-                  >
-                    Click
-                  </Button>
-                </div>
-                <div className="col-8">
+                    e.stopPropagation();
+                    handleClickOnHit(hit);
+                  }}
+                >
+                  Click
+                </Button>
+                <Grid className="col-8">
                   <Button
                     color="secondary"
                     variant="outlined"
-                    onClick={(e) => {
+                    onClick={e => {
                       e.stopPropagation();
                       handleConversionOnHit(hit);
                     }}
                   >
                     Conversion
                   </Button>
-                </div>
-              </div>
-            </div>
-          </Box>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
         ))
       ) : (
         <div className="col-12 d-flex justify-content-center ">
           <h5>No Results Found...</h5>
         </div>
       )}
-    </div>
+    </Grid>
   );
 };
 

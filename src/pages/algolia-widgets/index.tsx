@@ -1,3 +1,5 @@
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import algoliasearch from 'algoliasearch/lite';
 import {
   InstantSearch,
@@ -18,61 +20,56 @@ const searchClient = algoliasearch(AlgoliaConfig.APP_ID, AlgoliaConfig.API_KEY);
 
 /* https://www.algolia.com/doc/guides/building-search-ui/widgets/showcase/react/ */
 
-const AlgoliaWidgetsPage = () => {
+const AlgoliaWidgetsPage = () =>
+// TODO: window.aa('setUserToken', 'user-id');
+// cookie consent service like OneTrust or TrustArc,
+// https://www.algolia.com/doc/guides/building-search-ui/events/react/#set-the-insights-option-to-true
 
-  // TODO: window.aa('setUserToken', 'user-id');
-  // cookie consent service like OneTrust or TrustArc,
-  // https://www.algolia.com/doc/guides/building-search-ui/events/react/#set-the-insights-option-to-true
-
-  return (
-    <div style={{ padding: '10px 20px 40px 20px' }}>
+  (
+    <Grid sx={{ padding: '10px 20px 40px 20px' }}>
+      <Typography variant="h5" sx={{ mb: '20px' }}>Algolia Widgets</Typography>
       <Autocomplete />
-      <h1>Algolia Widgets</h1>
       <InstantSearch
         searchClient={searchClient}
         indexName={AlgoliaConfig.DEFAULT_INDEX}
         insights
       >
         <Configure hitsPerPage={AlgoliaConfig.CONFIG.hitsPerPage} />
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-xs-12 col-md-3">
-              <RefinementListWidget />
-              <CustomFilters />
-              <CurrentRefinementWidget />
-            </div>
-            <div className="col-xs-12 col-md-9">
-              <div className="row">
-                <SearchBox />
-              </div>
-              <div className="row">
-                <div className="col-6">
-                  <Stats
-                    translations={{
-                      rootElementText({ nbHits, processingTimeMS }) {
-                        return `${nbHits} results in ${processingTimeMS} ms`;
-                      },
-                    }}
-                  />
-                </div>
-                <div className=" d-flex col-6 justify-content-end">
-                  <PoweredBy
-                    classNames={{
-                      root: 'ais-PoweredBy--root',
-                    }}
-                    theme="dark"
-                  />
-                </div>
-              </div>
-              <ResultsList />
-              <PaginationWidget />
-            </div>
-          </div>
-        </div>
+        <Grid container item xs={12} sx={{ mt: '40px' }}>
+          <Grid item xs={12} md={3}>
+            <RefinementListWidget />
+            <CustomFilters />
+            <CurrentRefinementWidget />
+          </Grid>
+          <Grid container item xs={12} md={9}>
+            <Grid item xs={12}>
+              <SearchBox />
+            </Grid>
+            <Grid container item xs={12}>
+              <Grid item xs={6}>
+                <Stats
+                  translations={{
+                    rootElementText({ nbHits, processingTimeMS }) {
+                      return `${nbHits} results in ${processingTimeMS} ms`;
+                    },
+                  }}
+                />
+              </Grid>
+              <Grid container item xs={6} justifyContent="flex-end">
+                <PoweredBy
+                  classNames={{ root: 'ais-PoweredBy--root' }}
+                  theme="dark"
+                />
+              </Grid>
+            </Grid>
+            <ResultsList />
+            <PaginationWidget />
+          </Grid>
+        </Grid>
       </InstantSearch>
-    </div>
-  );
-};
+    </Grid>
+  )
+;
 
 export default AlgoliaWidgetsPage;
 
