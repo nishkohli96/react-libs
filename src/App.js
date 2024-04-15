@@ -7,7 +7,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import LoadingComp from '_Components/LoadingComp';
 import Routing from '_Routes';
 import { store, persistor } from '_Store';
-import '_Styles/tailwind.css';
+// import '_Styles/tailwind.css';
 import '_Styles/algolia-styles.css';
 
 function App() {
