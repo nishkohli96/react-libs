@@ -77,8 +77,9 @@
   },
   "scripts": {
     "build-dictionary": "style-dictionary build --config ./style-dictionary/config.js",
-    "start": "yarn build-dictionary && react-app-rewired start",
+    "dev": "yarn build-dictionary && react-app-rewired start",
     "build": "yarn build-dictionary && react-app-rewired build",
+    "start": "yarn build && serve -l 3002 -s build",
     "eject": "react-scripts eject",
     "lint": "eslint --fix .",
     "cypress:open": "cypress open",
