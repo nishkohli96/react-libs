@@ -9,7 +9,7 @@ import {
   Select,
   TextField,
   Tooltip,
-  Typography,
+  Typography
 } from '@mui/material';
 import { Delete, Replay } from '@mui/icons-material';
 import { FormSchema } from './schema';
@@ -27,9 +27,9 @@ const ReactHookForm = () => {
         shape: ItemShape[2],
         length: null,
         width: null,
-        height: null,
-      },
-    ],
+        height: null
+      }
+    ]
   };
 
   const {
@@ -38,16 +38,16 @@ const ReactHookForm = () => {
     reset,
     handleSubmit,
     setValue,
-    formState: { errors },
+    formState: { errors }
   } = useForm<FormType>({
     resolver: yupResolver(FormSchema),
     defaultValues: initialFormValues,
-    mode: 'onBlur',
+    mode: 'onBlur'
   });
 
   const { fields, append, prepend, remove } = useFieldArray({
     control,
-    name: 'items',
+    name: 'items'
   });
 
   const submitForm = (values: FormType) => {
@@ -219,7 +219,7 @@ const ReactHookForm = () => {
               variant="outlined"
               onClick={() => append({
                 ...initialFormValues.items[0],
-                name: 'Appended Item',
+                name: 'Appended Item'
               })}
             >
               Append Item
@@ -232,7 +232,7 @@ const ReactHookForm = () => {
               onClick={() =>
                 prepend({
                   ...initialFormValues.items[0],
-                  name: 'Prepended Item',
+                  name: 'Prepended Item'
                 })}
             >
               Prepend Item

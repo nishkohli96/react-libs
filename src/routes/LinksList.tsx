@@ -13,72 +13,72 @@ const LinksList = () => {
   const routePaths = [
     {
       name: '/aos-glass-icons',
-      text: 'Aos & react-icons',
+      text: 'Aos & react-icons'
     },
     {
       name: '/algolia-widgets',
-      text: 'Algolia Widgets',
+      text: 'Algolia Widgets'
     },
     {
       name: '/axios',
-      text: 'Axios & React-Query',
+      text: 'Axios & React-Query'
     },
     {
       name: '/color-pickers',
-      text: 'Color Pickers',
+      text: 'Color Pickers'
     },
     {
       name: '/drag-n-drop',
-      text: 'Drag and drop list *',
+      text: 'Drag and drop list *'
     },
     {
       name: '/faker-csv',
-      text: 'Faker & react-csv',
+      text: 'Faker & react-csv'
     },
     {
       name: '/font-source',
-      text: 'Font Source',
+      text: 'Font Source'
     },
     {
       name: '/form-js',
-      text: 'Form-JS',
+      text: 'Form-JS'
     },
     {
       name: '/formik',
-      text: 'Formik',
+      text: 'Formik'
     },
     {
       name: '/react-charts',
-      text: 'React-charts',
+      text: 'React-charts'
     },
     {
       name: '/react-hook-form',
-      text: 'React Hook Form',
+      text: 'React Hook Form'
     },
     {
       name: '/react-final-form',
-      text: 'React Final Form',
+      text: 'React Final Form'
     },
     {
       name: '/react-window',
-      text: 'React Window',
+      text: 'React Window'
     },
     {
       name: '/redux',
-      text: 'Redux Egs',
+      text: 'Redux Egs'
     },
     {
       name: '/rte',
-      text: 'Rich Text Editors **',
+      text: 'Rich Text Editors **'
     },
     {
       name: '/toasts',
-      text: 'Toasts - cogo & react-toastify',
+      text: 'Toasts - cogo & react-toastify'
     },
     {
       name: '/videojs',
-      text: 'VideoJS * & React-player',
-    },
+      text: 'VideoJS * & React-player'
+    }
   ];
 
   return (

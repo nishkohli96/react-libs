@@ -20,10 +20,10 @@ export const fetchBankInfo = createAsyncThunk(
   'bank/fetchBankInfo',
   async payload => {
     const response = await axios.get(
-      `https://ifsc.razorpay.com/${payload.ifsc}`,
+      `https://ifsc.razorpay.com/${payload.ifsc}`
     );
     return response.data;
-  },
+  }
 );
 
 export const bankInfoSlice = createSlice({
@@ -50,7 +50,7 @@ export const bankInfoSlice = createSlice({
       .addCase(fetchBankInfo.rejected, () => {
         console.log('failed');
       });
-  },
+  }
 });
 
 export default bankInfoSlice.reducer;

@@ -3,13 +3,13 @@ export enum Colors {
   Red = 'Red',
   Black = 'Black',
   Orange = 'Orange',
-  White = 'White',
+  White = 'White'
 }
 export enum ItemShape {
   Square = 'Square',
   Cube = 'Cube',
   Spherical = 'Spherical',
-  Irregular = 'Irregular',
+  Irregular = 'Irregular'
 }
 
 interface Item {

@@ -17,9 +17,12 @@ export default function CkEditorAdvanced() {
       data="<p>Hello from CKEditor&nbsp;5!</p>"
       config={{
         plugins: [
-          Essentials, Paragraph, Bold, Italic,
+          Essentials,
+          Paragraph,
+          Bold,
+          Italic
         ],
-        toolbar: ['bold', 'italic'],
+        toolbar: ['bold', 'italic']
       }}
     />
   );

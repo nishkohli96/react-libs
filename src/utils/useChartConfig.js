@@ -2,25 +2,43 @@ import { useState, useEffect, useCallback, useMemo } from 'react';
 
 const options = {
   elementType: [
-    'line', 'area', 'bar', 'bubble',
+    'line',
+    'area',
+    'bar',
+    'bubble'
   ],
   primaryAxisType: [
-    'linear', 'time', 'log', 'ordinal',
+    'linear',
+    'time',
+    'log',
+    'ordinal'
   ],
   secondaryAxisType: [
-    'linear', 'time', 'log', 'ordinal',
+    'linear',
+    'time',
+    'log',
+    'ordinal'
   ],
   primaryAxisPosition: [
-    'top', 'left', 'right', 'bottom',
+    'top',
+    'left',
+    'right',
+    'bottom'
   ],
   secondaryAxisPosition: [
-    'top', 'left', 'right', 'bottom',
+    'top',
+    'left',
+    'right',
+    'bottom'
   ],
   secondaryAxisStack: [true, false],
   primaryAxisShow: [true, false],
   secondaryAxisShow: [true, false],
   grouping: [
-    'single', 'series', 'primary', 'secondary',
+    'single',
+    'series',
+    'primary',
+    'secondary'
   ],
   tooltipAnchor: [
     'closest',
@@ -34,7 +52,7 @@ const options = {
     'gridLeft',
     'gridRight',
     'gridCenter',
-    'pointer',
+    'pointer'
   ],
   tooltipAlign: [
     'auto',
@@ -46,9 +64,9 @@ const options = {
     'topRight',
     'bottomLeft',
     'bottomRight',
-    'center',
+    'center'
   ],
-  snapCursor: [true, false],
+  snapCursor: [true, false]
 };
 
 const optionKeys = Object.keys(options);
@@ -71,9 +89,9 @@ function makeSeries(dataType, datums, dataSet) {
       const y = `${dataSet[i]}`;
       return {
         primary: x,
-        secondary: y,
+        secondary: y
       };
-    }),
+    })
   };
 }
 
@@ -103,7 +121,7 @@ export default function useChartConfig({
   grouping = 'primary',
   snapCursor = true,
   datums = 10,
-  dataSet = [],
+  dataSet = []
 }) {
   const [state, setState] = useState({
     count,
@@ -125,16 +143,21 @@ export default function useChartConfig({
     grouping,
     snapCursor,
     datums,
-    data: makeDataFrom(dataType, series, datums, dataSet),
+    data: makeDataFrom(dataType, series, datums, dataSet)
   });
 
   useEffect(() => {
     setState(old => ({
       ...old,
-      data: makeDataFrom(dataType, series, datums, dataSet),
+      data: makeDataFrom(dataType, series, datums, dataSet)
     }));
   }, [
-    count, yMax, dataType, datums, series, dataSet,
+    count,
+    yMax,
+    dataType,
+    datums,
+    series,
+    dataSet
   ]);
 
   /* Common config for all charts */
@@ -142,7 +165,7 @@ export default function useChartConfig({
   const [{ activeSeriesIndex, activeDatumIndex }, setActiveState]
     = useState({
       activeSeriesIndex: -1,
-      activeDatumIndex: -1,
+      activeDatumIndex: -1
     });
 
   const getSeriesStyle = useCallback(
@@ -153,28 +176,28 @@ export default function useChartConfig({
           ? series.index === activeSeriesIndex
             ? 1
             : 0.3
-          : 1,
+          : 1
     }),
-    [activeSeriesIndex],
+    [activeSeriesIndex]
   );
 
   const getDatumStyle = useCallback(
     datum => ({ color: activeDatumIndex === datum.index ? '#c9406c' : '#478dca' }),
-    [activeDatumIndex],
+    [activeDatumIndex]
   );
 
   const onFocus = useCallback(
     focused =>
       setActiveState({
         activeSeriesIndex: focused ? focused.series.id : -1,
-        activeDatumIndex: focused ? focused.index : -1,
+        activeDatumIndex: focused ? focused.index : -1
       }),
-    [setActiveState],
+    [setActiveState]
   );
 
   const dataSeries = useMemo(
     () => ({ type: 'bar' }),
-    [],
+    []
   );
 
   const axes = useMemo(
@@ -184,17 +207,17 @@ export default function useChartConfig({
         type: 'ordinal',
         position: 'bottom',
         showTicks: true,
-        id: 'date',
+        id: 'date'
       },
       {
         position: 'left',
         type: 'linear',
         stacked: false,
         hardMin: 0,
-        hardMax: yMax,
-      },
+        hardMax: yMax
+      }
     ],
-    [yMax],
+    [yMax]
   );
 
   const Options = optionKeys
@@ -211,7 +234,7 @@ export default function useChartConfig({
               [option]:
                 typeof options[option][0] === 'boolean'
                   ? value === 'true'
-                  : value,
+                  : value
             }))}
         >
           {options[option].map(d => (
@@ -231,6 +254,6 @@ export default function useChartConfig({
     getDatumStyle,
     onFocus,
     dataSeries,
-    axes,
+    axes
   };
 }

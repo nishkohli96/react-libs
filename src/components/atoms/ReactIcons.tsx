@@ -17,7 +17,7 @@ export default function ReactIcons() {
         value={{
           color: 'green',
           size: '40px',
-          className: 'global-class-name',
+          className: 'global-class-name'
         }}
       >
         <DiAndroid />

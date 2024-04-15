@@ -7,9 +7,9 @@ const axiosApi = axios.create({
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Origin': '*'
     // Authorization: `Bearer ${localStorage.getItem('auth')}`,
-  },
+  }
 });
 
 axiosApi.interceptors.request.use(
@@ -18,7 +18,7 @@ axiosApi.interceptors.request.use(
     // config.headers.Authorization = `Bearer ${localStorage.getItem('auth')}`;
     config
   ,
-  error => Promise.reject(error),
+  error => Promise.reject(error)
 );
 
 axiosApi.interceptors.response.use(
@@ -28,7 +28,7 @@ axiosApi.interceptors.response.use(
   ,
   error =>
     // Do something with response error
-    Promise.reject(error),
+    Promise.reject(error)
 
 );
 

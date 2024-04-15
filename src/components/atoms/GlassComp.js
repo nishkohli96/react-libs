@@ -7,15 +7,15 @@ const styles = {
   container: {
     margin: 5,
     padding: 5,
-    backgroundColor: '#FF5071',
+    backgroundColor: '#FF5071'
   },
   transparent: {
     backgroundColor: '#ffffff',
     borderRadius: 10,
     padding: 5,
     width: 'fit-content',
-    opacity: 0.3,
-  },
+    opacity: 0.3
+  }
 };
 
 const GlassComp = () => (

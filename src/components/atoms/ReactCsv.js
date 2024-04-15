@@ -13,14 +13,14 @@ class ReactCsv extends Component {
         of 1 line between headers & data */
   state = {
     dynamicData: [[]],
-    startDownload: false,
+    startDownload: false
   };
 
   staticData = [
     [],
     ['Joy', 'joy@gmail.com', 24],
     ['Tim', 'tim@gmail.com', 15],
-    ['Max', 'max@gmail.com', 8],
+    ['Max', 'max@gmail.com', 8]
   ];
 
   headers = ['Name', 'Email', 'Age'];
@@ -38,7 +38,7 @@ class ReactCsv extends Component {
 
     this.setState({
       dynamicData: arr,
-      startDownload: true,
+      startDownload: true
     });
 
     setTimeout(() => {
@@ -57,7 +57,7 @@ class ReactCsv extends Component {
           style={{
             textDecoration: 'none',
             backgroundColor: '#fe979c',
-            marginRight: 20,
+            marginRight: 20
           }}
         >
           Download static CSV Data
@@ -67,7 +67,7 @@ class ReactCsv extends Component {
           onClick={this.downloadApiData}
           style={{
             backgroundColor: '#007aba',
-            color: 'white',
+            color: 'white'
           }}
         >
           Download data from API

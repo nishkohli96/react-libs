@@ -23,7 +23,7 @@ const RangeSlider = (props: UseRangeProps) => {
     <div style={{
       padding: 10,
       display: 'flex',
-      alignItems: 'center',
+      alignItems: 'center'
     }}
     >
       <span>0</span>

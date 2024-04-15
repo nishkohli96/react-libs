@@ -3,7 +3,7 @@ import {
   decrement,
   decreaseAmt,
   increment,
-  incrementByAmount,
+  incrementByAmount
 } from '_Store/counter.slice';
 import { fetchBankInfo } from '_Store/bankInfo.slice';
 import { useGetBankInfoQuery } from '_Store/api.slice';
@@ -24,7 +24,7 @@ const ReduxEg = () => {
   const {
     data: bankInfoData,
     isLoading: bankInfoLoading,
-    isSuccess: bankInfoFetchSuccess,
+    isSuccess: bankInfoFetchSuccess
     // isError,
     // error,
     // refetch

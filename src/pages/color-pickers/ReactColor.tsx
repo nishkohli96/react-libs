@@ -6,7 +6,7 @@ import {
   CirclePicker,
   SketchPicker,
   SwatchesPicker,
-  PhotoshopPicker,
+  PhotoshopPicker
 } from 'react-color';
 
 const CircularColorPickerColors = [
@@ -17,25 +17,40 @@ const CircularColorPickerColors = [
   '#cddc39',
   '#ffeb3b',
   '#ffc107',
-  '#ff9800',
+  '#ff9800'
 ];
 
 const SwatchesColors = [
   [
-    '#333333', '#15202b', '#25293e', '#1b1c1e',
+    '#333333',
+    '#15202b',
+    '#25293e',
+    '#1b1c1e'
   ],
   [
-    '#e7eff8', '#A0d4df', '#2196f3', '#04437d',
+    '#e7eff8',
+    '#A0d4df',
+    '#2196f3',
+    '#04437d'
   ],
   [
-    '#eaf9e7', '#adebbe', '#aec70c', '#008c8c',
+    '#eaf9e7',
+    '#adebbe',
+    '#aec70c',
+    '#008c8c'
   ],
   [
-    '#feaf96', '#ff8714', '#e99b53', '#ea8c38',
+    '#feaf96',
+    '#ff8714',
+    '#e99b53',
+    '#ea8c38'
   ],
   [
-    '#fd89d0', '#f18c83', '#d74654', '#ff4196',
-  ],
+    '#fd89d0',
+    '#f18c83',
+    '#d74654',
+    '#ff4196'
+  ]
 ];
 
 export default function ReactColor() {
@@ -53,7 +68,7 @@ export default function ReactColor() {
     r: 51,
     g: 51,
     b: 51,
-    a: 0.7,
+    a: 0.7
   });
   const [circleColor, setCircleColor] = useState(CircularColorPickerColors[3]);
   const [swatchColor, setSwatchColor] = useState(SwatchesColors[1][3]);

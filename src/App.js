@@ -20,11 +20,11 @@ function App() {
         root: {
           marginTop: 20,
           width: '80%',
-          color: defaultTheme.palette.error.light,
+          color: defaultTheme.palette.error.light
         },
-        editor: { borderBottom: '1px solid gray' },
-      },
-    },
+        editor: { borderBottom: '1px solid gray' }
+      }
+    }
   });
 
   return (

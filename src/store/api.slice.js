@@ -19,8 +19,8 @@ export const apiSlice = createApi({
     getBankInfo: builder.query({
       // The URL for the request is '/fakeApi/posts'
       query: () => '/HDFC0001380',
-      providesTags: ['Bank'],
-    }),
+      providesTags: ['Bank']
+    })
     /* Post Query */
     // addNewPost: builder.mutation({
     //     query: initialPost => ({
@@ -31,7 +31,7 @@ export const apiSlice = createApi({
     //     }),
     //      invalidatesTags: ['Bank']
     //   })
-  }),
+  })
 });
 
 /*

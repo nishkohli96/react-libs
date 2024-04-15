@@ -7,7 +7,7 @@ import {
   Select,
   SelectProps,
   TextField,
-  TextFieldProps,
+  TextFieldProps
 } from '@mui/material';
 import { Field } from 'react-final-form';
 

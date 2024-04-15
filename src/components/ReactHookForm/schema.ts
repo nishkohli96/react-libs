@@ -11,13 +11,14 @@ import { Colors, ItemShape } from './types';
 
 export const FormSchema = object().shape(
   {
-    reqdText: string().required().min(2),
+    reqdText: string().required()
+      .min(2),
     quantity: number()
       .nullable()
       .notRequired()
       .when('quantity', {
         is: value => value,
-        then: rule => rule.min(10).max(100),
+        then: rule => rule.min(10).max(100)
       }),
     color: string().oneOf(Object.values(Colors)),
     items: array().of(
@@ -28,7 +29,7 @@ export const FormSchema = object().shape(
             .nullable()
             .when('description', {
               is: value => value?.length,
-              then: rule => rule.min(3).max(10),
+              then: rule => rule.min(3).max(10)
             }),
           shape: string().oneOf(Object.values(ItemShape)),
           length: number()
@@ -36,22 +37,24 @@ export const FormSchema = object().shape(
             .notRequired()
             .when('length', {
               is: val => val,
-              then: rule => rule.min(5).max(10000),
+              then: rule => rule.min(5).max(10000)
             })
             .when(['width', 'height'], {
               is: (a, b) => Boolean(a || b),
-              then: number().required('required').typeError('enter a number'),
+              then: number().required('required')
+                .typeError('enter a number')
             }),
           width: number()
             .nullable()
             .notRequired()
             .when('width', {
               is: val => val,
-              then: rule => rule.min(5).max(2000),
+              then: rule => rule.min(5).max(2000)
             })
             .when(['length', 'height'], {
               is: (a, b) => Boolean(a || b),
-              then: number().required().typeError('enter a number'),
+              then: number().required()
+                .typeError('enter a number')
             }),
           height: number()
             .nullable()
@@ -59,12 +62,13 @@ export const FormSchema = object().shape(
             .when('width', {
               is: val => val,
               then: rule =>
-                rule.min(5).max(100, 'Value can\'t be greater than 100'),
+                rule.min(5).max(100, 'Value can\'t be greater than 100')
             })
             .when(['width', 'length'], {
               is: (a, b) => Boolean(a || b),
-              then: number().required().typeError('enter a number'),
-            }),
+              then: number().required()
+                .typeError('enter a number')
+            })
         },
         [
           ['length', 'width'],
@@ -73,11 +77,11 @@ export const FormSchema = object().shape(
           ['description', 'description'],
           ['length', 'length'],
           ['width', 'width'],
-          ['height', 'height'],
-        ],
-      ),
-    ),
+          ['height', 'height']
+        ]
+      )
+    )
   },
   // Add Cyclic deps here because when require itself
-  [['quantity', 'quantity']],
+  [['quantity', 'quantity']]
 );

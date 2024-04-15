@@ -13,7 +13,7 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
     sendEvent(
       AlgoliaConfig.ALGOLIA_EVENTS.click,
       hit,
-      AlgoliaConfig.USER_EVENTS.product_click,
+      AlgoliaConfig.USER_EVENTS.product_click
     );
   };
 
@@ -21,7 +21,7 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
     sendEvent(
       AlgoliaConfig.ALGOLIA_EVENTS.conversion,
       hit,
-      AlgoliaConfig.USER_EVENTS.product_purchased,
+      AlgoliaConfig.USER_EVENTS.product_purchased
     );
   };
 
@@ -38,7 +38,7 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
             sx={{
               padding: '1rem',
               marginBottom: '2rem',
-              minHeight: theme => (theme.breakpoints.up('md') ? 400 : 'auto'),
+              minHeight: theme => (theme.breakpoints.up('md') ? 400 : 'auto')
             }}
             onClick={() => handleClickOnHit(hit)}
           >
@@ -49,7 +49,7 @@ const ResultsList = (props: UseHitsProps<ProductInfo>) => {
                 style={{
                   width: 85,
                   height: 160,
-                  marginBottom: '1rem',
+                  marginBottom: '1rem'
                 }}
               />
             </Grid>

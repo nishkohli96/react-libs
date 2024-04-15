@@ -5,7 +5,7 @@ import {
   InstantSearch,
   Configure,
   PoweredBy,
-  Stats,
+  Stats
 } from 'react-instantsearch';
 import AlgoliaConfig from './algolia-config';
 import Autocomplete from './autocomplete';
@@ -51,7 +51,7 @@ const AlgoliaWidgetsPage = () =>
                   translations={{
                     rootElementText({ nbHits, processingTimeMS }) {
                       return `${nbHits} results in ${processingTimeMS} ms`;
-                    },
+                    }
                   }}
                 />
               </Grid>

@@ -5,13 +5,19 @@ import { object, string } from 'yup';
 import { setIn } from 'final-form';
 
 const colors = [
-  'Red', 'Blue', 'Black', 'White',
+  'Red',
+  'Blue',
+  'Black',
+  'White'
 ];
 
 const formSchema = object().shape({
-  fullName: string().required().min(3),
-  bio: string().required('This field is reqd').min(3),
-  color: string().required().oneOf(colors),
+  fullName: string().required()
+    .min(3),
+  bio: string().required('This field is reqd')
+    .min(3),
+  color: string().required()
+    .oneOf(colors)
 });
 
 const FinalForm = () => {
