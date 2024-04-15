@@ -1,5 +1,5 @@
 {
-  "name": "nish1896-react-libs",
+  "name": "@nish1896/react-libs",
   "version": "1.0.0",
   "author": "Nishant Kohli",
   "dependencies": {
@@ -61,7 +61,7 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
-    "@nish1896/eslint-config": "^1.0.3",
+    "@nish1896/eslint-config": "^2.0.2",
     "@types/jest": "^28.1.6",
     "@types/node": "^18.7.1",
     "@types/react": "^18.0.17",

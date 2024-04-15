@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography';
 import { TitledContainer } from '../../components/atoms';
-import MuiRte from './Mui';
+import MuiRte from './mui';
 import CkEditor from './CkEditor';
 
 export default function RtePage() {
