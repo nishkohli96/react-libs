@@ -2,7 +2,7 @@ import { ReactElement, Fragment } from 'react';
 import {
   useCurrentRefinements,
   CurrentRefinementsProps,
-  ClearRefinements,
+  ClearRefinements
 } from 'react-instantsearch';
 import classNames from 'classnames';
 import IconButton from '@mui/material/IconButton';
@@ -17,7 +17,7 @@ import AlgoliaConfig from '../algolia-config';
  */
 
 const CurrentRefinementWidget = (
-  props: CurrentRefinementsProps,
+  props: CurrentRefinementsProps
 ): ReactElement => {
   const { items, refine } = useCurrentRefinements(props);
   return (
@@ -42,7 +42,7 @@ const CurrentRefinementWidget = (
                   {refinementItem?.refinements?.[0]?.value}
                   {` <= ${AlgoliaConfig.FACET_ATTRIBUTES.price} < `}
                   {Math.round(
-                    parseFloat(`${refinementItem?.refinements?.[1]?.value}`),
+                    parseFloat(`${refinementItem?.refinements?.[1]?.value}`)
                   )}
                 </span>
                 <IconButton
@@ -80,7 +80,7 @@ const CurrentRefinementWidget = (
         classNames={{
           root: 'ais-ClearRefinements--root',
           button: 'ais-ClearRefinements--button',
-          disabledButton: 'ais-ClearRefinements--button-disabled',
+          disabledButton: 'ais-ClearRefinements--button-disabled'
         }}
         translations={{ resetButtonText: 'Clear Refinements' }}
         // excludedAttributes={['brand']}

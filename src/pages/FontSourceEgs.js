@@ -12,21 +12,21 @@ const FontSouceEgs = () => (
     <p style={{ fontFamily: 'Crimson Pro' }}>Crimson Pro - default 400</p>
     <p style={{
       fontFamily: 'Crimson Pro',
-      fontWeight: 200,
+      fontWeight: 200
     }}
     >
       Crimson Pro - 200
     </p>
     <p style={{
       fontFamily: 'Crimson Pro',
-      fontWeight: 800,
+      fontWeight: 800
     }}
     >
       Crimson Pro - 800
     </p>
     <p style={{
       fontFamily: 'Roboto',
-      fontWeight: 300,
+      fontWeight: 300
     }}
     >
       Roboto - 300
@@ -34,14 +34,14 @@ const FontSouceEgs = () => (
     <p style={{ fontFamily: 'Roboto' }}>Roboto- default 400</p>
     <p style={{
       fontFamily: 'Roboto',
-      fontWeight: 500,
+      fontWeight: 500
     }}
     >
       Roboto - 500
     </p>
     <p style={{
       fontFamily: 'Roboto',
-      fontWeight: 700,
+      fontWeight: 700
     }}
     >
       Roboto - 700
@@ -49,7 +49,7 @@ const FontSouceEgs = () => (
     <p style={{ fontFamily: 'Roboto-Thin' }}>Roboto-Thin</p>
     <p style={{
       fontFamily: 'Roboto-Thin',
-      fontWeight: 700,
+      fontWeight: 700
     }}
     >
       Roboto-Thin-700
@@ -59,7 +59,7 @@ const FontSouceEgs = () => (
     <p style={{ fontFamily: 'Roboto-Light' }}>Roboto-Light</p>
     <p style={{
       fontFamily: 'Roboto-Light',
-      fontWeight: 900,
+      fontWeight: 900
     }}
     >
       Roboto-Light

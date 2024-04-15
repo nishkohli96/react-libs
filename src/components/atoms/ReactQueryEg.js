@@ -30,18 +30,18 @@ const MultipleQueryEg = () => {
     {
       queryKey: ['bank', 1],
       queryFn: () =>
-        axios('https://ifsc.razorpay.com/KARB0000001').then(res => res.data),
+        axios('https://ifsc.razorpay.com/KARB0000001').then(res => res.data)
     },
     {
       queryKey: ['bank', 2],
       queryFn: () =>
-        axios('https://ifsc.razorpay.com/HDFC0001380').then(res => res.data),
+        axios('https://ifsc.razorpay.com/HDFC0001380').then(res => res.data)
     },
     {
       queryKey: ['bank', 3],
       queryFn: () =>
-        axios('https://ifsc.razorpay.com/HDFC001380').then(res => res.data),
-    },
+        axios('https://ifsc.razorpay.com/HDFC001380').then(res => res.data)
+    }
   ]);
 
 

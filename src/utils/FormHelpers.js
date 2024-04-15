@@ -21,5 +21,6 @@ export const YupSchema = Yup.object({
   fullName: Yup.string()
     .max(10, 'Must be 10 characters or less')
     .required('Required'),
-  email: Yup.string().email('Invalid email address').required('Required'),
+  email: Yup.string().email('Invalid email address')
+    .required('Required')
 });

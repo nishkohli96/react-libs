@@ -8,12 +8,12 @@ const styles = {
     width: 500,
     height: 500,
     marginLeft: 40,
-    margin: 20,
+    margin: 20
   },
   btn: {
     backgroundColor: '#E85B5A',
-    color: 'white',
-  },
+    color: 'white'
+  }
 };
 
 const getRandomInt = () => {
@@ -57,7 +57,7 @@ const ReactChart = () => {
       datums: dataSet.length,
       yMax: getYMax(dataSet),
       dataType: 'integer',
-      dataSet,
+      dataSet
     });
 
   return (

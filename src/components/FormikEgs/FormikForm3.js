@@ -30,7 +30,7 @@ const MyCheckbox = ({ children, ...props }) => {
 
   const [field, meta] = useField({
     ...props,
-    type: 'checkbox',
+    type: 'checkbox'
   });
 
   return (
@@ -79,7 +79,7 @@ const FormikForm3 = () => (
         /* added for our checkbox */
         acceptedTerms: false,
         /* added for our select */
-        jobType: '',
+        jobType: ''
       }}
       validationSchema={Yup.object({
         firstName: Yup.string()
@@ -97,11 +97,14 @@ const FormikForm3 = () => (
         jobType: Yup.string()
           .oneOf(
             [
-              'designer', 'development', 'product', 'other',
+              'designer',
+              'development',
+              'product',
+              'other'
             ],
-            'Invalid Job Type',
+            'Invalid Job Type'
           )
-          .required('Required'),
+          .required('Required')
       })}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {

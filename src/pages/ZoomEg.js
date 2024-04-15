@@ -10,23 +10,23 @@ const styles = {
   fullScreen: {
     backgroundColor: 'powderblue',
     width: '100vw',
-    height: '100vh',
+    height: '100vh'
   },
   container: {
     padding: 30,
     margin: 30,
     width: 800,
     height: 500,
-    backgroundColor: 'silver',
+    backgroundColor: 'silver'
   },
   root: {
     display: 'block',
-    backgroundColor: '#414141',
+    backgroundColor: '#414141'
   },
   btn: {
     backgroundColor: '#123432',
-    color: 'white',
-  },
+    color: 'white'
+  }
 };
 
 const startMeeting = () => {
@@ -38,12 +38,13 @@ const startMeeting = () => {
 
   const timestamp = new Date().getTime() - 30000;
   const msg = Buffer.from(apiKey + meetingNumber + timestamp + role).toString(
-    'base64',
+    'base64'
   );
-  const hash = createHmac('sha256', apiSecret).update(msg).digest('base64');
+  const hash = createHmac('sha256', apiSecret).update(msg)
+    .digest('base64');
   const signature = Buffer.from(
     `${apiKey}.${meetingNumber}
-		  .${timestamp}.${role}.${hash}`,
+		  .${timestamp}.${role}.${hash}`
   ).toString('base64');
 
   /* Generate sign from api */
@@ -63,9 +64,9 @@ const startMeeting = () => {
         },
         error: error => {
           console.log(error);
-        },
+        }
       });
-    },
+    }
   });
 };
 

@@ -7,7 +7,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import LoadingComp from '_Components/LoadingComp';
 import Routing from '_Routes';
 import { store, persistor } from '_Store';
-import '_Styles/tailwind.css';
+import '_Styles/index.css';
 import '_Styles/algolia-styles.css';
 
 function App() {
@@ -20,11 +20,11 @@ function App() {
         root: {
           marginTop: 20,
           width: '80%',
-          color: defaultTheme.palette.error.light,
+          color: defaultTheme.palette.error.light
         },
-        editor: { borderBottom: '1px solid gray' },
-      },
-    },
+        editor: { borderBottom: '1px solid gray' }
+      }
+    }
   });
 
   return (

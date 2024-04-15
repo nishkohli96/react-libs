@@ -7,9 +7,9 @@ const VideoJsEg = () => {
     sources: [
       {
         src: 'https://youtu.be/7EXXSOy9D4U',
-        type: 'embed',
-      },
-    ],
+        type: 'embed'
+      }
+    ]
   };
 
   return (

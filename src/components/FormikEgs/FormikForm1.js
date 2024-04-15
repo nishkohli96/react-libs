@@ -9,15 +9,15 @@ import { YupSchema } from '_Utils/FormHelpers';
 const formDefaults = {
   fullName: '',
   email: '',
-  password: '',
+  password: ''
 };
 
 const styles = {
   submitBtn: {
     marginTop: '20px',
     backgroundColor: '#F27C59',
-    color: '#FFFFFF',
-  },
+    color: '#FFFFFF'
+  }
 };
 
 const FormikForm1 = () => {
@@ -27,7 +27,7 @@ const FormikForm1 = () => {
     validationSchema: YupSchema,
     onSubmit: values => {
       alert(JSON.stringify(values, null, 2));
-    },
+    }
   });
 
   return (

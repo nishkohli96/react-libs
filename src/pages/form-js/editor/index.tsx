@@ -25,9 +25,9 @@ const newFormSchema = {
   id: `Form_${formId}`,
   exporter: {
     name: 'form-js (https://demo.bpmn.io)',
-    version: '1.6.4',
+    version: '1.6.4'
   },
-  schemaVersion: 14,
+  schemaVersion: 14
 };
 
 export default function FormJSEditor() {

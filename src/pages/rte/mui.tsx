@@ -8,18 +8,18 @@ const emojis = [
   {
     keys: ['face', 'grin'],
     value: '😀',
-    content: '😀',
+    content: '😀'
   },
   {
     keys: ['face', 'joy'],
     value: '😂',
-    content: '😂',
+    content: '😂'
   },
   {
     keys: ['face', 'sweat'],
     value: '😅',
-    content: '😅',
-  },
+    content: '😅'
+  }
 ];
 
 /* https://www.npmjs.com/package/mui-rte#api */
@@ -36,9 +36,9 @@ export default function MuiRte() {
         strategies: [
           {
             items: emojis,
-            triggerChar: ':',
-          },
-        ],
+            triggerChar: ':'
+          }
+        ]
       }}
       toolbarButtonSize="small"
       onSave={handleOnSave}

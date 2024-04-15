@@ -10,17 +10,17 @@ const AlgoliaConfig = Object.freeze({
   FACET_ATTRIBUTES: {
     brand: 'brand',
     categories: 'categories',
-    price: 'price',
+    price: 'price'
   },
   ALGOLIA_EVENTS: {
     click: 'click',
-    conversion: 'conversion',
+    conversion: 'conversion'
   },
   USER_EVENTS: {
     product_click: 'Product Clicked',
-    product_purchased: 'Product Purchased',
+    product_purchased: 'Product Purchased'
   },
-  CONFIG: { hitsPerPage: 15 },
+  CONFIG: { hitsPerPage: 15 }
 });
 
 export default AlgoliaConfig;

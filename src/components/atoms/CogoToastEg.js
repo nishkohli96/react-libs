@@ -10,7 +10,7 @@ const CogoToastEg = () => {
       /* in seconds */
       hideAfter: 3,
       position: 'bottom-center',
-      heading: 'Success',
+      heading: 'Success'
     });
   };
 
@@ -22,7 +22,7 @@ const CogoToastEg = () => {
           <div>
             {'Isn\'t it?'}
           </div>
-        </div>,
+        </div>
       );
     });
   };

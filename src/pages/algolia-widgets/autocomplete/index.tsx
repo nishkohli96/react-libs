@@ -75,7 +75,7 @@ const Autocomplete = () => {
             ...params.InputProps,
             style: {
               padding: '5px 10px',
-              background: 'white',
+              background: 'white'
             },
             endAdornment: (
               <Fragment>
@@ -93,7 +93,7 @@ const Autocomplete = () => {
                   </IconButton>
                 )}
               </Fragment>
-            ),
+            )
           }}
         />
       )}
