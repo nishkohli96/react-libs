@@ -41,5 +41,7 @@ While building app for production, comment/remove `import tailwind.css` line in 
 - [react-toastify](https://www.npmjs.com/package/react-toastify) - 10.0.5
 - [react-window](https://www.npmjs.com/package/react-window) - 1.8.10
 - [style-dictionary](https://amzn.github.io/style-dictionary/#/) - 3.9.2
-- [tailwind-css](https://tailwindcss.com/)
+- *[tailwind-css](https://tailwindcss.com/)
 - [zoom-websdk](https://www.npmjs.com/package/@zoomus/websdk)
+
+* Avoid using tailwind-css with CRA. [Here's why](https://tailwindcss.com/docs/guides/create-react-app).

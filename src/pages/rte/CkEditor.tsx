@@ -1,11 +1,25 @@
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
+import { EventInfo } from '@ckeditor/ckeditor5-utils';
 
 export default function CkEditor() {
+  function handleChange(_: EventInfo, editor: ClassicEditor) {
+    /**
+     * Value will be of string type like,
+     * "<p>Hello from CKEditor&nbsp;5! fffefef</p>"
+     *
+     * This value can then be set as dangerouslySetInnerHTML
+     * if needed.
+     */
+    const content = editor.getData();
+    console.log('content: ', content);
+  }
+
   return (
     <CKEditor
       editor={ClassicEditor}
       data="<p>Hello from CKEditor&nbsp;5!</p>"
+      onChange={handleChange}
       config={{
         heading: {
           options: [
