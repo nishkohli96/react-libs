@@ -29,7 +29,9 @@ export const FFTextField: FC<TextFieldProps & FFTextFieldProps> = tfProps => {
             value={input.value}
             onChange={e => {
               input.onChange(e);
-              rest.onChangeFn && rest.onChangeFn(e);
+              if(rest.onChangeFn) {
+                rest.onChangeFn(e);
+              }
             }}
             error={isErr}
             helperText={isErr && meta.error}

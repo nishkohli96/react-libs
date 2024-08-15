@@ -5,10 +5,7 @@
   "dependencies": {
     "@bpmn-io/form-js-editor": "^1.7.0",
     "@bpmn-io/form-js-viewer": "^1.7.0",
-    "@ckeditor/ckeditor5-build-classic": "^41.0.0",
-    "@ckeditor/ckeditor5-code-block": "^41.0.0",
-    "@ckeditor/ckeditor5-find-and-replace": "^41.0.0",
-    "@ckeditor/ckeditor5-react": "^6.2.0",
+    "@ckeditor/ckeditor5-react": "^9.0.0",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@faker-js/faker": "^8.4.0",
@@ -25,6 +22,7 @@
     "aos": "^2.3.4",
     "axios": "^1.6.7",
     "bootstrap": "^5.3.2",
+    "ckeditor5": "^43.0.0",
     "classnames": "^2.3.2",
     "cogo-toast": "^4.2.3",
     "customize-cra": "^1.0.0",
@@ -57,7 +55,7 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
-    "@nish1896/eslint-config": "^2.0.2",
+    "@nish1896/eslint-config": "^2.0.5",
     "@types/jest": "^28.1.6",
     "@types/node": "^18.7.1",
     "@types/react": "^18.0.17",
@@ -65,7 +63,7 @@
     "@types/react-router-dom": "^5.3.3",
     "autoprefixer": "^10.4.19",
     "cypress": "^12.5.1",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "husky": "^9.0.10",
     "lint-staged": "^10.2.13",
     "postcss": "^8.4.38",

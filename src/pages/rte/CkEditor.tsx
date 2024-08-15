@@ -1,6 +1,20 @@
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
+import {
+  ClassicEditor,
+  Essentials,
+  Undo,
+  Bold,
+  Italic,
+  Underline,
+  Heading,
+  Font,
+  Link,
+  List,
+  BlockQuote,
+} from 'ckeditor5';
 import { EventInfo } from '@ckeditor/ckeditor5-utils';
+
+import 'ckeditor5/ckeditor5.css';
 
 export default function CkEditor() {
   function handleChange(_: EventInfo, editor: ClassicEditor) {
@@ -21,6 +35,39 @@ export default function CkEditor() {
       data="<p>Hello from CKEditor&nbsp;5!</p>"
       onChange={handleChange}
       config={{
+        plugins: [
+          Essentials,
+          Undo,
+          Bold,
+          Italic,
+          Underline,
+          Heading,
+          Font,
+          Link,
+          List,
+          BlockQuote,
+        ],
+        toolbar: {
+          items: [
+            'undo',
+            'redo',
+            '|',
+            'heading',
+            '|',
+            'bold',
+            'italic',
+            'underline',
+            '|',
+            'fontSize',
+            'fontFamily',
+            'fontColor',
+            '|',
+            'link',
+            'bulletedList',
+            'numberedList',
+            'blockQuote',
+          ],
+        },
         heading: {
           options: [
             {
