@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 15 Aug 2024 16:39:49 GMT
+ * Generated on Thu, 15 Aug 2024 18:43:22 GMT
  */
 
 export const ColorBasePrimary = "#61dafb";

@@ -17,7 +17,7 @@ While building app for production, comment/remove `import tailwind.css` line in 
 - [aos](https://www.npmjs.com/package/aos) - 2.3.4
 - [axios](https://www.npmjs.com/package/axios) - 1.6.7
 - [algolia](https://www.algolia.com/doc/guides/building-search-ui/widgets/showcase/react/) - 4.22.1 & [react-instantsearch](https://www.npmjs.com/package/react-instantsearch)
-- [ck-editor-react](https://www.npmjs.com/package/@ckeditor/ckeditor5-react) - 6.2.0
+- [ck-editor-react](https://www.npmjs.com/package/@ckeditor/ckeditor5-react) - 9.0.0
 - [cogo-toast](https://www.npmjs.com/package/cogo-toast) - 4.2.3
 - [cypress](https://www.cypress.io/)
 - [faker](https://fakerjs.dev/) - 8.4.0
