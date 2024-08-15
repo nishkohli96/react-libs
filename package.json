@@ -57,7 +57,7 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
-    "@nish1896/eslint-config": "^2.0.2",
+    "@nish1896/eslint-config": "^2.0.5",
     "@types/jest": "^28.1.6",
     "@types/node": "^18.7.1",
     "@types/react": "^18.0.17",
@@ -65,7 +65,7 @@
     "@types/react-router-dom": "^5.3.3",
     "autoprefixer": "^10.4.19",
     "cypress": "^12.5.1",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "husky": "^9.0.10",
     "lint-staged": "^10.2.13",
     "postcss": "^8.4.38",
