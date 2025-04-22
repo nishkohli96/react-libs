@@ -4,8 +4,8 @@ module.exports = {
     '@nish1896/eslint-config/js',
     '@nish1896/eslint-config/jsx'   
   ],
-  // rules: {
-  //   'react/jsx-filename-extension': 'off',
-  //   'react/prop-types': 'off'
-  // }
+  rules: {
+    'react/jsx-filename-extension': 'off',
+    'react/prop-types': 'off'
+  }
 };

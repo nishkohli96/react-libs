@@ -16,6 +16,7 @@
     "@mui/icons-material": "^5.15.19",
     "@mui/material": "^5.15.19",
     "@mui/styles": "^5.16.7",
+    "@nish1896/eslint-config": "^3.0.3",
     "@reduxjs/toolkit": "^2.1.0",
     "@zoomus/websdk": "^1.9.6",
     "algoliasearch": "^4.22.1",
@@ -55,7 +56,6 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
-    "@nish1896/eslint-config": "^3.0.3",
     "@types/jest": "^28.1.6",
     "@types/node": "^18.7.1",
     "@types/react": "^18.0.17",

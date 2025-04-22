@@ -54,11 +54,13 @@ const FormikForm1 = () => {
               value={formik.values.fullName}
               required
             />
-            {formik.touched.fullName && formik.errors.fullName ? (
-              <div className="errText">
-                {formik.errors.fullName}
-              </div>
-            ) : null}
+            {formik.touched.fullName && formik.errors.fullName
+              ? (
+                <div className="errText">
+                  {formik.errors.fullName}
+                </div>
+              )
+              : null}
           </div>
 
           <div className="formdiv">
@@ -72,11 +74,13 @@ const FormikForm1 = () => {
               value={formik.values.email}
               required
             />
-            {formik.touched.email && formik.errors.email ? (
-              <div className="errText">
-                {formik.errors.email}
-              </div>
-            ) : null}
+            {formik.touched.email && formik.errors.email
+              ? (
+                <div className="errText">
+                  {formik.errors.email}
+                </div>
+              )
+              : null}
           </div>
 
           <div className="formdiv">
@@ -91,11 +95,13 @@ const FormikForm1 = () => {
               value={formik.values.password}
               required
             />
-            {formik.touched.password && formik.errors.password ? (
-              <div className="errText">
-                {formik.errors.password}
-              </div>
-            ) : null}
+            {formik.touched.password && formik.errors.password
+              ? (
+                <div className="errText">
+                  {formik.errors.password}
+                </div>
+              )
+              : null}
           </div>
         </div>
 

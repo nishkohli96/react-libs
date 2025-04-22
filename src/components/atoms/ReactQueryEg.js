@@ -11,16 +11,18 @@ const SingleQueryEg = () => {
   return (
     <div>
       <div className="text-blue-400">Single-Query Example</div>
-      {isLoading ? (
-        <CircularProgress variant="indeterminate" />
-      ) : (
-        <div>
-          <b>Data Fetched</b>
+      {isLoading
+        ? (
+          <CircularProgress variant="indeterminate" />
+        )
+        : (
           <div>
-            {JSON.stringify(data)}
+            <b>Data Fetched</b>
+            <div>
+              {JSON.stringify(data)}
+            </div>
           </div>
-        </div>
-      )}
+        )}
     </div>
   );
 };
@@ -49,14 +51,16 @@ const MultipleQueryEg = () => {
     <div className="mt-5">
       <div className="text-blue-400">Multiple React-Query Example</div>
       {results.map((res, idx) =>
-        res?.isSuccess ? (
-          <div className="text-blue-800" key={idx}>
-            Data:
-            {res?.data?.BANK}
-          </div>
-        ) : (
-          <div className="text-red-300" key={idx}>ERROR</div>
-        ))}
+        res?.isSuccess
+          ? (
+            <div className="text-blue-800" key={idx}>
+              Data:
+              {res?.data?.BANK}
+            </div>
+          )
+          : (
+            <div className="text-red-300" key={idx}>ERROR</div>
+          ))}
     </div>
   );
 };
